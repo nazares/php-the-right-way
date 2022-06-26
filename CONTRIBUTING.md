@@ -11,7 +11,6 @@ the developers managing and developing this open source project. In return,
 they should reciprocate that respect in addressing your issue or assessing
 patches and features.
 
-
 ## Using the issue tracker
 
 The [issue tracker](https://github.com/codeguy/php-the-right-way/issues) is
@@ -24,7 +23,6 @@ respect the following restrictions:
 
 * Please **do not** derail or troll issues. Keep the discussion on topic and
   respect the opinions of others.
-
 
 <a name="pull-requests"></a>
 ## Pull Requests
@@ -91,7 +89,6 @@ included in the project:
 
 8. [Open a Pull Request](https://help.github.com/articles/using-pull-requests/)
     with a clear title and description.
-
 
 ## Contribution Agreement and Usage
 
