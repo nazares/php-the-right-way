@@ -9,7 +9,7 @@ This is the GitHub Pages repository for the _PHP: The Right Way_ project.
 * Sub-sections have `isChild: true` in their front matter.
 * The navigation and page structure are automatically generated.
 
-## Spread the Word!
+## Spread the Word&excl;
 
 _PHP: The Right Way_ has web banner images you can use on your website. Show your support, and let new PHP
 developers know where to find good information!
