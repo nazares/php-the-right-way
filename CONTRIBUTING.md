@@ -24,7 +24,6 @@ respect the following restrictions:
 * Please **do not** derail or troll issues. Keep the discussion on topic and
   respect the opinions of others.
 
-<a name="pull-requests"></a>
 ## Pull Requests
 
 Pull requests are a great way to add new content to PHP The Right Way, as well
