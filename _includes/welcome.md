@@ -43,9 +43,9 @@ _PHP: The Right Way_ переведено на множество различн
 
 Самая последняя версия _PHP: The Right Way_ также доступна в PDF, EPUB и MOBI форматах. [Перейти на Leanpub][1]
 
-## Как внести вклад
+## Как принять участие
 
-Помогите сделать этот веб-сайт лучшим ресурсом для новых PHP программистов! [Contribute on GitHub][2]
+Помогите сделать этот веб-сайт лучшим ресурсом для новых PHP программистов! [Поддержать на GitHub][2]
 
 [1]: https://leanpub.com/phptherightway
 [2]: https://github.com/codeguy/php-the-right-way/tree/gh-pages

@@ -1,10 +1,10 @@
 ---
-title:   Use the Current Stable Version (8.1)
+title: Используйте текущую стабильную версию (8.1)
 isChild: true
-anchor:  use_the_current_stable_version
+anchor: use_the_current_stable_version
 ---
 
-## Use the Current Stable Version (8.1) {#use_the_current_stable_version_title}
+## Используйте текущую стабильную версию (8.1) {#use_the_current_stable_version_title}
 
 If you are getting started with PHP, start with the current stable release of [PHP 8.1][php-release]. PHP 8.x adds many [new features](#language_highlights) over the older 7.x and 5.x versions. The engine has been largely re-written, and PHP is now even quicker than older versions. PHP 8 is a major update of the language and contains many new features and optimizations.
 
