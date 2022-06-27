@@ -20,6 +20,7 @@ macOS поставляется с предустановленным PHP но э
     brew unlink php
     brew link --overwrite php@8.0
 
+
     brew unlink php
     brew link --overwrite php@8.1
 
