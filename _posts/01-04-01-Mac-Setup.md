@@ -3,21 +3,21 @@ isChild: true
 anchor:  mac_setup
 ---
 
-## Mac Setup {#mac_setup_title}
+## Mac Установка {#mac_setup_title}
 
-macOS comes prepackaged with PHP but it is normally a little behind the latest stable release. There are multiple ways to install the latest PHP version on macOS.
+macOS поставляется с предустановленным PHP но это обычно немного более ранняя версия чем последний стабильный релиз. Есть есколько способов установить последнюю версию PHP в macOS.
 
-### Install PHP via Homebrew
+### Установка PHP через Homebrew
 
-[Homebrew] is a package manager for macOS that helps you easily install PHP and various extensions. The Homebrew core repository provides "formulae" for PHP 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0 and PHP 8.1. Install the latest version with this command:
+[Homebrew] - это пакетный менеджер для macOS который помогает вам легко установить PHP и различные расширения. Главный репозиторий Homebrew предоставляет "formulae" формулы для PHP 5.6, 7.0, 7.1, 7.2, 7.3, 7.4, 8.0 и PHP 8.1. Установите последнюю версию командой:
 
 ```
 brew install php@8.1
 ```
 
-You can switch between Homebrew PHP versions by modifying your `PATH` variable. Alternatively, you can use [brew-php-switcher][brew-php-switcher] to switch PHP versions automatically.
+Вы можете переключаться между Homebrew PHP вырсиями изменяя переменную `PATH`. Альтернативно, вы можете использовать [brew-php-switcher][brew-php-switcher] для переключения PHP версий автоматически.
 
-You can also switch between PHP versions manually by unlinking and linking the wanted version:
+Также вы можете переключаться вручную переключаться между PHP версиями отсоединяяя и присоединяя желаемую версию:
 
 ```
 brew unlink php
@@ -29,12 +29,12 @@ brew unlink php
 brew link --overwrite php@8.1
 ```
 
-### Install PHP via Macports
+### Установка PHP через Macports
 
-The [MacPorts] Project is an open-source community initiative to design an
-easy-to-use system for compiling, installing, and upgrading either
-command-line, X11 or Aqua based open-source software on the OS X operating
-system.
+Проект [MacPorts] - это инициатива open-source сообщества по разработке
+легкой в использовании системы для компиляции, установки, и обновления, так-же
+командная строка, X11 или Aqua open-source программного обеспечения в операционной
+системе OS X.
 
 MacPorts supports pre-compiled binaries, so you don't need to recompile every
 dependency from the source tarball files, it saves your life if you don't

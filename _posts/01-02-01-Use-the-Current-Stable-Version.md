@@ -1,14 +1,14 @@
 ---
-title:   Use the Current Stable Version (8.1)
+title: Используйте текущую стабильную версию (8.1)
 isChild: true
-anchor:  use_the_current_stable_version
+anchor: use_the_current_stable_version
 ---
 
-## Use the Current Stable Version (8.1) {#use_the_current_stable_version_title}
+## Используйте текущую стабильную версию (8.1) {#use_the_current_stable_version_title}
 
-If you are getting started with PHP, start with the current stable release of [PHP 8.1][php-release]. PHP 8.x adds many [new features](#language_highlights) over the older 7.x and 5.x versions. The engine has been largely re-written, and PHP is now even quicker than older versions. PHP 8 is a major update of the language and contains many new features and optimizations.
+Если вы начали работать с PHP, начните с текущего стабильного релиза [PHP 8.1][php-release]. PHP 8.x добавляет много [новых особенностей](#language_highlights) чем более старые 7.x и 5.x версии. Движок был в значительной степени переписан, и PHP сегодня намного быстрее чем более старые версии. PHP 8 - это крупное обновление языка, сожержащее много новых особенностей и оптимизаций.
 
-You should try to upgrade to the latest stable version quickly - PHP 5.6 [is already End of Life](http://php.net/supported-versions.php). Upgrading is easy, as there are not many [backwards compatibility breaks][php-bc]. If you are not sure which version a function or feature is in, you can check the PHP documentation on the [php.net][php-docs] website.
+Вам необходимо быстро попробовать обновиться до последней стабильной версии - PHP 5.6 [уже End of Life](http://php.net/supported-versions.php). Обновление - это просто, тут не так много [поломок обратной совместимости][php-bc]. Если вы не уверены в какой версии содержится функция илиособенность, вы можете проверить PHP документацию на веб-сайте [php.net][php-docs].
 
 [php-release]: http://php.net/downloads.php
 [php-docs]: http://php.net/manual/
