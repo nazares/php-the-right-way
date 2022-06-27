@@ -2,4 +2,4 @@
 anchor: language_highlights
 ---
 
-# Language Highlights {#language_highlights_title}
+# Особенности языка {#language_highlights_title}

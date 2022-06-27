@@ -3,21 +3,21 @@ isChild: true
 anchor:  programming_paradigms
 ---
 
-## Programming Paradigms {#programming_paradigms_title}
+## Парадигмы программирования {#programming_paradigms_title}
 
-PHP is a flexible, dynamic language that supports a variety of programming techniques. It has evolved dramatically over
-the years, notably adding a solid object-oriented model in PHP 5.0 (2004), anonymous functions and namespaces in
-PHP 5.3 (2009), and traits in PHP 5.4 (2012).
+PHP гибкий, динамический язык который поддерживает различные техники программирования. Он резко эволюционировал на
+протяжении лет, в частности добавилась надежная объектно-ориентированная модель в PHP 5.0 (2004), анонимные функции и пространства имен в
+PHP 5.3 (2009), а так же трейты в PHP 5.4 (2012).
 
-### Object-oriented Programming
+### Объектно-Ориентированное Программирование
 
-PHP has a very complete set of object-oriented programming features including support for classes, abstract classes,
-interfaces, inheritance, constructors, cloning, exceptions, and more.
+PHP имеет очень полный набор возможностей объектно-ориентированного программирования, включая поддержку классов, абстрактных классов,
+интерфейсов, наследования, конструкторов, клонирования, исключений и т. д.
 
-* [Read about Object-oriented PHP][oop]
-* [Read about Traits][traits]
+* [Читать об объектно-ориентированном PHP][oop]
+* [Читать о Трейтах][traits]
 
-### Functional Programming
+### Функциональное программирование
 
 PHP supports first-class functions, meaning that a function can be assigned to a variable. Both user-defined and
 built-in functions can be referenced by a variable and invoked dynamically. Functions can be passed as arguments to
@@ -49,7 +49,6 @@ available as `__call()` and `__callStatic()`.
 * [Read about Reflection][reflection]
 * [Read about Overloading][overloading]
 
-
 [oop]: https://secure.php.net/language.oop5
 [traits]: https://secure.php.net/language.oop5.traits
 [anonymous-functions]: https://secure.php.net/functions.anonymous
@@ -60,4 +59,3 @@ available as `__call()` and `__callStatic()`.
 [magic-methods]: https://secure.php.net/language.oop5.magic
 [reflection]: https://secure.php.net/intro.reflection
 [overloading]: https://secure.php.net/language.oop5.overloading
-
