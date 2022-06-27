@@ -1,24 +1,21 @@
-# Welcome
+# Добро пожаловать
 
-There's a lot of outdated information on the Web that leads new PHP users astray,
-propagating bad practices and insecure code. _PHP: The Right Way_ is an easy-to-read,
-quick reference for PHP popular coding standards, links to authoritative tutorials
-around the Web and what the contributors consider to be best practices at the present
-time.
+В сети много устаревшей информации которая вводит новых пользователей PHP в заблуждение,
+распространяя плохие практики и небезопасный код. _PHP: The Right Way_ - это легкочитаемый,
+краткий справочник PHP по популярным стандатрам кодирования, ссылки на авторитетные руководства
+по всему интернету и то, что участники считают лучшими практиками в натоящий момент.
+_Не существует канонического способа использования PHP_. Цель этого веб-сайта представить новым PHP
+разработчикам некоторые темы, которые они могли не знать, долгое время,
+и нацелить опытных профессионалов на свежие идеи в тех темах с которыми они работали на протяжении
+лет без какого либо пересмотрения. Этот веб-сайт также не расскажет вам какими инструментами пользоваться, но
+предложит советы для множества вариантов, когда возможно объяснит разницу в подходах и вариантах использования.
 
-_There is no canonical way to use PHP_. This website aims to introduce new PHP
-developers to some topics which they may not discover until it is too late, and aims
-to give seasoned pros some fresh ideas on those topics they've been doing for years
-without ever reconsidering. This website will also not tell you which tools to use, but
-instead offer suggestions for multiple options, when possible explaining the differences
-in approach and use-case.
+Это живой документ и будет продолжать обновляться с более полезной информацией и
+примерами, как только они станут доступными.
 
-This is a living document and will continue to be updated with more helpful information
-and examples as they become available.
+## Переводы
 
-## Translations
-
-_PHP: The Right Way_ is translated into many different languages:
+_PHP: The Right Way_ переведено на множество различных языков:
 
 * [English](http://www.phptherightway.com)
 * [Español](http://phpdevenezuela.github.io/php-the-right-way)
@@ -32,7 +29,7 @@ _PHP: The Right Way_ is translated into many different languages:
 * [Srpski](http://phpsrbija.github.io/php-the-right-way/)
 * [Türkçe](http://hkulekci.github.io/php-the-right-way/)
 * [български](http://bg.phptherightway.com)
-* [Русский язык](http://getjump.github.io/ru-php-the-right-way)
+* [Русский](http://nazares.github.io/php-the-right-way)
 * [Українська](http://iflista.github.io/php-the-right-way/)
 * [العربية](https://adaroobi.github.io/php-the-right-way/)
 * [فارسى](http://novid.github.io/php-the-right-way/)
@@ -42,13 +39,13 @@ _PHP: The Right Way_ is translated into many different languages:
 * [简体中文](https://laravel-china.github.io/php-the-right-way/)
 * [繁體中文](https://laravel-taiwan.github.io/php-the-right-way)
 
-## Book
+## Книга
 
-The most recent version of _PHP: The Right Way_ is also available in PDF, EPUB and MOBI formats. [Go to Leanpub][1]
+Самая последняя версия _PHP: The Right Way_ также доступна в PDF, EPUB и MOBI форматах. [Перейти на Leanpub][1]
 
-## How to Contribute
+## Как внести вклад
 
-Help make this website the best resource for new PHP programmers! [Contribute on GitHub][2]
+Помогите сделать этот веб-сайт лучшим ресурсом для новых PHP программистов! [Contribute on GitHub][2]
 
 [1]: https://leanpub.com/phptherightway
 [2]: https://github.com/codeguy/php-the-right-way/tree/gh-pages
