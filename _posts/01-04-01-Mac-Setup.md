@@ -1,4 +1,5 @@
 ---
+title: Mac Установка
 isChild: true
 anchor:  mac_setup
 ---
@@ -17,12 +18,15 @@ macOS поставляется с предустановленным PHP но э
 
 Также вы можете переключаться вручную между PHP версиями, отсоединяяя и присоединяя желаемую версию:
 
+```
     brew unlink php
     brew link --overwrite php@8.0
+```
 
-
+```
     brew unlink php
     brew link --overwrite php@8.1
+```
 
 ### Установка PHP через Macports
 
