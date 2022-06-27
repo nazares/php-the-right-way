@@ -1,4 +1,4 @@
-baseurl: /php-the-right-way/
+baseurl: https://nazares.github.io/php-the-right-way/
 highlighter: rouge
 markdown: kramdown
 permalink: date
