@@ -1,13 +1,13 @@
 ---
+title: Основы
 isChild: true
 anchor:  the_basics
 ---
 
-## The Basics {#the_basics_title}
+## Основы {#the_basics_title}
 
-PHP is a vast language that allows coders of all levels the ability to produce code not only quickly, but efficiently.
-However, while advancing through the language, we often forget the basics that we first learnt (or overlooked) in favor
-of short cuts and/or bad habits. To help combat this common issue, this section is aimed at reminding coders of the
-basic coding practices within PHP.
+PHP — это обширный язык, который позволяет программистам всех уровней создавать код не только быстро, но и эффективно.
+Однако, продвигаясь по языку, мы часто забываем основы, которые мы сначала изучили (или упустили из виду), в пользу коротких путей и/или
+вредных привычек. Чтобы помочь справиться с этой распространенной проблемой, этот раздел призван напомнить программистам об основных методах кодирования в PHP.
 
-* Continue reading on [The Basics](/pages/The-Basics.html)
+* Продолжить чтение [Основы](/pages/The-Basics.html)
