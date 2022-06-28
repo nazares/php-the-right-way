@@ -1,32 +1,32 @@
 ---
+title: Пространства имен
 isChild: true
 anchor:  namespaces
 ---
 
-## Namespaces {#namespaces_title}
+## Пространства имен {#namespaces_title}
 
-As mentioned above, the PHP community has a lot of developers creating lots of code. This means that one library's PHP
-code might use the same class name as another. When both libraries are used in the same namespace, they collide
-and cause trouble.
+Как было сказано выше, сообщество PHP состоит из большого количества разработчиков которые создают много кода. Это означает что код одной библиотеки PHP
+может использовать такое же имя класса как и в другой. Когда обе библиотеки используют одинаковые пространства имен, они сталкиваются
+и начинаются проблемы.
 
-_Namespaces_ solve this problem. As described in the PHP reference manual, namespaces may be compared to operating
-system directories that _namespace_ files; two files with the same name may co-exist in separate directories. Likewise,
-two PHP classes with the same name may co-exist in separate PHP namespaces. It's as simple as that.
+_Пространства имен_ решают эту проблему. Как описано в PHP reference manual, пространства имен можно сравнить с каталогами операционной
+системы где _namespace_ - файлы; два файла с одинаковыми именами могут сосуществовать в разных директориях. Также как,
+два PHP класса с одинаковыми именами могут сосуществовать в разных PHP пространствах имен. Это так же просто.
 
-It is important for you to namespace your code so that it may be used by other developers without fear of colliding
-with other libraries.
+Важно использовать пространства имен для вашего кода, чтобы его могли использовать другие разработчики, не опасаясь конфликтов
+с другими библиотеками.
 
-One recommended way to use namespaces is outlined in [PSR-4][psr4], which aims to provide a standard file, class and
-namespace convention to allow plug-and-play code.
+Один из рекомендуемых способов использования пространства имен описан в [PSR-4][psr4], который нацелен на обеспечение стандарта согласования файла, класса и
+пространства имен позволяющих легко встраиваемый (plug-and-play) код.
 
-In October 2014 the PHP-FIG deprecated the previous autoloading standard: [PSR-0][psr0]. Both PSR-0 and PSR-4 are still perfectly usable.  The latter requires PHP 5.3, so many PHP 5.2-only projects implement PSR-0.
+В октябре 2014 PHP-FIG объявили устаревшим предыдущий стандарт автозагрузки: [PSR-0][psr0]. Оба PSR-0 и PSR-4 все еще вполне пригодны для использования. Последний требует PHP 5.3, и так много PHP 5.2-only проектов используют PSR-0.
 
-If you're going to use an autoloader standard for a new application or package, look into PSR-4.
+Если вы собираетесь использовать стандарт автозагрузки в новых приложениях или пакетах, смотрите в сторону PSR-4.
 
-* [Read about Namespaces][namespaces]
-* [Read about PSR-0][psr0]
-* [Read about PSR-4][psr4]
-
+* [Читать о Namespaces][namespaces]
+* [Читать о PSR-0][psr0]
+* [Читать о PSR-4][psr4]
 
 [namespaces]: https://secure.php.net/language.namespaces
 [psr0]: https://www.php-fig.org/psr/psr-0/
