@@ -1,5 +1,6 @@
 ---
+title: Практики написания кода
 anchor: coding_practices
 ---
 
-# Coding Practices {#coding_practices_title}
+# Практики написания кода {#coding_practices_title}
