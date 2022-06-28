@@ -19,35 +19,36 @@ PHP имеет очень полный набор возможностей об�
 
 ### Функциональное программирование
 
-PHP supports first-class functions, meaning that a function can be assigned to a variable. Both user-defined and
-built-in functions can be referenced by a variable and invoked dynamically. Functions can be passed as arguments to
-other functions (a feature called _Higher-order Functions_) and functions can return other functions.
+PHP поддерживает первоклассные функции, имеется ввиду что функция может быть присвоена переменной. Функции определенные пользователем и
+встроенные функции, и те и другие могут ссылками переменной и вызываться динамически. Функции могут передаваться как аргументы
+других функций (особенность называется _Higher-order Functions_) и функции могут возвращать другие
+функции.
 
-Recursion, a feature that allows a function to call itself, is supported by the language, but most PHP code
-is focused on iteration.
+Рекурсия, особенность которая позволяет функции вызывать саму себя, она поддерживается языком, но болшая часть PHP кода
+сфокусированно на итерациях.
 
-New anonymous functions (with support for closures) are present since PHP 5.3 (2009).
+Новые анонимные функции (которые поддерживают замыкания) представлены начиная с PHP 5.3 (2009).
 
-PHP 5.4 added the ability to bind closures to an object's scope and also improved support for callables such that they
-can be used interchangeably with anonymous functions in almost all cases.
+PHP 5.4 добавлена возможность привязки замыканий к области видимости объекта а также улучшена поддержка для вызовов так что они
+могут быть взаимозаменяемо использованы с анонимными функциями почти во всех случаях.
 
-* Continue reading on [Functional Programming in PHP](/pages/Functional-Programming.html)
-* [Read about Anonymous Functions][anonymous-functions]
-* [Read about the Closure class][closure-class]
-* [More details in the Closures RFC][closures-rfc]
-* [Read about Callables][callables]
-* [Read about dynamically invoking functions with `call_user_func_array()`][call-user-func-array]
+* Продолжить чтение [Функциональное программирование PHP](/pages/Functional-Programming.html)
+* [Читать об Анонимных функциях][anonymous-functions]
+* [Чтать о классе Замыканий][closure-class]
+* [Более детально в Closures RFC][closures-rfc]
+* [Читать о вызовах функций][callables]
+* [Читать о динамическом вызове функций с `call_user_func_array()`][call-user-func-array]
 
-### Meta Programming
+### Метапрограммирование
 
-PHP supports various forms of meta-programming through mechanisms like the Reflection API and Magic Methods. There are
-many Magic Methods available like `__get()`, `__set()`, `__clone()`, `__toString()`, `__invoke()`, etc. that allow
-developers to hook into class behavior. Ruby developers often say that PHP is lacking `method_missing`, but it is
-available as `__call()` and `__callStatic()`.
+PHP поддерживает различные формы метапрограммирования через механизмы такие как Reflection API и Магические Методы. Есть
+много доступных Магических Методов как `__get()`, `__set()`, `__clone()`, `__toString()`, `__invoke()`, и т.д. что позволяют
+разработчикам подключаться к поведению класса. Разработчики Ruby часто говорят что PHP не хватает `method_missing`, но это
+доступно как `__call()` и `__callStatic()`.
 
-* [Read about Magic Methods][magic-methods]
-* [Read about Reflection][reflection]
-* [Read about Overloading][overloading]
+* [Читать о Магических Методах][magic-methods]
+* [Читать о Рефлексии][reflection]
+* [Читать о Перегрузке][overloading]
 
 [oop]: https://secure.php.net/language.oop5
 [traits]: https://secure.php.net/language.oop5.traits
