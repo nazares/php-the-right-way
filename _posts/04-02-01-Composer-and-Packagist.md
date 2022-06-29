@@ -107,5 +107,5 @@ composer global require phpunit/phpunit
 [Twig]: https://twig.symfony.com/
 [libraries.io]: https://libraries.io/
 [Local PHP Security Checker]: https://github.com/fabpot/local-php-security-checker
-[Learn about Composer]: https://getcomposer.org/doc/00-intro.md
+[Узнать больше о Composer]: https://getcomposer.org/doc/00-intro.md
 [ComposerSetup]: https://getcomposer.org/Composer-Setup.exe
