@@ -1,37 +1,41 @@
-# PHP: The Right Way
+# PHP: Правильный путь
 
-## Overview
+Русский перевод руководства <http://phptherightway.com>
 
-This is the GitHub Pages repository for the _PHP: The Right Way_ project.
+## Обзор
 
-* This website is a Jekyll project.
-* Each section and sub-section are a Markdown file in `_posts/`.
-* Sub-sections have `isChild: true` in their front matter.
-* The navigation and page structure are automatically generated.
+Это репозиторий GitHub Pages проекта _PHP: The Right Way_.
 
-## Spread the Word&excl;
+* Этот веб-сайт является Jekyll проектом.
+* Каждый раздел и подраздел - это Markdown файл в `_posts/`.
+* Подразделы содержат `isChild: true` в их секции метаданных.
+* Навигация и структура страниц генерируются автоматически.
 
-_PHP: The Right Way_ has web banner images you can use on your website. Show your support, and let new PHP
-developers know where to find good information!
+## Распространяйте Слово
 
-[See Banner Images](https://www.phptherightway.com/banners.html)
+У _PHP: The Right Way_ есть веб-баннеры которые вы можете использовать на своем
+сайте. Окажите поддержку, и дайте новым PHP разработчикам знать, где найти хорошую информацию!
 
-## How to Contribute
+[Посмотреть баннеры](https://www.phptherightway.com/banners.html)
 
-You should read the `CONTRIBUTING.md` file for precise instructions and tips. But, if you prefer a TL;DR:
+## Как внести свой вклад
 
-1. Fork and edit
-2. Optionally install [Ruby](https://rvm.io/rvm/install/) with [Jekyll](https://github.com/mojombo/jekyll/) gem to preview locally
-3. Submit pull request for consideration
+Для получения более точных инструкции и советов, необходимо прочитать файл
+`CONTRIBUTING.md`, но если вы предпочитаете TL;DR (не любите читать длинные тексты):
 
-### Contributor Style Guide
+1. Сделайте ветвление (далее **форк** от _англ. Fork_) и редактируйте
+2. Дополнительно (необязательно) установите [Ruby](https://rvm.io/rvm/install/)
+с [Jekyll](https://github.com/mojombo/jekyll/) gem для локального предпросмотра
+3. Отправьте (pull request) запрос на рассмотрение
 
-1. Use American English spelling (_primary English repo only_)
-2. Use four (4) spaces to indent text; do not use tabs.
-3. Wrap all text to 120 characters.
-4. Code samples should adhere to PSR-1 or higher.
+### Руководство по оформлению для автора
 
-## Where
+1. Используйте правописание американского английского (_только для английского репозитория_)
+2. Используйте четыре (4) пробела для отступов текста; не используйте табуляцию.
+3. Ограничивайте длину строки 120 символами.
+4. Примеры кода должны придерживаться стандарта PSR-1 или выше.
+
+## Где
 
 <https://www.phptherightway.com>
 
@@ -48,7 +52,7 @@ You should read the `CONTRIBUTING.md` file for precise instructions and tips. Bu
 * [Srpski](https://phpsrbija.github.io/php-the-right-way/)
 * [Türkçe](https://hkulekci.github.io/php-the-right-way/)
 * [български](https://bg.phptherightway.com)
-* [Русский язык](https://getjump.github.io/ru-php-the-right-way)
+* [Русский](https://nazares.github.io/php-the-right-way/)
 * [Українська](https://iflista.github.io/php-the-right-way/)
 * [العربية](https://adaroobi.github.io/php-the-right-way/)
 * [فارسى](https://novid.github.io/php-the-right-way/)
@@ -58,34 +62,38 @@ You should read the `CONTRIBUTING.md` file for precise instructions and tips. Bu
 * [简体中文](https://laravel-china.github.io/php-the-right-way/)
 * [繁體中文](https://laravel-taiwan.github.io/php-the-right-way)
 
-### Translations
+### Переводы
 
-If you are interested in translating _PHP: The Right Way_, fork this repo on GitHub and publish your localized fork to your own GitHub Pages account. We'll link to your translation from the primary document.
+Если вы заинтересовыны в переводе _PHP: The Right Way_, сделайте форк этого репозитория на GitHub и опубликуйте свой локализованный форк в своей учетной записи GitHub Pages. Мы свяжем ваш перевод с основным документом.
 
-To avoid fragmentation and reader confusion, please choose one of these options:
+Для избежания фрагментации и замешательства со стороны читателя, пожалуйста выберите один из вариантов:
 
-1. We link to your GitHub Pages fork with `[username].github.io/php-the-right-way`
-2. We link to your GitHub Pages fork with a subdomain (e.g. "ru.phptherightway.com")
+1. Мы ссылаемся на ваш форк GitHub Pages c `[username].github.io/php-the-right-way`
+2. Мы ссылаемся на ваш форк GitHub Pages с поддоменом (например, «ru.phptherightway.com»)
 
-If you use a subdomain, enter the subdomain into the `CNAME` file, and ask us to setup DNS for you. If you do not use a subdomain, remove the `CNAME` file entirely else your fork will not build when pushed.
+Если вы используете поддомен, введите поддомен в файл `CNAME`, и попросите нас настроить для вас DNS. Если вы не используете поддомен, удалите файл `CNAME` в противном случае ваш форк не будет собран при отправке.
 
-Add information about your translation in the [wiki page](https://github.com/codeguy/php-the-right-way/wiki/Translations).
+Добавьте информацию о вашем переводе в [wiki page](https://github.com/codeguy/php-the-right-way/wiki/Translations).
 
-When your translation is ready, open an issue on the Issue Tracker to let us know.
+Когда ваш перевод будет готов, откройте вопрос в Issue Tracker, для того чтобы дать нам знать.
 
-## Why
+## Зачем
 
-There's been a lot of discussion lately about how the PHP community lacks sufficient, credible information for programmers new to PHP. This repository aims to solve this problem.
+В последнее время было много дискуссий о том, что PHP сообществу не хватает достаточно достоверной информации для начинающих PHP программистов. Этот репозиторий нацелен на то чтобы решить эту проблему.
 
-## Who
+## Кто
 
-My name is [Josh Lockhart](https://twitter.com/codeguy). I'm the author of the [Slim Framework](https://www.slimframework.com/), and I work for [New Media Campaigns](https://www.newmediacampaigns.com/).
+Меня зовут [Josh Lockhart](https://twitter.com/codeguy). Я автор [Slim Framework](https://www.slimframework.com/), и я работаю на [New Media Campaigns](https://www.newmediacampaigns.com/).
 
-### Collaborators
+### Соавторы
 
 * [Kris Jordan](https://krisjordan.com/)
 * [Phil Sturgeon](https://phil.tech/)
 
-## License
+### Русский перевод
+
+* [Sergei Nazarenko](https://nazares.ru/)
+
+## Лицензия
 
 [Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License](https://creativecommons.org/licenses/by-nc-sa/3.0/)
