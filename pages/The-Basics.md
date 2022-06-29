@@ -1,12 +1,12 @@
 ---
 layout: page
-title:  The Basics
+title:  Основы
 sitemap: true
 ---
 
-# The Basics
+# Основы
 
-## Comparison operators
+## Операторы сравнения
 
 Comparison operators are an often overlooked aspect of PHP, which can lead to many unexpected outcomes. One such
 problem stems from strict comparisons (the comparison of booleans as integers).
@@ -31,7 +31,7 @@ if (strpos('testing', 'test') !== false) {    // true, as strict comparison was 
 }
 {% endhighlight %}
 
-* [Comparison operators](http://php.net/language.operators.comparison)
+*[Comparison operators](http://php.net/language.operators.comparison)
 * [Comparison table](http://php.net/types.comparisons)
 * [Comparison cheatsheet](http://phpcheatsheets.com/index.php?page=compare)
 
@@ -106,7 +106,7 @@ function test($a)
 }
 {% endhighlight %}
 
-* [Switch statements](http://php.net/control-structures.switch)
+*[Switch statements](http://php.net/control-structures.switch)
 * [PHP switch](http://phpswitch.com/)
 
 ## Global namespace
@@ -131,17 +131,16 @@ function array()
 }
 {% endhighlight %}
 
-* [Global space](http://php.net/language.namespaces.global)
+*[Global space](http://php.net/language.namespaces.global)
 * [Global rules](http://php.net/userlandnaming.rules)
 
-## Strings
+## Строки
 
-### Concatenation
+### Конкатенация
 
 - If your line extends beyond the recommended line length (120 characters), consider concatenating your line
 - For readability it is best to use concatenation operators over concatenating assignment operators
 - While within the original scope of the variable, indent when concatenation uses a new line
-
 
 {% highlight php %}
 <?php
@@ -171,7 +170,6 @@ variables.
 If using single quotes, you could enter a variable name into a string like so: `'some $thing'`, and you would see the
 exact output of `some $thing`. If using double quotes, that would try to evaluate the `$thing` variable name and show
 errors if no variable was found.
-
 
 {% highlight php %}
 <?php
@@ -327,7 +325,6 @@ application. Trying to rewrite code to use one or the other is always an exercis
 optimization unless you really understand the meaning and impact of the differences.
 
 * [Disproving the Single Quotes Performance Myth](http://nikic.github.io/2012/01/09/Disproving-the-Single-Quotes-Performance-Myth.html)
-
 
 ## Ternary operators
 

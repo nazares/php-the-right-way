@@ -52,7 +52,7 @@ _Этот раздел был первоначально написан [Alex Ca
 
 Чтобы быть уверенным что ваши строки предаются от PHP к MySQL как UTF-8, убедитесь в том что ваша база данных и таблицы установлены в `utf8mb4` набор символов и сопоставление, и то что вы используете набор символов `utf8mb4` в строке подключения PDO. Смотрите пример ниже. Это _критически важно_.
 
-Обратите внимание что вы должны использовать набор символов `utf8mb4` для полноценной поддержки UTF-8, а не `utf8`! [Смотрите дальнейшее чтение](#further-reading-1)
+Обратите внимание что вы должны использовать набор символов `utf8mb4` для полноценной поддержки UTF-8, а не `utf8`! [Смотрите дальнейшее чтение](#further-reading-utf8)
 чтобы узнать почему.
 
 ### UTF-8 на уровне браузера
@@ -140,7 +140,7 @@ header('Content-Type: text/html; charset=UTF-8'); // Unnecessary if your default
 </html>
 {% endhighlight %}
 
-### Дальнейшее чтение {#further-reading-1}
+### Дальнейшее чтение {#further-reading-utf8}
 
 * [PHP Manual: String Operations](https://secure.php.net/language.operators.string)
 * [PHP Manual: String Functions](https://secure.php.net/ref.strings)
