@@ -1,15 +1,15 @@
 ---
-title:   Working with UTF-8
+title:   Работа с UTF-8
 isChild: true
 anchor:  php_and_utf8
 ---
 
-## Working with UTF-8 {#php_and_utf8_title}
+## Работа с UTF-8 {#php_and_utf8_title}
 
-_This section was originally written by [Alex Cabal](https://alexcabal.com/) over at
-[PHP Best Practices](https://phpbestpractices.org/#utf-8) and has been used as the basis for our own UTF-8 advice_.
+_Этот раздел был первоначально написан [Alex Cabal](https://alexcabal.com/) по адресу
+[Лучшие практики PHP](https://phpbestpractices.org/#utf-8) и использовались в качестве основы для наших собственных рекомендаций по UTF-8_.
 
-### There's no one-liner. Be careful, detailed, and consistent
+### Здесь нет краткости. Будьте внимательны, подробны и последовательны
 
 В данный момент PHP не поддерживает Unicode на низком уровне. Есть несколько способов обеспечения
 корректной обработки строк UTF-8, но это не легко, и требуется копаться, почти во всех уровнях
@@ -52,21 +52,21 @@ _This section was originally written by [Alex Cabal](https://alexcabal.com/) ove
 
 Чтобы быть уверенным что ваши строки предаются от PHP к MySQL как UTF-8, убедитесь в том что ваша база данных и таблицы установлены в `utf8mb4` набор символов и сопоставление, и то что вы используете набор символов `utf8mb4` в строке подключения PDO. Смотрите пример ниже. Это _критически важно_.
 
-Обратите внимание что вы должны использовать набор символов `utf8mb4` для полноценной поддержки UTF-8, а не `utf8`! [Смотрите дальнейшее чтение](#further-reading)
+Обратите внимание что вы должны использовать набор символов `utf8mb4` для полноценной поддержки UTF-8, а не `utf8`! [Смотрите дальнейшее чтение](#further-reading-1)
 чтобы узнать почему.
 
 ### UTF-8 на уровне браузера
 
 Используйте `mb_http_output()` функцию чтобы обеспечить UTF-8 вывод вашего PHP скрипта в браузер.
 
-The browser will then need to be told by the HTTP response that this page should be considered as UTF-8. Today, it is common to set the character set in the HTTP response header like this:
+Затем браузер должен будет сообщить ответом HTTP, что эту страницу следует рассматривать как UTF-8. Сегодня принято устанавливать набор символов в заголовке ответа HTTP следующим образом:
 
 {% highlight php %}
 <?php
 header('Content-Type: text/html; charset=UTF-8')
 {% endhighlight %}
 
-The historic approach to doing that was to include the [charset `<meta>` tag](http://htmlpurifier.org/docs/enduser-utf8.html) in your page's `<head>` tag.
+Исторический подход к этому заключался в том, чтобы включить [тег charset `<meta>`](http://htmlpurifier.org/docs/enduser-utf8.html) в тег `<head>` вашей страницы.
 
 {% highlight php %}
 <?php
@@ -140,7 +140,7 @@ header('Content-Type: text/html; charset=UTF-8'); // Unnecessary if your default
 </html>
 {% endhighlight %}
 
-### Further reading
+### Дальнейшее чтение {#further-reading-1}
 
 * [PHP Manual: String Operations](https://secure.php.net/language.operators.string)
 * [PHP Manual: String Functions](https://secure.php.net/ref.strings)
