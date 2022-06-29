@@ -13,7 +13,7 @@ _Предупреждение для новичков: i18n и l10n — это �
 
 - **Интернационализация** — это когда вы организуете свой код, чтобы его можно было адаптировать к различным языкам или регионам без
 рефакторинга. Это действие обычно делается один раз - желательно в начале проекта, иначе вам, вероятно, потребуются какие-то огромные изменения в исходниках!
-- **Локализацция** происходит, когда вы адаптируете интерфейс (в основном) путем перевода содержимого на основе работы i18n, проделанной
+- **Локализация** происходит, когда вы адаптируете интерфейс (в основном) путем перевода содержимого на основе работы i18n, проделанной
 ранее. Обычно это делается каждый раз, когда требуется поддержка нового языка или региона, и обновляется при добавлении новых частей интерфейса, поскольку они должны быть доступны на всех поддерживаемых языках.
 - **Множественность** определяет правила, необходимые между разными языками для взаимодействия строк, содержащих числа и счетчики. Например,
 в английском языке, когда у вас есть только один элемент, он стоит в единственном числе, а все, что отличается от него, называется множественным числом; множественное число в этом языке обозначается добавлением S после некоторых слов, а иногда и изменением его частей. В
@@ -22,39 +22,34 @@ _Предупреждение для новичков: i18n и l10n — это �
 
 ## Распространенные способы реализации
 
-The easiest way to internationalize PHP software is by using array files and using those strings in templates, such as
-`<h1><?=$TRANS['title_about_page']?></h1>`. This way is, however, hardly recommended for serious projects, as it poses
-some maintenance issues along the road - some might appear in the very beginning, such as pluralization. So, please,
-don't try this if your project will contain more than a couple of pages.
+Самый простой способ интернационализировать софт PHP - это использование массива файлов и строк в шаблонах, таких как
+`<h1><?=$TRANS['title_about_page']?></h1>`. Однако, этот способ, вряд ли рекомендован для серьезных проектов, так как это предполагает
+некоторые проблемы в обслуживании на пути - некоторые могут появиться в самом начале, такие как
+множественность.Так что, пожалуйста, не пробуйте это, если ваш проект будет состоять из более чем пары страниц.
 
-The most classic way and often taken as reference for i18n and l10n is a [Unix tool called `gettext`][gettext]. It dates
-back to 1995 and is still a complete implementation for translating software. It is easy enough to get running, while
-still sporting powerful supporting tools. It is about Gettext we will be talking here. Also, to help you not get messy
-over the command-line, we will be presenting a great GUI application that can be used to easily update your l10n source
+Самый классический и часто используемый способ для i18n и l10n - это [Unix инструмент называющийся `gettext`][gettext]. Он берет своё начало
+с 1995 и все еще является совершенной реализацией для перевода программного обеспечения. С ним достаточно легко начать работать, пока
+все еще обладающий недюжинной силой, инструмент поддержки. О Gettext мы поговорим здесь. Так же , чтобы помочь вам не запутаться
+в командной строке, мы представим замечательное GUI приложение которое может быть использовано для легкого обновления вашего l10n исходника
 
-### Other tools
+### Другие инструменты
 
-There are common libraries used that support Gettext and other implementations of i18n. Some of them may seem easier to
-install or sport additional features or i18n file formats. In this document, we focus on the tools provided with the
-PHP core, but here we list others for completion:
+Есть общеиспользуемые библиотеки которые поддерживают Gettext и другие реализации i18n. Некоторые из них могут показаться более простыми
+в установке или поддержке дополнительных возможностей или i18n файловых форматов. В этом документе, мы фокусируемся на инструментах поставляемых с ядром PHP, но здесь, для полноты, мы перечислим и другие:
 
-- [aura/intl][aura-intl]: Provides internationalization (I18N) tools, specifically package-oriented per-locale message
-translation. It uses array formats for message. Does not provide a message extractor, but does provide advanced
-message formatting via the `intl` extension (including pluralized messages).
-- [oscarotero/Gettext][oscarotero]: Gettext support with an OO interface; includes improved helper functions, powerful
-extractors for several file formats (some of them not supported natively by the `gettext` command), and can also export
-to other formats besides `.mo/.po` files. Can be useful if you need to integrate your translation files into other
-parts of the system, like a JavaScript interface.
-- [symfony/translation][symfony]: supports a lot of different formats, but recommends using verbose XLIFF's. Doesn't
-include helper functions nor a built-in extractor, but supports placeholders using `strtr()` internally.
-- [laminas/laminas-i18n][laminas]: supports array and INI files, or Gettext formats. Implements a caching layer to save you from
-reading the filesystem every time. It also includes view helpers, and locale-aware input filters and validators.
-However, it has no message extractor.
+- [aura/intl][aura-intl]: Предоставляет инструменты интернационализации (I18N), специально пакетно-ориентированный перевод сообщений для каждой локали. Он использует форматы массива для сообщения. Не предоставляет экстрактор сообщения, но предоставляет расширенное форматирование сообщения через `intl` расширение (включая множественные сообщения).
+- [oscarotero/Gettext][oscarotero]: поддержка Gettext с ОО интерфейсом; включая улучшенные вспомогательные функции, мощные экстракторы для некоторых форматов файла (некоторые из них изначально не поддерживаются командой `gettext`), а также экспорт
+в другие форматы помимо `.mo/.po` файлов. Может быть полезно если нужно интегрировать ваши файлы перевода в другие
+части системы, например JavaScript интерфейс.
+- [symfony/translation][symfony]: поддерживает много разных форматов, но рекомендуется использовать многословный XLIFF. Не
+включает вспомогательных функций а также встроенных экстракторов, но внутренне поддерживает заполнители используя `strtr()`.
+- [laminas/laminas-i18n][laminas]: поддерживает массив и INI файлы, или Gettext форматы. Реализует уровень кеширования, чтобы избавить вас от необходимости чтения файловой системы, каждый раз. Также включает вспомогательные функции просмотра, входные фильтры с учетом локали и валидаторы.
+Однако, не имеет экстракторов сообщения.
 
-Other frameworks also include i18n modules, but those are not available outside of their codebases:
+Другие фреймворки также включают в себя i18n модули, но они не доступны за пределами их кодовой базы:
 
-- [Laravel] supports basic array files, has no automatic extractor but includes a `@lang` helper for template files.
-- [Yii] supports array, Gettext, and database-based translation, and includes a messages extractor. It is backed by the
+- [Laravel] поддерживает вазовый массив файлов, не имеет автоматического экстрактора но включает вспомогательную функцию `@lang` для файлов шаблонов.
+- [Yii] поддерживает массив, Gettext, перевод на основе базы данных, и включает экстрактор сообщений. It is backed by the
 [`Intl`][intl] extension, available since PHP 5.3, and based on the [ICU project]; this enables Yii to run powerful
 replacements, like spelling out numbers, formatting dates, times, intervals, currency, and ordinals.
 
@@ -63,7 +58,7 @@ you can use the original gettext toolchain (including Poedit) as described in th
 
 ## Gettext
 
-### Installation
+### Установка
 
 You might need to install Gettext and the related PHP library by using your package manager, like `apt-get` or `yum`.
 After installed, enable it by adding `extension=gettext.so` (Linux/Unix) or `extension=php_gettext.dll` (Windows) to
@@ -73,9 +68,9 @@ Here we will also be using [Poedit] to create translation files. You will probab
 manager; it is available for Unix, Mac, and Windows, and can be [downloaded for free on their website][poedit_download]
 as well.
 
-### Structure
+### Структура
 
-#### Types of files
+#### Типы файлов
 
 There are three files you usually deal with while working with gettext. The main ones are PO (Portable Object) and
 MO (Machine Object) files, the first being a list of readable "translated objects" and the second, the corresponding
@@ -132,7 +127,7 @@ fixed `LC_MESSAGES` folder that will contain all your PO/MO pairs. Example:
        └─ ...
 {% endhighlight %}
 
-### Plural forms
+### Множественные формы
 
 As we said in the introduction, different languages might sport different plural rules. However, gettext saves us from
 this trouble once again. When creating a new `.po` file, you will have to declare the [plural rules][plural] for that
@@ -226,7 +221,7 @@ The [Gettext manual][manual] favors the first approach as, in general, it is eas
 case of trouble. That is how we will be working here as well. However, the [Symfony documentation][symfony-keys] favors
 keyword-based translation, to allow for independent changes of all translations without affecting templates as well.
 
-### Everyday usage
+### Каждодневное использование
 
 In a typical application, you would use some Gettext functions while writing static text in your pages. Those sentences
 would then appear in `.po` files, get translated, compiled into `.mo` files and then, used by Gettext when rendering
