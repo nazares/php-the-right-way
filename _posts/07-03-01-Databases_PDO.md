@@ -1,10 +1,10 @@
 ---
 isChild: true
-title:   PDO Extension
+title:   Расширение PDO
 anchor:  pdo_extension
 ---
 
-## PDO Extension {#pdo_extension_title}
+## Расширение PDO {#pdo_extension_title}
 
 [PDO] is a database connection abstraction library &mdash; built into PHP since 5.1.0 &mdash; that provides a common
 interface to talk with many different databases. For example, you can use basically identical code to interface with
@@ -69,7 +69,6 @@ set to NULL. If you don't do this explicitly, PHP will automatically close the c
 unless of course you are using persistent connections.
 
 * [Learn about PDO connections]
-
 
 [pdo]: https://secure.php.net/pdo
 [SQL Injection]: http://wiki.hashphp.org/Validation
