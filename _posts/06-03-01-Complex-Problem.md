@@ -5,34 +5,32 @@ anchor:  complex_problem
 
 ## Complex Problem {#complex_problem_title}
 
-If you have ever read about Dependency Injection then you have probably seen the terms *"Inversion of Control"* or
-*"Dependency Inversion Principle"*. These are the complex problems that Dependency Injection solves.
+Если вы когда либо читали о Внедрении зависимости, то вероятнее всего знакомы с терминами *"Инверсия управления"* или
+*"Принцип инверсии зависимостей"*. These are the complex problems that Dependency Injection solves.
 
-### Inversion of Control
+### Инверсия управления
 
-Inversion of Control is as it says, "inverting the control" of a system by keeping organizational control entirely
-separate from our objects. In terms of Dependency Injection, this means loosening our dependencies by controlling and
-instantiating them elsewhere in the system.
+Инверсия управления как говорится, "инвертирует управление" системы, сохраняя организационное управление полноценно
+отделяясь от наших объектов. В терминологии Инверсии управления, означает потерю наших зависимостей управляя и
+и реализуя их где либо в системе.
 
-For years, PHP frameworks have been achieving Inversion of Control, however, the question became, which part of control
-are we inverting, and where to? For example, MVC frameworks would generally provide a super object or base controller
-that other controllers must extend to gain access to its dependencies. This **is** Inversion of Control, however,
-instead of loosening dependencies, this method simply moved them.
+На протяжении нескольких лет, PHP фреймворками была достигнута Инверсия Управления, однако, стоял вопрос, какую часть управления
+мы инвертируем, и где? Например, MVC фреймворки обычно предоставляют супер объект или, основной контроллер
+которые другие контроллеры должны расширять, получая доступ к их зависимостям. Это **и есть** Инверсия управления, однако,
+вместо потери зависимостей, этот метод просто перемещает их.
 
-Dependency Injection allows us to more elegantly solve this problem by only injecting the dependencies we need, when we
-need them, without the need for any hard coded dependencies at all.
+Внедрение зависимости позволяет нам более элегантно решить эту проблему, внедряя нужные зависимости,
+только тогда, когда мы нуждаемся в них, без необходимости сложных зависимостей вообще.
 
 ### S.O.L.I.D
 
-#### Single Responsibility Principle
+#### Принцип единственной ответственности
 
-The Single Responsibility Principle is about actors and high-level architecture. It states that “A class should have
-only one reason to change.” This means that every class should *only* have responsibility over a single part of the
-functionality provided by the software. The largest benefit of this approach is that it enables improved code
-*reusability*. By designing our class to do just one thing, we can use (or re-use) it in any other program without
-changing it.
+Принцип единственной ответственности об актерах и высокоуровневой архитектуре. Это состояние когда “Класс A должен иметь
+только одну причину для изменения.” Это значит, что каждый класс должен иметь ответственность *только* над одной частью функциональности предоставляемой ПО. Огромнейшая польза от этого подхода в том что он включает *переиспользование*
+улучшенного кода. Спроектировав наш класс для выполнения только одной задачи, мы можем использовать (или переиспользовать) его в любой другой программе, не изменяя.
 
-#### Open/Closed Principle
+#### Принцип Открытости/Закрытости
 
 The Open/Closed Principle is about class design and feature extensions. It states that “Software entities (classes,
 modules, functions, etc.) should be open for extension, but closed for modification.” This means that we should design
