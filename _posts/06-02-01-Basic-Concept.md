@@ -1,15 +1,16 @@
 ---
+title: Основная концепция
 isChild: true
 anchor:  basic_concept
 ---
 
-## Basic Concept {#basic_concept_title}
+## Основная концепция {#basic_concept_title}
 
-We can demonstrate the concept with a simple, yet naive example.
-
-Here we have a `Database` class that requires an adapter to speak to the database. We instantiate the adapter in the
-constructor and create a hard dependency. This makes testing difficult and means the `Database` class is very tightly
-coupled to the adapter.
+Мы можем продемонстрировать концепцию, простым и примитивным примером.
+У нас есть класс `Database`, который требует адаптер для общения с базой данных.
+Here we have a `Database` class that requires an adapter to speak to the database. Мы реализуем адаптер в
+конструкторе и создаем жесткую зависимость. Это делает тестирование сложным и означает что класс `Database`, очень тесно
+связан с адаптером.
 
 {% highlight php %}
 <?php
@@ -28,7 +29,7 @@ class Database
 class MysqlAdapter {}
 {% endhighlight %}
 
-This code can be refactored to use Dependency Injection and therefore loosen the dependency.
+Этот код может быть переработан с использованием Внедрения Зависимости и следовательно ослабит зависимости.
 
 {% highlight php %}
 <?php
@@ -47,6 +48,7 @@ class Database
 class MysqlAdapter {}
 {% endhighlight %}
 
-Now we are giving the `Database` class its dependency rather than creating it itself. We could even create a method
-that would accept an argument of the dependency and set it that way, or if the `$adapter` property was `public` we
-could set it directly.
+Теперь мы отдаем классу `Database` его зависимость а не создаем его самого. Мы даже могли бы
+создать метод
+который принимал бы аргумент зависимости и устанавливал его этим способом, или если свойство `$adapter` было `public`, мы
+могли бы установить его напрямую.

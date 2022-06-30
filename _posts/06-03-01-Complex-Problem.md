@@ -22,14 +22,14 @@ instead of loosening dependencies, this method simply moved them.
 Dependency Injection allows us to more elegantly solve this problem by only injecting the dependencies we need, when we
 need them, without the need for any hard coded dependencies at all.
 
-### S.O.L.I.D.
+### S.O.L.I.D
 
 #### Single Responsibility Principle
 
 The Single Responsibility Principle is about actors and high-level architecture. It states that “A class should have
-only one reason to change.” This means that every class should _only_ have responsibility over a single part of the
+only one reason to change.” This means that every class should *only* have responsibility over a single part of the
 functionality provided by the software. The largest benefit of this approach is that it enables improved code
-_reusability_. By designing our class to do just one thing, we can use (or re-use) it in any other program without
+*reusability*. By designing our class to do just one thing, we can use (or re-use) it in any other program without
 changing it.
 
 #### Open/Closed Principle
@@ -38,7 +38,7 @@ The Open/Closed Principle is about class design and feature extensions. It state
 modules, functions, etc.) should be open for extension, but closed for modification.” This means that we should design
 our modules, classes and functions in a way that when a new functionality is needed, we should not modify our existing
 code but rather write new code that will be used by existing code. Practically speaking, this means that we should write
-classes that implement and adhere to _interfaces_, then type-hint against those interfaces instead of specific classes.
+classes that implement and adhere to *interfaces*, then type-hint against those interfaces instead of specific classes.
 
 The largest benefit of this approach is that we can very easily extend our code with support for something new without
 having to modify existing code, meaning that we can reduce QA time, and the risk for negative impact to the application
@@ -59,7 +59,7 @@ type (e.g., `FileInterface`) to another we don't need to change anything else in
 
 #### Interface Segregation Principle
 
-The Interface Segregation Principle (ISP) is about _business-logic-to-clients_ communication. It states that “No client
+The Interface Segregation Principle (ISP) is about *business-logic-to-clients* communication. It states that “No client
 should be forced to depend on methods it does not use.” This means that instead of having a single monolithic interface
 that all conforming classes need to implement, we should instead provide a set of smaller, concept-specific interfaces
 that a conforming class implements one or more of.

@@ -382,21 +382,22 @@ Gettext/Poedit не имеет права изменять ваши исходн
 или, может быть, причудливую `_r()`, которая объединит вызовы `gettext()` и `sprintf()`. Другие библиотеки, такие как
 [Gettext от oscarotero][oscarotero], также предоставляют подобные вспомогательные функции.
 
-В этих случаях, you'll need to instruct the Gettext utility on how to extract the strings from those new functions.
-Don't be afraid; it is very easy. It is just a field in the `.po` file, or a Settings screen on Poedit. In the editor,
-that option is inside "Catalog > Properties > Source keywords". Remember: Gettext already knows the default functions
-for many languages, so don’t be afraid if that list seems empty. You need to include there the specifications of those
-new functions, following [a specific format][func_format]:
+В этих случаях, нужно дать инструкции Gettext утилите, как извлекать строки из этих новых функций.
+Не бойтесь; это очень легко. Это просто поле в `.po` файле, или экран Settings в Poedit. В редакторе,
+эта опция находится внутри "Catalog > Properties > Source keywords". Помните: Gettext уже знает функции по-умолчанию
+для многих языков, так что не бойтесь, что этот список выглядит пустым. Необходимо включить там спецификации этих
+новых функций, следуя [определенному формату][func_format]:
 
-- if you create something like `t()` that simply returns the translation for a string, you can specify it as `t`.
-Gettext will know the only function argument is the string to be translated;
-- if the function has more than one argument, you can specify in which one the first string is - and if needed, the
-plural form as well. For instance, if we call our function like this: `__('one user', '%d users', $number)`, the
-specification would be `__:1,2`, meaning the first form is the first argument, and the second form is the second
-argument. If your number comes as the first argument instead, the spec would be `__:2,3`, indicating the first form is
-the second argument, and so on.
+- если вы создаете что-то подобное `t()` это просто вернет перевод для строки, вы можете определить это как `t`.
+Gettext будет знать, что только аргумент функции - строка будет переведена;
+- если у функции больше одного аргумента, вы можете определить в каком из них первая строка - и если нужно,
+так же множественную форму. Например, если мы вызываем нашу функцию как: `__('one user', '%d users', $number)`,
+спецификацией будет `__:1,2`, означает первая форма - это первый аргумент, и вторая форма - второй
+аргумент. Если вместо этого в качестве первого аргумента используется ваше число, спецификация
+будет `__:2,3`, что указывает на то, что первая форма является
+вторым аргументом, и т.д.
 
-After including those new rules in the `.po` file, a new scan will bring in your new strings just as easy as before.
+После включения этих новых правил в файл `.po`, новое сканирование принесет ваши новые строки так же просто, как и раньше.
 
 ### Рекомендации
 
