@@ -370,17 +370,17 @@ Gettext/Poedit не имеет права изменять ваши исходн
 
 #### Возможные проблемы с кэшированием
 
-If you are running PHP as a module on Apache (`mod_php`), you might face issues with the `.mo` file being cached. It
-happens the first time it is read, and then, to update it, you might need to restart the server. On Nginx and PHP5 it
-usually takes only a couple of page refreshes to refresh the translation cache, and on PHP7 it is rarely needed.
+Если вы используете PHP как модуль Apache (`mod_php`), у вас могут возникнуть проблемы с кешированием файла `.mo`.
+Это происходит при первом чтении, а затем, чтобы обновить его, может потребоваться перезагрузка сервера. На Nginx и PHP5
+обычно требуется всего пара обновлений страницы, чтобы обновить кеш перевода, а на PHP7 это требуется редко.
 
-#### Additional helper functions
+#### Дополнительные вспомогательные функции
 
-As preferred by many people, it is easier to use `_()` instead of `gettext()`. Many custom i18n libraries from
-frameworks use something similar to `t()` as well, to make translated code shorter. However, that is the only function
-that sports a shortcut. You might want to add in your project some others, such as `__()` or `_n()` for `ngettext()`,
-or maybe a fancy `_r()` that would join `gettext()` and `sprintf()` calls. Other libraries, such as
-[oscarotero's Gettext][oscarotero] also provide helper functions like these.
+Многие предпочитают использовать `_()` вместо `gettext()`. Многие пользовательские библиотеки i18n из
+фреймворков также используют что-то похожее на `t()`, чтобы сделать переведенный код короче. Однако это единственная функция,
+которая имеет ярлык. Возможно, вы захотите добавить в свой проект некоторые другие, такие как `__()` или `_n()` для `ngettext()`,
+или, может быть, причудливую `_r()`, которая объединит вызовы `gettext()` и `sprintf()`. Другие библиотеки, такие как
+[Gettext от oscarotero][oscarotero], также предоставляют подобные вспомогательные функции.
 
 In those cases, you'll need to instruct the Gettext utility on how to extract the strings from those new functions.
 Don't be afraid; it is very easy. It is just a field in the `.po` file, or a Settings screen on Poedit. In the editor,
