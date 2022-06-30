@@ -49,59 +49,59 @@ _Предупреждение для новичков: i18n и l10n — это �
 Другие фреймворки также включают в себя i18n модули, но они не доступны за пределами их кодовой базы:
 
 - [Laravel] поддерживает вазовый массив файлов, не имеет автоматического экстрактора но включает вспомогательную функцию `@lang` для файлов шаблонов.
-- [Yii] поддерживает массив, Gettext, перевод на основе базы данных, и включает экстрактор сообщений. It is backed by the
-[`Intl`][intl] extension, available since PHP 5.3, and based on the [ICU project]; this enables Yii to run powerful
-replacements, like spelling out numbers, formatting dates, times, intervals, currency, and ordinals.
+- [Yii] поддерживает массив, Gettext, перевод на основе базы данных, и включает экстрактор сообщений. Поддерживается
+расширением [`Intl`][intl], доступным, начиная с PHP 5.3, и основанным на [ICU project]; это позволяет Yii выполнять
+мощные замены, такие как прописывание чисел, форматирование дат, времени, интервалов, валюты и порядковых номеров.
 
-If you decide to go for one of the libraries that provide no extractors, you may want to use the gettext formats, so
-you can use the original gettext toolchain (including Poedit) as described in the rest of the chapter.
+Если вы решите использовать одну из библиотек, не предоставляющих экстракторов, вы можете использовать форматы
+gettext, чтобы вы могли использовать исходную цепочку инструментов gettext (включая Poedit), как описано в оставшейся части главы.
 
 ## Gettext
 
 ### Установка
 
-You might need to install Gettext and the related PHP library by using your package manager, like `apt-get` or `yum`.
-After installed, enable it by adding `extension=gettext.so` (Linux/Unix) or `extension=php_gettext.dll` (Windows) to
-your `php.ini`.
+Возможно, вам потребуется установить Gettext и связанную с ним библиотеку PHP с помощью вашего менеджера пакетов, такого
+как `apt-get` или `yum`. После установки включите его, добавив `extension=gettext.so` (Linux/Unix) или
+`extension=php_gettext.dll` (Windows) в ваш `php.ini`.
 
-Here we will also be using [Poedit] to create translation files. You will probably find it in your system's package
-manager; it is available for Unix, Mac, and Windows, and can be [downloaded for free on their website][poedit_download]
-as well.
+Здесь мы также будем использовать [Poedit] для создания файлов перевода. Вы, вероятно, найдете его в менеджере пакетов
+вашей системы; он доступен для Unix, Mac и Windows, а также может быть [бесплатно загружен на их веб-сайте][poedit_download].
 
 ### Структура
 
 #### Типы файлов
 
-There are three files you usually deal with while working with gettext. The main ones are PO (Portable Object) and
-MO (Machine Object) files, the first being a list of readable "translated objects" and the second, the corresponding
-binary to be interpreted by gettext when doing localization. There's also a POT (Template) file, which simply contains
-all existing keys from your source files, and can be used as a guide to generate and update all PO files. Those template
-files are not mandatory: depending on the tool you are using to do l10n, you can go just fine with only PO/MO files.
-You will always have one pair of PO/MO files per language and region, but only one POT per domain.
+Есть три файла, с которыми вы обычно имеете дело при работе с gettext. Основными из них являются файлы PO (Portable Object)
+и MO (Machine Object), первый из которых представляет собой список читаемых «переведенных объектов», а второй — соответствующий
+двоичный файл, который должен интерпретироваться gettext при выполнении локализации. Существует также файл POT (шаблон),
+который просто содержит все существующие ключи из ваших исходных файлов и может использоваться в качестве руководства для
+создания и обновления всех файлов PO. Эти файлы шаблонов не являются обязательными: в зависимости от инструмента, который
+вы используете для выполнения l10n, вы вполне можете обойтись только файлами PO/MO. У вас всегда будет одна пара файлов
+PO/MO для каждого языка и региона, но только одна POT для каждого домена.
 
-### Domains
+### Домены
 
-There are some cases, in big projects, where you might need to separate translations when the same words convey
-different meaning given a context. In those cases, you split them into different _domains_. They are, basically, named
-groups of POT/PO/MO files, where the filename is the said _translation domain_. Small and medium-sized projects usually,
-for simplicity, use only one domain; its name is arbitrary, but we will be using "main" for our code samples.
-In [Symfony] projects, for example, domains are used to separate the translation for validation messages.
+В некоторых случаях в больших проектах вам может понадобиться разделить переводы, когда одни и те же слова имеют разное
+значение в зависимости от контекста. В этих случаях вы разделяете их на разные _домены_. По сути, это именованные группы
+файлов POT/PO/MO, где имя файла является указанным _доменом перевода_. Малые и средние проекты обычно для простоты используют
+только один домен; его имя произвольное, но мы будем использовать «main» для наших примеров кода. Например, в проектах
+[Symfony] домены используются для разделения перевода сообщений проверки.
 
-#### Locale code
+#### Locale коды
 
-A locale is simply a code that identifies one version of a language. It is defined following the [ISO 639-1][639-1] and
-[ISO 3166-1 alpha-2][3166-1] specs: two lower-case letters for the language, optionally followed by an underline and two
-upper-case letters identifying the country or regional code. For [rare languages][rare], three letters are used.
+Locale - это просто код который идентифицирует версию одного языка. Это определено следующими [ISO 639-1][639-1] и
+[ISO 3166-1 alpha-2][3166-1] спецификациями: две строчные буквы для языка, необязательно с последующим подчеркиванием и двумя
+заглавными буквами обозначающими код страны или региона. Для [редких языков][rare], используются три буквы.
 
-For some speakers, the country part may seem redundant. In fact, some languages have dialects in different
-countries, such as Austrian German (`de_AT`) or Brazilian Portuguese (`pt_BR`). The second part is used to distinguish
-between those dialects - when it is not present, it is taken as a "generic" or "hybrid" version of the language.
+Для некоторых говорящих часть страны может показаться избыточной. На самом деле некоторые языки имеют диалекты в разных странах,
+например, австрийский немецкий (`de_AT`) или бразильский португальский (`pt_BR`). Вторая часть используется для различия
+этих диалектов - когда ее нет, она рассматривается как «общая» или «гибридная» версия языка.
 
-### Directory structure
+### Структура каталогов
 
-To use Gettext, we will need to adhere to a specific structure of folders. First, you will need to select an arbitrary
-root for your l10n files in your source repository. Inside it, you will have a folder for each needed locale, and a
-fixed `LC_MESSAGES` folder that will contain all your PO/MO pairs. Example:
+Чтобы использовать Gettext, нам нужно будет придерживаться определенной структуры папок. Во-первых, вам нужно будет выбрать
+произвольный корень для ваших файлов l10n в исходном репозитории. Внутри у вас будет папка для каждой необходимой локали
+и фиксированная папка `LC_MESSAGES`, которая будет содержать все ваши пары PO/MO. Пример:
 
 {% highlight console %}
 <project root>
@@ -129,31 +129,31 @@ fixed `LC_MESSAGES` folder that will contain all your PO/MO pairs. Example:
 
 ### Множественные формы
 
-As we said in the introduction, different languages might sport different plural rules. However, gettext saves us from
-this trouble once again. When creating a new `.po` file, you will have to declare the [plural rules][plural] for that
-language, and translated pieces that are plural-sensitive will have a different form for each of those rules. When
-calling Gettext in code, you will have to specify the number related to the sentence, and it will work out the correct
-form to use - even using string substitution if needed.
+Как мы уже говорили во введении, разные языки могут иметь разные правила множественного числа. Однако gettext в очередной
+раз спасает нас от этой неприятности. При создании нового файла `.po` вам нужно будет объявить [правила множественного числа][plural]
+для этого языка, и переведенные части, чувствительные к множественному числу, будут иметь другую форму для каждого из этих правил.
+При вызове Gettext в коде вам нужно будет указать номер, относящийся к предложению, и он выработает правильную форму для использования -
+даже с использованием подстановки строк, если это необходимо.
 
-Plural rules include the number of plurals available and a boolean test with `n` that would define in which rule the
-given number falls (starting the count with 0). For example:
+Правила множественного числа включают в себя количество доступных множественных чисел и логическую проверку с `n`,
+которая определяет, в какое правило попадает данное число (начиная с 0). Например:
 
-- Japanese: `nplurals=1; plural=0` - only one rule
-- English: `nplurals=2; plural=(n != 1);` - two rules, first if N is one, second rule otherwise
-- Brazilian Portuguese: `nplurals=2; plural=(n > 1);` - two rules, second if N is bigger than one, first otherwise
+- Japanese: `nplurals=1; plural=0` - только одно правило
+- English: `nplurals=2; plural=(n != 1);` - два правила, первое - если N единица, второе правило - в противном случае
+- Brazilian Portuguese: `nplurals=2; plural=(n > 1);` - два правила, второе - если N больше одного, первое - в противном случае
 
-Now that you understood the basis of how plural rules works - and if you didn't, please look at a deeper explanation
-on the [LingoHub tutorial][lingohub_plurals] -, you might want to copy the ones you need from a [list][plural] instead
-of writing them by hand.
+Теперь, когда вы поняли, как работают правила множественного числа, а если нет, ознакомьтесь с более подробным объяснением
+в [учебнике LingoHub][lingohub_plurals], вы можете скопировать те, которые вам нужны, из [списка][plural] вместо того,
+чтобы писать их от руки.
 
-When calling out Gettext to do localization on sentences with counters, you will have to provide it the
-related number as well. Gettext will work out what rule should be in effect and use the correct localized version.
-You will need to include in the `.po` file a different sentence for each plural rule defined.
+При вызове Gettext для локализации предложений со счетчиками вам также нужно будет указать соответствующий номер. Gettext
+определит, какое правило должно действовать, и использует правильную локализованную версию. Вам нужно будет включить
+в файл `.po` разные предложения для каждого определенного правила множественного числа.
 
-### Sample implementation
+### Пример реализации
 
-After all that theory, let's get a little practical. Here's an excerpt of a `.po` file - don't mind with its format,
-but with the overall content instead; you will learn how to edit it easily later:
+После всей этой теории давайте перейдем к практике. Вот выдержка из файла `.po` - не обращайте внимания на его формат,
+но вместо этого обратите внимание на общее содержание; позже вы научитесь легко его редактировать:
 
 {% highlight po %}
 msgid ""
@@ -174,60 +174,59 @@ msgstr[0] "Só uma mensagem não lida"
 msgstr[1] "%d mensagens não lidas"
 {% endhighlight %}
 
-The first section works like a header, having the `msgid` and `msgstr` especially empty. It describes the file encoding,
-plural forms and other things that are less relevant.
-The second section translates a simple string from English to
-Brazilian Portuguese, and the third does the same, but leveraging string replacement from [`sprintf`][sprintf] so the
-translation may contain the user name and visit date.
-The last section is a sample of pluralization forms, displaying
-the singular and plural version as `msgid` in English and their corresponding translations as `msgstr` 0 and 1
-(following the number given by the plural rule). There, string replacement is used as well so the number can be seen
-directly in the sentence, by using `%d`. The plural forms always have two `msgid` (singular and plural), so it is
-advised not to use a complex language as the source of translation.
+Первая секция работает как заголовок, имея пустые поля `msgid` и `msgstr`. В нем описывается кодировка файла,
+формы множественного числа и другие менее важные вещи.
+Второй раздел переводит простую строку с английского на
+бразильский португальский, а третий делает то же самое, но использует замену строки из [`sprintf`][sprintf], поэтому
+перевод может содержать имя пользователя и дату посещения.
+Последний раздел представляет собой пример форм множественного числа, отображающих
+версию единственного и множественного числа как `msgid` на английском языке и их соответствующие переводы как `msgstr` 0 и 1
+(после числа, заданного правилом множественного числа). Там также используется замена строки, поэтому номер можно увидеть
+прямо в предложении, используя `%d`. Формы множественного числа всегда имеют два `msgid` (единственное и множественное число), поэтому
+рекомендуется не использовать сложный язык в качестве источника перевода.
 
-### Discussion on l10n keys
+### Обсуждение l10n ключей
 
-As you might have noticed, we are using as source ID the actual sentence in English. That `msgid` is the same used
-throughout all your `.po` files, meaning other languages will have the same format and the same `msgid` fields but
-translated `msgstr` lines.
+Как вы могли заметить, мы используем в качестве идентификатора источника фактическое предложение на английском языке.
+Этот `msgid` используется во всех ваших файлах `.po`, что означает, что другие языки будут иметь тот же формат и те же
+поля `msgid`, но переведенные строки `msgstr`.
 
-Talking about translation keys, there are two main "schools" here:
+Говоря о ключах перевода, здесь есть две основные «школы»:
 
-1. _`msgid` as a real sentence_.
-    The main advantages are:
-    - if there are pieces of the software untranslated in any given language, the key displayed will still maintain some
-    meaning. Example: if you happen to translate by heart from English to Spanish but need help to translate to French,
-    you might publish the new page with missing French sentences, and parts of the website would be displayed in English
-    instead;
-    - it is much easier for the translator to understand what's going on and do a proper translation based on the
-    `msgid`;
-    - it gives you "free" l10n for one language - the source one;
-    - The only disadvantage: if you need to change the actual text, you would need to replace the same `msgid`
-    across several language files.
+1. _`msgid` как настоящее предложение_.
+    Основные преимущества:
 
-2. _`msgid` as a unique, structured key_.
-It would describe the sentence role in the application in a structured way, including the template or part where the
-string is located instead of its content.
-    - it is a great way to have the code organized, separating the text content from the template logic.
-    - however, that could bring problems to the translator that would miss the context. A source language file would be
-    needed as a basis for other translations. Example: the developer would ideally have an `en.po` file, that
-    translators would read to understand what to write in `fr.po` for instance.
-    - missing translations would display meaningless keys on screen (`top_menu.welcome` instead of `Hello there, User!`
-    on the said untranslated French page). That is good it as would force translation to be complete before publishing -
-    however, bad as translation issues would be remarkably awful in the interface. Some libraries, though, include an
-    option to specify a given language as "fallback", having a similar behavior as the other approach.
+    - если есть части программного обеспечения, не переведенные на какой-либо язык, отображаемый ключ все равно будет иметь какое-то значение. Пример: если вы переводите наизусть с английского на испанский, но вам нужна помощь в переводе на французский,
+    вы можете опубликовать новую страницу с отсутствующими французскими предложениями, и вместо этого части веб-сайта
+    будут отображаться на английском языке;
+    - переводчику намного легче понять, что происходит, и сделать правильный перевод на основе `msgid`;
+    - оно дает вам "бесплатный" l10n для одного языка - исходного;
+    - Единственный недостаток: если вам нужно изменить фактический текст, вам нужно будет заменить один и тот же `msgid`
+    в нескольких языковых файлах.
 
-The [Gettext manual][manual] favors the first approach as, in general, it is easier for translators and users in
-case of trouble. That is how we will be working here as well. However, the [Symfony documentation][symfony-keys] favors
-keyword-based translation, to allow for independent changes of all translations without affecting templates as well.
+2. _`msgid` как уникальный, структурированный ключ_.
+Он будет структурированно описывать роль предложения в приложении, включая шаблон или часть, в которой находится строка,
+а не ее содержимое.
+    - это отличный способ организовать код, отделив текстовое содержимое от логики шаблона.
+    - однако это может создать проблемы для переводчика, который упустит контекст. Файл исходного языка потребуется
+    в качестве основы для других переводов. Пример: в идеале у разработчика должен быть файл `en.po`, который
+    переводчики будут читать, чтобы понять, что писать, например, в `fr.po`.
+    - отсутствующие переводы будут отображать бессмысленные клавиши на экране (`top_menu.welcome` вместо `Привет, пользователь!`
+    на указанной непереведенной французской странице). Это хорошо, поскольку заставило бы перевод быть завершенным перед публикацией,
+    но плохо, поскольку проблемы с переводом были бы ужасно ужасными в интерфейсе. Некоторые библиотеки, тем не менее, включают
+    возможность указать данный язык как "резервный", имея поведение, аналогичное другому подходу.
 
-### Каждодневное использование
+В [руководстве по Gettext][manual] предпочтение отдается первому подходу, так как в целом он проще для переводчиков и пользователей в
+случае возникновения проблем. Так же и здесь будем работать. Тем не менее, [документация Symfony][symfony-keys] отдает предпочтение
+переводу на основе ключевых слов, что позволяет вносить независимые изменения во все переводы, не затрагивая при этом шаблоны.
 
-In a typical application, you would use some Gettext functions while writing static text in your pages. Those sentences
-would then appear in `.po` files, get translated, compiled into `.mo` files and then, used by Gettext when rendering
-the actual interface. Given that, let's tie together what we have discussed so far in a step-by-step example:
+### Повседневное использование
 
-#### 1. A sample template file, including some different gettext calls
+В типичном приложении вы должны использовать некоторые функции Gettext при написании статического текста на своих страницах. Затем эти
+предложения появляются в файлах `.po`, переводятся, компилируются в файлы `.mo` и затем используются Gettext при рендеринге
+фактического интерфейса. Учитывая это, давайте свяжем то, что мы обсуждали до сих пор, в пошаговом примере:
+
+#### 1. Пример файла шаблона, включающего несколько различных вызовов gettext
 
 {% highlight php %}
 <?php include 'i18n_setup.php' ?>
@@ -248,13 +247,13 @@ the actual interface. Given that, let's tie together what we have discussed so f
 <p><?=gettext('We\'re now translating some strings')?></p>
 {% endhighlight %}
 
-- [`gettext()`][func] simply translates a `msgid` into its corresponding `msgstr` for a given language. There's also
-the shorthand function `_()` that works the same way;
-- [`ngettext()`][n_func] does the same but with plural rules;
-- there's also [`dgettext()`][d_func] and [`dngettext()`][dn_func], that allows you to override the domain for a single
-call. More on domain configuration in the next example.
+- [`gettext()`][func] просто переводит `msgid` в соответствующий `msgstr` для данного языка. Есть также
+короткая функция `_()` которая работает точно так же;
+- [`ngettext()`][n_func] делает то же самое, но с правилами множественного числа;
+- есть также [`dgettext()`][d_func] и [`dngettext()`][dn_func], что позволяют переопределить домен для одного
+вызова. Подробнее о конфигурации домена в следующем примере.
 
-#### 2. A sample setup file (`i18n_setup.php` as used above), selecting the correct locale and configuring Gettext
+#### 2. Образец установочного файла (`i18n_setup.php`, как указано выше), выбор правильной локали и настройка Gettext
 
 {% highlight php %}
 <?php
@@ -313,77 +312,77 @@ textdomain('main');
 ?>
 {% endhighlight %}
 
-#### 3. Preparing translation for the first run
+#### 3. Подготовка перевода к первому запуску
 
-One of the great advantages Gettext has over custom framework i18n packages is its extensive and powerful file format.
-"Oh man, that’s quite hard to understand and edit by hand, a simple array would be easier!" Make no mistake,
-applications like [Poedit] are here to help - _a lot_. You can get the program from [their website][poedit_download],
-it’s free and available for all platforms. It’s a pretty easy tool to get used to, and a very powerful one at the same
-time - using all features Gettext has available. This guide is based on PoEdit 1.8.
+Одним из больших преимуществ Gettext по сравнению с настраиваемыми пакетами i18n является обширный и мощный формат файлов.
+"О, чувак, это довольно сложно понять и отредактировать вручную, простой массив был бы проще!" Не заблуждайтесь,
+такие приложения, как [Poedit], здесь, чтобы помочь - _много_. Вы можете скачать программу с [их веб-сайта][poedit_download],
+она бесплатна и доступна для всех платформ. Это довольно простой инструмент, к которому можно привыкнуть, и в то же
+время очень мощный — он использует все функции, доступные в Gettext. Это руководство основано на PoEdit 1.8.
 
-In the first run, you should select “File > New...” from the menu. You’ll be asked straight ahead for the language:
-here you can select/filter the language you want to translate to, or use that format we mentioned before, such as
-`en_US` or `pt_BR`.
+При первом запуске вы должны выбрать "File > New..." из меню. Вам сразу же будет предложено выбрать язык:
+здесь вы можете выбрать/отфильтровать язык, на который хотите перевести, или использовать тот формат, который мы упоминали ранее, например
+`en_US` или `pt_BR`.
 
-Now, save the file - using that directory structure we mentioned as well. Then you should click “Extract from sources”,
-and here you’ll configure various settings for the extraction and translation tasks. You’ll be able to find all those
-later through “Catalog > Properties”:
+Теперь сохраните файл, используя ту же структуру каталогов, о которой мы упоминали. Затем вы должны нажать "Extract from sources",
+и здесь вы настроите различные параметры для задач извлечения и перевода. Вы сможете найти все это
+позже через "Catalog > Properties":
 
-- Source paths: here you must include all folders from the project where `gettext()` (and siblings) are called - this
-is usually your templates/views folder(s). This is the only mandatory setting;
+- Source paths: здесь вы должны включить все папки из проекта, где вызывается `gettext()` (и родственные) - обычно это ваши
+папки шаблонов/представлений. Это единственная обязательная настройка;
 - Translation properties:
-  - Project name and version, Team and Team’s email address: useful information that goes in the .po file header;
-  - Plural forms: here go those rules we mentioned before - there’s a link in there with samples as well. You can
-    leave it with the default option most of the time, as PoEdit already includes a handy database of plural rules for
-    many languages.
-  - Charsets: UTF-8, preferably;
-  - Source code charset: set here the charset used by your codebase - probably UTF-8 as well, right?
-- Source keywords: The underlying software knows how `gettext()` and similar function calls look like in several
-programming languages, but you might as well create your own translation functions. It will be here you’ll add those
-other methods. This will be discussed later in the “Tips” section.
+  - Project name and version, Team and Team’s email address: полезная информация, которая находится в заголовке файла .po;
+  - Plural forms: вот и те правила, о которых мы упоминали ранее — там также есть ссылка с образцами. В большинстве случаев
+  вы можете оставить его с параметром по умолчанию, поскольку PoEdit уже включает удобную базу данных множественных
+  правил для многих языков.
+  - Charsets: UTF-8, желательно;
+  - Source code charset: установите здесь кодировку, используемую вашей кодовой базой - возможно, UTF-8, верно?
+- Source keywords: Базовое программное обеспечение знает, как `gettext()` и подобные вызовы функций выглядят в нескольких
+языках программирования, но вы также можете создавать свои собственные функции перевода. Именно здесь вы добавите эти
+другие методы. Об этом позже в разделе "Советы".
 
-After setting those points it will run a scan through your source files to find all the localization calls. After every
-scan PoEdit will display a summary of what was found and what was removed from the source files. New entries will fed
-empty into the translation table, and you’ll start typing in the localized versions of those strings. Save it and a .mo
-file will be (re)compiled into the same folder and ta-dah: your project is internationalized.
+После установки этих точек он просканирует ваши исходные файлы, чтобы найти все вызовы локализации. После каждого
+сканирования PoEdit будет отображать сводку того, что было найдено и что было удалено из исходных файлов. Новые записи будут
+загружены в таблицу перевода пустыми, и вы начнете вводить локализованные версии этих строк. Сохраните его, и файл .mo
+будет (повторно)скомпилирован в ту же папку и та-да: ваш проект интернационализирован.
 
-#### 4. Translating strings
+#### 4. Перевод строк
 
-As you may have noticed before, there are two main types of localized strings: simple ones and those with plural
-forms. The first ones have simply two boxes: source and localized string. The source string cannot be modified as
-Gettext/Poedit do not include the powers to alter your source files - you should change the source itself and rescan
-the files. Tip: you may right-click a translation line and it will hint you with the source files and lines where that
-string is being used.
-On the other hand, plural form strings include two boxes to show the two source strings, and tabs so you can configure
-the different final forms.
+Как вы, возможно, уже заметили, есть два основных типа локализованных строк: простые и во множественном числе.
+Первые имеют просто два поля: исходную и локализованную строку. Исходная строка не может быть изменена, так как
+Gettext/Poedit не имеет права изменять ваши исходные файлы - вам следует изменить сам источник и повторно отсканировать
+файлы. Совет: вы можете щелкнуть правой кнопкой мыши строку перевода, и она подскажет вам исходные файлы и строки,
+в которых используется эта строка.
+С другой стороны, строки во множественном числе включают в себя два поля для отображения двух исходных строк и вкладки,
+позволяющие настраивать различные окончательные формы.
 
-Whenever you change your sources and need to update the translations, just hit Refresh and Poedit will rescan the code,
-removing non-existent entries, merging the ones that changed and adding new ones. It may also try to guess some
-translations, based on other ones you did. Those guesses and the changed entries will receive a "Fuzzy" marker,
-indicating it needs review, appearing golden in the list. It is also useful if you have a translation team and someone
-tries to write something they are not sure about: just mark Fuzzy, and someone else will review later.
+Всякий раз, когда вы изменяете свои источники и вам нужно обновить переводы, просто нажмите Refresh, и Poedit повторно
+просканирует код, удалив несуществующие записи, объединив те, которые были изменены, и добавив новые. Он также может попытаться угадать
+некоторые переводы, основываясь на других сделанных вами переводах. Эти предположения и измененные записи получат маркер "Fuzzy",
+указывающий на то, что они нуждаются в проверке, и отобразятся в списке золотыми. Это также полезно, если у вас есть команда
+переводчиков, и кто-то пытается написать что-то, в чем он не уверен: просто отметьте Fuzzy, и кто-то другой проверит позже.
 
-Finally, it is advised to leave "View > Untranslated entries first" marked, as it will help you _a lot_ to not forget
-any entry. From that menu, you can also open parts of the UI that allow you to leave contextual information for
-translators if needed.
+Наконец, рекомендуется оставить отмеченным "View > Untranslated entries first", так как это поможет вам _много_ не забыть,
+ни одной записи. Из этого меню вы также можете открывать части пользовательского интерфейса, которые позволяют
+при необходимости оставлять контекстную информацию для переводчиков.
 
 ### Tips & Tricks
 
-#### Possible caching issues
+#### Возможные проблемы с кэшированием
 
-If you are running PHP as a module on Apache (`mod_php`), you might face issues with the `.mo` file being cached. It
-happens the first time it is read, and then, to update it, you might need to restart the server. On Nginx and PHP5 it
-usually takes only a couple of page refreshes to refresh the translation cache, and on PHP7 it is rarely needed.
+Если вы используете PHP как модуль Apache (`mod_php`), у вас могут возникнуть проблемы с кешированием файла `.mo`.
+Это происходит при первом чтении, а затем, чтобы обновить его, может потребоваться перезагрузка сервера. На Nginx и PHP5
+обычно требуется всего пара обновлений страницы, чтобы обновить кеш перевода, а на PHP7 это требуется редко.
 
-#### Additional helper functions
+#### Дополнительные вспомогательные функции
 
-As preferred by many people, it is easier to use `_()` instead of `gettext()`. Many custom i18n libraries from
-frameworks use something similar to `t()` as well, to make translated code shorter. However, that is the only function
-that sports a shortcut. You might want to add in your project some others, such as `__()` or `_n()` for `ngettext()`,
-or maybe a fancy `_r()` that would join `gettext()` and `sprintf()` calls. Other libraries, such as
-[oscarotero's Gettext][oscarotero] also provide helper functions like these.
+Многие предпочитают использовать `_()` вместо `gettext()`. Многие пользовательские библиотеки i18n из
+фреймворков также используют что-то похожее на `t()`, чтобы сделать переведенный код короче. Однако это единственная функция,
+которая имеет ярлык. Возможно, вы захотите добавить в свой проект некоторые другие, такие как `__()` или `_n()` для `ngettext()`,
+или, может быть, причудливую `_r()`, которая объединит вызовы `gettext()` и `sprintf()`. Другие библиотеки, такие как
+[Gettext от oscarotero][oscarotero], также предоставляют подобные вспомогательные функции.
 
-In those cases, you'll need to instruct the Gettext utility on how to extract the strings from those new functions.
+В этих случаях, you'll need to instruct the Gettext utility on how to extract the strings from those new functions.
 Don't be afraid; it is very easy. It is just a field in the `.po` file, or a Settings screen on Poedit. In the editor,
 that option is inside "Catalog > Properties > Source keywords". Remember: Gettext already knows the default functions
 for many languages, so don’t be afraid if that list seems empty. You need to include there the specifications of those
@@ -399,7 +398,7 @@ the second argument, and so on.
 
 After including those new rules in the `.po` file, a new scan will bring in your new strings just as easy as before.
 
-### References
+### Рекомендации
 
 - [Wikipedia: i18n and l10n](https://en.wikipedia.org/wiki/Internationalization_and_localization)
 - [Wikipedia: Gettext](https://en.wikipedia.org/wiki/Gettext)
