@@ -6,54 +6,38 @@ anchor:  complex_problem
 
 ## Комплексная проблема {#complex_problem_title}
 
-If you have ever read about Dependency Injection then you have probably seen the terms *"Inversion of Control"* or
-*"Dependency Inversion Principle"*. These are the complex problems that Dependency Injection solves.
+Если вы когда либо читали о Внедрении зависимости, то вероятнее всего знакомы с терминами *"Инверсия управления"* или
+*"Принцип инверсии зависимостей"*. These are the complex problems that Dependency Injection solves.
 
-### Inversion of Control
+### Инверсия управления
 
-Inversion of Control is as it says, "inverting the control" of a system by keeping organizational control entirely
-separate from our objects. In terms of Dependency Injection, this means loosening our dependencies by controlling and
-instantiating them elsewhere in the system.
+Инверсия управления как говорится, "инвертирует управление" системы, сохраняя организационное управление полноценно
+отделяясь от наших объектов. В терминологии Инверсии управления, означает потерю наших зависимостей управляя и
+и реализуя их где либо в системе.
 
-For years, PHP frameworks have been achieving Inversion of Control, however, the question became, which part of control
-are we inverting, and where to? For example, MVC frameworks would generally provide a super object or base controller
-that other controllers must extend to gain access to its dependencies. This **is** Inversion of Control, however,
-instead of loosening dependencies, this method simply moved them.
+На протяжении нескольких лет, PHP фреймворками была достигнута Инверсия Управления, однако, стоял вопрос, какую часть управления
+мы инвертируем, и где? Например, MVC фреймворки обычно предоставляют супер объект или, основной контроллер
+которые другие контроллеры должны расширять, получая доступ к их зависимостям. Это **и есть** Инверсия управления, однако,
+вместо потери зависимостей, этот метод просто перемещает их.
 
-Dependency Injection allows us to more elegantly solve this problem by only injecting the dependencies we need, when we
-need them, without the need for any hard coded dependencies at all.
+Внедрение зависимости позволяет нам более элегантно решить эту проблему, внедряя нужные зависимости,
+только тогда, когда мы нуждаемся в них, без необходимости сложных зависимостей вообще.
 
-### S.O.L.I.D.
+### S.O.L.I.D
 
-#### Single Responsibility Principle
+#### Принцип единственной ответственности
 
-The Single Responsibility Principle is about actors and high-level architecture. It states that “A class should have
-only one reason to change.” This means that every class should _only_ have responsibility over a single part of the
-functionality provided by the software. The largest benefit of this approach is that it enables improved code
-_reusability_. By designing our class to do just one thing, we can use (or re-use) it in any other program without
-changing it.
+Принцип единственной ответственности об актерах и высокоуровневой архитектуре. Это состояние когда “Класс A должен иметь
+только одну причину для изменения.” Это значит, что каждый класс должен иметь ответственность *только* над одной частью функциональности предоставляемой ПО. Огромнейшая польза от этого подхода в том что он включает *переиспользование*
+улучшенного кода. Спроектировав наш класс для выполнения только одной задачи, мы можем использовать (или переиспользовать) его в любой другой программе, не изменяя.
 
-#### Open/Closed Principle
+#### Принцип Открытости/Закрытости
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-The Open/Closed Principle is about class design and feature extensions. It states that “Software entities (classes,
-modules, functions, etc.) should be open for extension, but closed for modification.” This means that we should design
-our modules, classes and functions in a way that when a new functionality is needed, we should not modify our existing
-code but rather write new code that will be used by existing code. Practically speaking, this means that we should write
-classes that implement and adhere to _interfaces_, then type-hint against those interfaces instead of specific classes.
-=======
-=======
->>>>>>> Stashed changes
 Принцип открытости/закрытости касается проектирования классов и расширений функций. В нем говорится, что "программные объекты (классы,
 модули, функции и т. д.) должны быть открыты для расширения, но закрыты для модификации". Это означает, что мы должны проектировать
 наши модули, классы и функции таким образом, чтобы, когда потребуется новая функциональность, мы не должны были изменять наш существующий
 код, а скорее писать новый код, который будет использоваться существующим кодом. С практической точки зрения это означает, что мы должны
 писать классы, которые реализуют *интерфейсы* и придерживаются их, а затем указывать тип для этих интерфейсов, а не для конкретных классов.
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 
 Самым большим преимуществом этого подхода является то, что мы можем очень легко расширить наш код с поддержкой чего-то нового, не изменяя
 существующий код, а это означает, что мы можем сократить время контроля качества, а риск негативного воздействия на приложение существенно
@@ -74,23 +58,10 @@ classes that implement and adhere to _interfaces_, then type-hint against those 
 
 #### Принцип разделения интерфейса
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-The Interface Segregation Principle (ISP) is about _business-logic-to-clients_ communication. It states that “No client
-should be forced to depend on methods it does not use.” This means that instead of having a single monolithic interface
-that all conforming classes need to implement, we should instead provide a set of smaller, concept-specific interfaces
-that a conforming class implements one or more of.
-=======
-=======
->>>>>>> Stashed changes
 Принцип разделения интерфейса (ISP) касается связи *бизнес-логики с клиентами*. В нем говорится, что "Ни один клиент
 не должен зависеть от методов, которые он не использует". Это означает, что вместо единого монолитного интерфейса,
 который должны реализовать все соответствующие классы, мы должны вместо этого предоставить набор меньших интерфейсов,
 зависящих от концепции, один или несколько из которых реализует соответствующий класс.
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 
 Например, классу `Car` или `Bus` будет интересен метод `SteeringWheel()`, а классу `Motorcycle` или `Tricycle` — нет.
 И наоборот, классу `Motorcycle` или `Tricycle` будет интересен метод `handlebars()`, а классу `Car` или `Bus` — нет.
