@@ -398,7 +398,7 @@ the second argument, and so on.
 
 After including those new rules in the `.po` file, a new scan will bring in your new strings just as easy as before.
 
-### References
+### Рекомендации
 
 - [Wikipedia: i18n and l10n](https://en.wikipedia.org/wiki/Internationalization_and_localization)
 - [Wikipedia: Gettext](https://en.wikipedia.org/wiki/Gettext)
