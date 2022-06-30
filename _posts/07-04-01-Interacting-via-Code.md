@@ -1,13 +1,13 @@
 ---
 isChild: true
-title:   Interacting with Databases
+title:   Взаимодействие с базами данных
 anchor:  databases_interacting
 ---
 
-## Interacting with Databases {#databases_interacting_title}
+## Взаимодействие с базами данных {#databases_interacting_title}
 
-When developers first start to learn PHP, they often end up mixing their database interaction up with their
-presentation logic, using code that might look like this:
+Когда разработчики впервые начинают изучать PHP, они часто заканчивают тем, что смешивают взаимодействие с базой данных
+с логикой представления, используя код, который может выглядеть следующим образом:
 
 {% highlight php %}
 <ul>
@@ -19,13 +19,11 @@ foreach ($db->query('SELECT * FROM table') as $row) {
 </ul>
 {% endhighlight %}
 
-This is bad practice for all sorts of reasons, mainly that it's hard to debug, hard to test, hard to read and it is
-going to output a lot of fields if you don't put a limit on there.
+Это плохая практика по разным причинам, в основном из-за того, что ее трудно отлаживать, трудно тестировать, трудно читать,
+и она будет выводить много полей, если вы не установите там ограничение.
 
-While there are many other solutions to doing this - depending on if you prefer [OOP](/#object-oriented-programming) or
-[functional programming](/#functional-programming) - there must be some element of separation.
-
-Consider the most basic step:
+Хотя есть много других решений для этого — в зависимости от того, предпочитаете ли вы [ООП](/#object-oriented-programming)
+или [функциональное программирование](/#functional-programming) — должен быть какой-то элемент разделения.
 
 {% highlight php %}
 <?php
@@ -39,11 +37,11 @@ foreach ($results as $row) {
 }
 {% endhighlight %}
 
-That is a good start. Put those two items in two different files and you've got some clean separation.
+Это хорошее начало. Поместите эти два элемента в два разных файла, и вы получите четкое разделение.
 
-Create a class to place that method in and you have a "Model". Create a simple `.php` file to put the presentation
-logic in and you have a "View", which is very nearly [MVC] - a common OOP architecture for most
-[frameworks](/#frameworks).
+Создайте класс для размещения этого метода, и у вас есть "Модель". Создайте простой файл `.php`, чтобы поместить в него
+логику представления, и у вас будет "Представление", которое очень близко к [MVC] - общей архитектуре ООП для большинства
+[фреймворков](/#frameworks).
 
 **foo.php**
 
@@ -62,7 +60,6 @@ $fooList = $fooModel->getAllFoos();
 // Show the view
 include 'views/foo-list.php';
 {% endhighlight %}
-
 
 **models/FooModel.php**
 
@@ -91,9 +88,8 @@ class FooModel
 <?php endforeach ?>
 {% endhighlight %}
 
-This is essentially the same as what most modern frameworks are doing, albeit a little more manual. You might not
-need to do all of that every time, but mixing together too much presentation logic and database interaction can be a
-real problem if you ever want to [unit-test](/#unit-testing) your application.
-
+По сути, это то же самое, что и большинство современных фреймворков, хотя и немного более ручное. Возможно, вам не
+нужно делать все это каждый раз, но смешивание слишком большого количества логики представления и взаимодействия с базой
+данных может стать реальной проблемой, если вы когда-нибудь захотите [unit-тестирование](/#unit-testing) своего приложения.
 
 [MVC]: https://code.tutsplus.com/tutorials/mvc-for-noobs--net-10488
