@@ -1,9 +1,10 @@
 ---
+title: Комплексная проблема
 isChild: true
 anchor:  complex_problem
 ---
 
-## Complex Problem {#complex_problem_title}
+## Комплексная проблема {#complex_problem_title}
 
 Если вы когда либо читали о Внедрении зависимости, то вероятнее всего знакомы с терминами *"Инверсия управления"* или
 *"Принцип инверсии зависимостей"*. These are the complex problems that Dependency Injection solves.
@@ -32,47 +33,82 @@ anchor:  complex_problem
 
 #### Принцип Открытости/Закрытости
 
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 The Open/Closed Principle is about class design and feature extensions. It states that “Software entities (classes,
 modules, functions, etc.) should be open for extension, but closed for modification.” This means that we should design
 our modules, classes and functions in a way that when a new functionality is needed, we should not modify our existing
 code but rather write new code that will be used by existing code. Practically speaking, this means that we should write
+<<<<<<< HEAD
 classes that implement and adhere to *interfaces*, then type-hint against those interfaces instead of specific classes.
+=======
+classes that implement and adhere to _interfaces_, then type-hint against those interfaces instead of specific classes.
+=======
+=======
+>>>>>>> Stashed changes
+Принцип открытости/закрытости касается проектирования классов и расширений функций. В нем говорится, что "программные объекты (классы,
+модули, функции и т. д.) должны быть открыты для расширения, но закрыты для модификации". Это означает, что мы должны проектировать
+наши модули, классы и функции таким образом, чтобы, когда потребуется новая функциональность, мы не должны были изменять наш существующий
+код, а скорее писать новый код, который будет использоваться существующим кодом. С практической точки зрения это означает, что мы должны
+писать классы, которые реализуют *интерфейсы* и придерживаются их, а затем указывать тип для этих интерфейсов, а не для конкретных классов.
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+>>>>>>> l10n
 
-The largest benefit of this approach is that we can very easily extend our code with support for something new without
-having to modify existing code, meaning that we can reduce QA time, and the risk for negative impact to the application
-is substantially reduced. We can deploy new code, faster, and with more confidence.
+Самым большим преимуществом этого подхода является то, что мы можем очень легко расширить наш код с поддержкой чего-то нового, не изменяя
+существующий код, а это означает, что мы можем сократить время контроля качества, а риск негативного воздействия на приложение существенно
+снижается. Мы можем развертывать новый код быстрее и с большей уверенностью.
 
-#### Liskov Substitution Principle
+#### Принцип замены Лисков
 
-The Liskov Substitution Principle is about subtyping and inheritance. It states that “Child classes should never break
-the parent class’ type definitions.” Or, in Robert C. Martin’s words, “Subtypes must be substitutable for their base
-types.”
+Принцип замены Лисков касается подтипов и наследования. В нем говорится, что "дочерние классы никогда не должны нарушать
+определения типов родительского класса". Или, говоря словами Robert C. Martin, "подтипы должны быть взаимозаменяемыми для своих базовых
+типов".
 
-For example, if we have a `FileInterface` interface which defines an `embed()` method, and we have `Audio` and `Video`
-classes which both implement the `FileInterface` interface, then we can expect that the usage of the `embed()` method will always
-do the thing that we intend. If we later create a `PDF` class or a `Gist` class which implement the `FileInterface`
-interface, we will already know and understand what the `embed()` method will do. The largest benefit of this approach
-is that we have the ability to build flexible and easily-configurable programs, because when we change one object of a
-type (e.g., `FileInterface`) to another we don't need to change anything else in our program.
+Например, если у нас есть интерфейс `FileInterface`, который определяет метод `embed()`, и у нас есть классы `Audio` и `Video`,
+которые оба реализуют интерфейс `FileInterface`, то мы можем ожидать, что использование Метод `embed()` всегда будет делать
+то, что мы намеревались. Если позже мы создадим класс `PDF` или класс `Gist`, которые реализуют интерфейс `FileInterface`,
+мы уже будем знать и понимать, что будет делать метод `embed()`. Самым большим преимуществом этого подхода является то,
+что у нас есть возможность создавать гибкие и легко настраиваемые программы, потому что, когда мы меняем один объект
+типа (например, `FileInterface`) на другой, нам не нужно ничего менять в нашей программе.
 
-#### Interface Segregation Principle
+#### Принцип разделения интерфейса
 
+<<<<<<< HEAD
 The Interface Segregation Principle (ISP) is about *business-logic-to-clients* communication. It states that “No client
+=======
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+The Interface Segregation Principle (ISP) is about _business-logic-to-clients_ communication. It states that “No client
+>>>>>>> l10n
 should be forced to depend on methods it does not use.” This means that instead of having a single monolithic interface
 that all conforming classes need to implement, we should instead provide a set of smaller, concept-specific interfaces
 that a conforming class implements one or more of.
+=======
+=======
+>>>>>>> Stashed changes
+Принцип разделения интерфейса (ISP) касается связи *бизнес-логики с клиентами*. В нем говорится, что "Ни один клиент
+не должен зависеть от методов, которые он не использует". Это означает, что вместо единого монолитного интерфейса,
+который должны реализовать все соответствующие классы, мы должны вместо этого предоставить набор меньших интерфейсов,
+зависящих от концепции, один или несколько из которых реализует соответствующий класс.
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 
-For example, a `Car` or `Bus` class would be interested in a `steeringWheel()` method, but a `Motorcycle` or `Tricycle`
-class would not. Conversely, a `Motorcycle` or `Tricycle` class would be interested in a `handlebars()` method, but a
-`Car` or `Bus` class would not. There is no need to have all of these types of vehicles implement support for both
-`steeringWheel()` as well as `handlebars()`, so we should break-apart the source interface.
+Например, классу `Car` или `Bus` будет интересен метод `SteeringWheel()`, а классу `Motorcycle` или `Tricycle` — нет.
+И наоборот, классу `Motorcycle` или `Tricycle` будет интересен метод `handlebars()`, а классу `Car` или `Bus` — нет.
+Нет необходимости, чтобы все эти типы транспортных средств поддерживали как `steeringWheel()`, так и `handlebars()`,
+поэтому мы должны разделить исходный интерфейс.
 
-#### Dependency Inversion Principle
+#### Принцип инверсии зависимости
 
-The Dependency Inversion Principle is about removing hard-links between discrete classes so that new functionality can
-be leveraged by passing a different class. It states that one should *"Depend on Abstractions. Do not depend on
-concretions."*. Put simply, this means our dependencies should be interfaces/contracts or abstract classes rather than
-concrete implementations. We can easily refactor the above example to follow this principle.
+Принцип инверсии зависимостей заключается в удалении жестких ссылок между отдельными классами, чтобы можно было использовать новые функции,
+передавая другой класс. В нем говорится, что нужно *"Зависеть от абстракций. Не зависеть от конкретики"*.
+Проще говоря, это означает, что наши зависимости должны быть интерфейсами/контрактами или абстрактными классами,
+а не конкретными реализациями. Мы можем легко реорганизовать приведенный выше пример, чтобы следовать этому принципу.
 
 {% highlight php %}
 <?php
@@ -93,14 +129,14 @@ interface AdapterInterface {}
 class MysqlAdapter implements AdapterInterface {}
 {% endhighlight %}
 
-There are several benefits to the `Database` class now depending on an interface rather than a concretion.
+Теперь у класса `Database` есть несколько преимуществ, зависящих от интерфейса, а не от конкретизации.
 
-Consider that we are working in a team and the adapter is being worked on by a colleague. In our first example, we
-would have to wait for said colleague to finish the adapter before we could properly mock it for our unit tests. Now
-that the dependency is an interface/contract we can happily mock that interface knowing that our colleague will build
-the adapter based on that contract.
+Учтите, что мы работаем в команде, а над адаптером работает коллега. В нашем первом примере нам
+пришлось бы ждать, пока указанный коллега закончит работу над адаптером, прежде чем мы сможем должным образом смоделировать
+его для наших модульных тестов. Теперь, когда зависимость представляет собой интерфейс/контракт, мы можем с радостью
+создать макет этого интерфейса, зная, что наш коллега создаст адаптер на основе этого контракта.
 
-An even bigger benefit to this method is that our code is now much more scalable. If a year down the line we decide
-that we want to migrate to a different type of database, we can write an adapter that implements the original interface
-and injects that instead, no more refactoring would be required as we can ensure that the adapter follows the contract
-set by the interface.
+Еще большее преимущество этого метода заключается в том, что наш код стал намного более масштабируемым. Если через год мы решим,
+что хотим перейти на базу данных другого типа, мы можем написать адаптер, который реализует исходный интерфейс
+и внедряет его вместо этого, больше не потребуется рефакторинг, поскольку мы можем гарантировать, что адаптер следует контракт,
+установленный интерфейсом.
