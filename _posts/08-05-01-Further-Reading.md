@@ -1,6 +1,7 @@
 ---
 isChild: true
-anchor:  templating_further_reading
+title: Дальнейшее чтение
+anchor: templating_further_reading
 ---
 
 ## Дальнейшее чтение {#templating_further_reading_title}

@@ -1,5 +1,6 @@
 ---
 isChild: true
+title: Скомпилированные шаблоны
 anchor:  compiled_templates
 ---
 
