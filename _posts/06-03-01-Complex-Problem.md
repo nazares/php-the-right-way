@@ -35,6 +35,7 @@ anchor:  complex_problem
 
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 The Open/Closed Principle is about class design and feature extensions. It states that “Software entities (classes,
 modules, functions, etc.) should be open for extension, but closed for modification.” This means that we should design
 our modules, classes and functions in a way that when a new functionality is needed, we should not modify our existing
@@ -46,16 +47,21 @@ classes that implement and adhere to _interfaces_, then type-hint against those 
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 Принцип открытости/закрытости касается проектирования классов и расширений функций. В нем говорится, что "программные объекты (классы,
 модули, функции и т. д.) должны быть открыты для расширения, но закрыты для модификации". Это означает, что мы должны проектировать
 наши модули, классы и функции таким образом, чтобы, когда потребуется новая функциональность, мы не должны были изменять наш существующий
 код, а скорее писать новый код, который будет использоваться существующим кодом. С практической точки зрения это означает, что мы должны
 писать классы, которые реализуют *интерфейсы* и придерживаются их, а затем указывать тип для этих интерфейсов, а не для конкретных классов.
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 >>>>>>> l10n
+=======
+>>>>>>> Stashed changes
 
 Самым большим преимуществом этого подхода является то, что мы можем очень легко расширить наш код с поддержкой чего-то нового, не изменяя
 существующий код, а это означает, что мы можем сократить время контроля качества, а риск негативного воздействия на приложение существенно
@@ -76,6 +82,7 @@ classes that implement and adhere to _interfaces_, then type-hint against those 
 
 #### Принцип разделения интерфейса
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 The Interface Segregation Principle (ISP) is about *business-logic-to-clients* communication. It states that “No client
 =======
@@ -89,11 +96,16 @@ that a conforming class implements one or more of.
 =======
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 Принцип разделения интерфейса (ISP) касается связи *бизнес-логики с клиентами*. В нем говорится, что "Ни один клиент
 не должен зависеть от методов, которые он не использует". Это означает, что вместо единого монолитного интерфейса,
 который должны реализовать все соответствующие классы, мы должны вместо этого предоставить набор меньших интерфейсов,
 зависящих от концепции, один или несколько из которых реализует соответствующий класс.
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
