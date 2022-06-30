@@ -382,7 +382,7 @@ Gettext/Poedit не имеет права изменять ваши исходн
 или, может быть, причудливую `_r()`, которая объединит вызовы `gettext()` и `sprintf()`. Другие библиотеки, такие как
 [Gettext от oscarotero][oscarotero], также предоставляют подобные вспомогательные функции.
 
-In those cases, you'll need to instruct the Gettext utility on how to extract the strings from those new functions.
+В этих случаях, you'll need to instruct the Gettext utility on how to extract the strings from those new functions.
 Don't be afraid; it is very easy. It is just a field in the `.po` file, or a Settings screen on Poedit. In the editor,
 that option is inside "Catalog > Properties > Source keywords". Remember: Gettext already knows the default functions
 for many languages, so don’t be afraid if that list seems empty. You need to include there the specifications of those
