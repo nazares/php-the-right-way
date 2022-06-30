@@ -1,26 +1,25 @@
 ---
 isChild: true
-title:   Abstraction Layers
+title:   Слои абстракций
 anchor:  databases_abstraction_layers
 ---
 
-## Abstraction Layers {#databases_abstraction_layers_title}
+## Слои абстракций {#databases_abstraction_layers_title}
 
-Many frameworks provide their own abstraction layer which may or may not sit on top of [PDO][1]. These will often
-emulate features for one database system that is missing from another by wrapping your queries in PHP methods, giving
-you actual database abstraction instead of just the connection abstraction that PDO provides. This will of course add a
-little overhead, but if you are building a portable application that needs to work with MySQL, PostgreSQL and SQLite
-then a little overhead will be worth it for the sake of code cleanliness.
+Многие фреймворки предоставляют свой собственный уровень абстракции, который может располагаться или не располагаться
+поверх [PDO][1]. Они часто будут эмулировать функции одной системы баз данных, отсутствующие в другой, оборачивая ваши
+запросы в методы PHP, предоставляя вам реальную абстракцию базы данных, а не просто абстракцию соединения, которую
+предоставляет PDO. Это, конечно, добавит немного накладных расходов, но если вы создаете переносимое приложение,
+которое должно работать с MySQL, PostgreSQL и SQLite, то небольшие накладные расходы будут оправданы ради чистоты кода.
 
-Some abstraction layers have been built using the [PSR-0][psr0] or [PSR-4][psr4] namespace standards so can be
-installed in any application you like:
+Некоторые уровни абстракции были построены с использованием стандартов пространств имен [PSR-0][psr0] или [PSR-4][psr4],
+поэтому их можно установить в любое приложение, которое вам нравится:
 
 * [Atlas][5]
 * [Aura SQL][6]
 * [Doctrine2 DBAL][2]
 * [Propel][7]
 * [Zend-db][4]
-
 
 [1]: https://secure.php.net/book.pdo
 [2]: https://www.doctrine-project.org/projects/dbal.html

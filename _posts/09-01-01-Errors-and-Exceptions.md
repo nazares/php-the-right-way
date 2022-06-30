@@ -1,7 +1,6 @@
 ---
-title:  Errors and Exceptions
+title:  Ошибки и исключения
 anchor: errors_and_exceptions
 ---
 
-# Errors and Exceptions {#errors_and_exceptions_title}
-
+# Ошибки и исключения {#errors_and_exceptions_title}
