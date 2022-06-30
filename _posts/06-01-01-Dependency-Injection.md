@@ -1,15 +1,16 @@
 ---
-title:  Dependency Injection
+title:  Внедрение зависимости
 anchor: dependency_injection
 ---
 
-# Dependency Injection {#dependency_injection_title}
+# Внедрение зависимости {#dependency_injection_title}
 
-From [Wikipedia](https://wikipedia.org/wiki/Dependency_injection):
+Из [Wikipedia](https://wikipedia.org/wiki/Dependency_injection):
 
-> Dependency injection is a software design pattern that allows the removal of hard-coded dependencies and makes it
-> possible to change them, whether at run-time or compile-time.
+> Внедрение зависимости - это шаблон проектирования ПО который позволяет устранение сложных зависимостей и делает
+> возможным менять их, как в режиме реального времени так и на стадии компиляции.
 
-This quote makes the concept sound much more complicated than it actually is. Dependency Injection is providing a
-component with its dependencies either through constructor injection, method calls or the setting of properties. It is
-that simple.
+Это высказывание делает концепцию более сложной, чем она на самом деле есть. Внедрение Зависимости
+предоставляет
+компонент с его зависимостями также через внедрение конструктора, вызовы метода или установку свойств.
+Это так легко.
