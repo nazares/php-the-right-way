@@ -1,47 +1,51 @@
 ---
 isChild: true
+title: Хэширование пароля
 anchor:  password_hashing
 ---
 
-## Password Hashing {#password_hashing_title}
+## Хэширование пароля {#password_hashing_title}
 
-Eventually everyone builds a PHP application that relies on user login. Usernames and passwords are stored in a
-database and later used to authenticate users upon login.
+В конце концов каждый создает приложение PHP, которое зависит от входа пользователя в систему. Имена пользователей и
+пароли хранятся в базе данных и позже используются для аутентификации пользователей при входе в систему.
 
-It is important that you properly [_hash_][3] passwords before storing them. Hashing and encrypting are [two very different things][7]
-that often get confused.
+Важно, чтобы вы правильно делали [_hash_][3] паролей перед их сохранением. Хеширование и шифрование — это [две очень
+разные вещи][7], которые часто путают.
 
-Hashing is an irreversible, one-way function. This produces a fixed-length string that cannot be feasibly reversed.
-This means you can compare a hash against another to determine if they both came from the same source string, but you
-cannot determine the original string. If passwords are not hashed and your database is accessed by an unauthorized
-third-party, all user accounts are now compromised.
+Хеширование — необратимая односторонняя функция. Это создает строку фиксированной длины, которую невозможно обратить
+вспять. Это означает, что вы можете сравнить хэш с другим, чтобы определить, пришли ли они оба из одной и той же исходной
+строки, но вы не можете определить исходную строку. Если пароли не хэшируются и к вашей базе данных обращается
+неавторизованная третья сторона, все учетные записи пользователей теперь скомпрометированы.
 
-Unlike hashing, encryption is reversible (provided you have the key). Encryption is useful in other areas, but is a poor
-strategy for securely storing passwords.
+В отличие от хеширования, шифрование обратимо (если у вас есть ключ). Шифрование полезно в других областях, но это плохая
+стратегия для безопасного хранения паролей.
 
-Passwords should also be individually [_salted_][5] by adding a random string to each password before hashing. This prevents dictionary attacks and the use of "rainbow tables" (a reverse list of crytographic hashes for common passwords.)
+Пароли также должны быть индивидуально [_salted_][5] путем добавления случайной строки к каждому паролю перед хешированием.
+Это предотвращает атаки по словарю и использование «радужных таблиц» (обратный список криптографических хэшей для обычных
+паролей).
 
-Hashing and salting are vital as often users use the same password for multiple services and password quality can be poor.
+Хеширование и добавление соли жизненно важны, так как часто пользователи используют один и тот же пароль для нескольких
+сервисов, а качество пароля может быть низким.
 
-Additionally, you should use [a specialized _password hashing_ algorithm][6] rather than fast, general-purpose
-cryptographic hash function (e.g. SHA256). The short list of acceptable password hashing algorithms (as of June 2018)
-to use are:
+Кроме того, вам следует использовать [специализированный алгоритм_хеширования_пароля][6], а не быструю универсальную
+криптографическую хеш-функцию (например, SHA256). Краткий список приемлемых алгоритмов хеширования паролей (по состоянию
+на июнь 2018 г.) для использования:
 
-* Argon2 (available in PHP 7.2 and newer)
+* Argon2 (доступно в PHP 7.2 и новее)
 * Scrypt
-* **Bcrypt** (PHP provides this one for you; see below)
+* **Bcrypt** (PHP предоставляет его для вас; см. ниже)
 * PBKDF2 with HMAC-SHA256 or HMAC-SHA512
 
-Fortunately, nowadays PHP makes this easy.
+К счастью, в настоящее время PHP делает это легко.
 
-**Hashing passwords with `password_hash`**
+**Хеширование паролей с `password_hash`**
 
-In PHP 5.5 `password_hash()` was introduced. At this time it is using BCrypt, the strongest algorithm currently
-supported by PHP. It will be updated in the future to support more algorithms as needed though. The `password_compat`
-library was created to provide forward compatibility for PHP >= 5.3.7.
+В PHP 5.5 был введен `password_hash()`. В настоящее время он использует BCrypt, самый сильный алгоритм, который в
+настоящее время поддерживается PHP. Однако в будущем он будет обновлен для поддержки большего количества алгоритмов по
+мере необходимости. Библиотека `password_compat` была создана для обеспечения прямой совместимости с PHP >= 5.3.7.
 
-Below we hash a string, and then check the hash against a new string. Because our two source strings are different
-('secret-password' vs. 'bad-password') this login will fail.
+Ниже мы хешируем строку, а затем проверяем хеш на новую строку. Поскольку наши две исходные строки различаются
+("secret-password" и "bad-password"), этот вход не удастся.
 
 {% highlight php %}
 <?php
@@ -56,14 +60,15 @@ if (password_verify('bad-password', $passwordHash)) {
 }
 {% endhighlight %}
 
-`password_hash()` takes care of password salting for you. The salt is stored, along with the algorithm and "cost", as part of the hash.  `password_verify()` extracts this to determine how to check the password, so you don't need a separate database field to store your salts.
+`password_hash()` позаботится о добавлении соли для вас. Соль хранится вместе с алгоритмом и "расценивается" как часть
+хэша. `password_verify()` извлекает это, чтобы определить, как проверить пароль, поэтому вам не нужно отдельное поле
+базы данных для хранения ваших солей.
 
-* [Learn about `password_hash()`] [1]
-* [`password_compat` for PHP >= 5.3.7 && < 5.5] [2]
-* [Learn about hashing in regards to cryptography] [3]
-* [Learn about salts] [5]
-* [PHP `password_hash()` RFC] [4]
-
+*[Узнать о `password_hash()`][1]
+* [`password_compat` for PHP >= 5.3.7 && < 5.5][2]
+*[Узнать о хешировании в отношении криптографии][3]
+* [Узнать о salts][5]
+* [PHP `password_hash()` RFC][4]
 
 [1]: https://secure.php.net/function.password-hash
 [2]: https://github.com/ircmaxell/password_compat
@@ -72,4 +77,3 @@ if (password_verify('bad-password', $passwordHash)) {
 [5]: https://wikipedia.org/wiki/Salt_(cryptography)
 [6]: https://paragonie.com/blog/2016/02/how-safely-store-password-in-2016
 [7]: https://paragonie.com/blog/2015/08/you-wouldnt-base64-a-password-cryptography-decoded
-

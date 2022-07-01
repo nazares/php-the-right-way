@@ -1,41 +1,44 @@
 ---
 isChild: true
+title: Фильтрация данных
 anchor:  data_filtering
 ---
 
-## Data Filtering {#data_filtering_title}
+## Фильтрация данных (Data Filtering) {#data_filtering_title}
 
-Never ever (ever) trust foreign input introduced to your PHP code. Always sanitize and validate foreign input before
-using it in code. The `filter_var()` and `filter_input()` functions can sanitize text and validate text formats (e.g.
-email addresses).
+Никогда (никогда) не доверяйте чужому вводу, введенному в ваш PHP-код. Всегда очищайте и проверяйте внешний ввод перед
+его использованием в коде. Функции `filter_var()` и `filter_input()` могут очищать текст и проверять текстовые форматы
+(например, адреса электронной почты).
 
-Foreign input can be anything: `$_GET` and `$_POST` form input data, some values in the `$_SERVER` superglobal, and the
-HTTP request body via `fopen('php://input', 'r')`. Remember, foreign input is not limited to form data submitted by the
-user. Uploaded and downloaded files, session values, cookie data, and data from third-party web services are foreign
-input, too.
+Внешний ввод может быть любым: `$_GET` и `$_POST` формируют входные данные, некоторые значения в суперглобальном массиве
+`$_SERVER` и тело HTTP-запроса через `fopen('php://input', 'r')`. Помните, что внешний ввод не ограничивается данными
+формы, отправленными пользователем. Загруженные и выгруженные файлы, значения сеанса, данные cookie и данные сторонних
+веб-сервисов также являются посторонними входными данными.
 
-While foreign data can be stored, combined, and accessed later, it is still foreign input. Every time you process,
-output, concatenate, or include data in your code, ask yourself if the data is filtered properly and can it be trusted.
+Хотя сторонние данные можно хранить, комбинировать и обращаться к ним позже, они по-прежнему являются внешними входными
+данными. Каждый раз, когда вы обрабатываете, выводите, объединяете или включаете данные в свой код, спрашивайте себя,
+правильно ли фильтруются данные и можно ли им доверять.
 
-Data may be _filtered_ differently based on its purpose. For example, when unfiltered foreign input is passed into HTML
-page output, it can execute HTML and JavaScript on your site! This is known as Cross-Site Scripting (XSS) and can be a
-very dangerous attack. One way to avoid XSS is to sanitize all user-generated data before outputting it to your page by
-removing HTML tags with the `strip_tags()` function or escaping characters with special meaning into their respective
-HTML entities with the `htmlentities()` or `htmlspecialchars()` functions.
+Данные могут _фильтроваться_ по-разному в зависимости от их назначения. Например, когда нефильтрованный посторонний ввод
+передается в вывод HTML-страницы, он может выполнять HTML и JavaScript на вашем сайте! Это известно как межсайтовый
+скриптинг (XSS) и может быть очень опасной атакой. Один из способов избежать XSS — очистить все пользовательские данные
+перед их выводом на вашу страницу, удалив теги HTML с помощью функции `strip_tags()` или экранировав символы со
+специальным значением в соответствующие объекты HTML с помощью `htmlentities()` или функции `htmlspecialchars()`.
 
-Another example is passing options to be executed on the command line. This can be extremely dangerous (and is usually
-a bad idea), but you can use the built-in `escapeshellarg()` function to sanitize the executed command's arguments.
+Другой пример — передача параметров для выполнения в командной строке. Это может быть чрезвычайно опасно (и, как правило,
+это плохая идея), но вы можете использовать встроенную функцию `escapeshellarg()` для очистки аргументов выполняемой
+команды.
 
-One last example is accepting foreign input to determine a file to load from the filesystem. This can be exploited by
-changing the filename to a file path. You need to remove `"/"`, `"../"`, [null bytes][6], or other characters from the
-file path so it can't load hidden, non-public, or sensitive files.
+Последний пример — прием внешнего ввода для определения файла для загрузки из файловой системы. Это можно использовать,
+изменив имя файла на путь к файлу. Вам нужно удалить `"/"`, `"../"`, [null bytes][6] или другие символы из пути к файлу,
+чтобы он не мог загружать скрытые, непубличные или конфиденциальные файлы.
 
-* [Learn about data filtering][1]
-* [Learn about `filter_var`][4]
-* [Learn about `filter_input`][5]
-* [Learn about handling null bytes][6]
+* [Узнать о data filtering][1]
+* [Узнать о `filter_var`][4]
+* [Узнать о `filter_input`][5]
+* [Узнать о handling null bytes][6]
 
-### Sanitization
+### Санитарная обработка (Sanitization)
 
 Sanitization removes (or escapes) illegal or unsafe characters from foreign input.
 
@@ -60,7 +63,6 @@ Validation ensures that foreign input is what you expect. For example, you may w
 phone number, or age when processing a registration submission.
 
 [See Validation Filters][3]
-
 
 [1]: https://secure.php.net/book.filter
 [2]: https://secure.php.net/filter.filters.sanitize
