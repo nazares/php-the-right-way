@@ -40,18 +40,20 @@ anchor:  data_filtering
 
 ### Санитарная обработка (Sanitization)
 
-Sanitization removes (or escapes) illegal or unsafe characters from foreign input.
+Дезинфекция удаляет (или избавляет от) незаконные или небезопасные символы из чужого ввода.
 
-For example, you should sanitize foreign input before including the input in HTML or inserting it into a raw SQL query.
-When you use bound parameters with [PDO](#databases), it will sanitize the input for you.
+Например, вам необходимо санировать чужой ввод, прежде чем подключать ввод в HTML или вставлять это в необработанный SQL
+запрос. Когда вы используете связанные параметры с [PDO](#databases), оно будет обеззараживать ввод для вас.
 
-Sometimes it is required to allow some safe HTML tags in the input when including it in the HTML page. This is very
-hard to do and many avoid it by using other more restricted formatting like Markdown or BBCode, although whitelisting
-libraries like [HTML Purifier][html-purifier] exists for this reason.
+Иногда требуется разрешить несколько безопасных HTML тегов на входе, когда вкладываете их в HTML страницу. Это очень
+сложно сделать и многие избегают этого, используя более ограниченное форматирование, такое как Markdown или BBCode, хотя
+библиотеки белого списка, такие как [HTML Purifier][html-purifier] существуют по этой причине.
 
-[See Sanitization Filters][2]
+[Смотреть фильтры санирования][2]
 
 ### Unserialization
+
+Опасно `unserialize()` данные от пользователей или других недоверенных ресурсов
 
 It is dangerous to `unserialize()` data from users or other untrusted sources.  Doing so can allow malicious users to instantiate objects (with user-defined properties) whose destructors will be executed, **even if the objects themselves aren't used**.  You should therefore avoid unserializing untrusted data.
 
