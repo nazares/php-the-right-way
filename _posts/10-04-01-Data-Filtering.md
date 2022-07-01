@@ -33,44 +33,47 @@ anchor:  data_filtering
 изменив имя файла на путь к файлу. Вам нужно удалить `"/"`, `"../"`, [null bytes][6] или другие символы из пути к файлу,
 чтобы он не мог загружать скрытые, непубличные или конфиденциальные файлы.
 
-* [Узнать о data filtering][1]
-* [Узнать о `filter_var`][4]
-* [Узнать о `filter_input`][5]
+* [Узнать о фильтрации данных][1]
+* [Узнать о `filter_var()`][4]
+* [Узнать о `filter_input()`][5]
 * [Узнать о handling null bytes][6]
 
-### Санитарная обработка (Sanitization)
+### Очищение (Sanitization)
 
-Дезинфекция удаляет (или избавляет от) незаконные или небезопасные символы из чужого ввода.
+Очищение удаляет (или экранирует) недопустимые или небезопасные символы из внешнего ввода.
 
-Например, вам необходимо санировать чужой ввод, прежде чем подключать ввод в HTML или вставлять это в необработанный SQL
+Например, вам необходимо очистить чужой ввод, прежде чем подключать ввод в HTML или вставлять его в необработанный SQL
 запрос. Когда вы используете связанные параметры с [PDO](#databases), оно будет обеззараживать ввод для вас.
 
 Иногда требуется разрешить несколько безопасных HTML тегов на входе, когда вкладываете их в HTML страницу. Это очень
 сложно сделать и многие избегают этого, используя более ограниченное форматирование, такое как Markdown или BBCode, хотя
 библиотеки белого списка, такие как [HTML Purifier][html-purifier] существуют по этой причине.
 
-[Смотреть фильтры санирования][2]
+[Смотреть очищающие фильтры][2]
 
-### Unserialization
+### Десериализация (Unserialization)
 
 Опасно `unserialize()` данные от пользователей или других недоверенных ресурсов
 
-It is dangerous to `unserialize()` data from users or other untrusted sources.  Doing so can allow malicious users to instantiate objects (with user-defined properties) whose destructors will be executed, **even if the objects themselves aren't used**.  You should therefore avoid unserializing untrusted data.
+Опасно `unserialize()` данные от пользователей или других ненадежных источников. Это может позволить злоумышленникам
+создавать экземпляры объектов (с определяемыми пользователем свойствами), чьи деструкторы будут выполняться, **даже если
+сами объекты не используются**. Поэтому вам следует избегать десериализации ненадежных данных.
 
-If you absolutely must unserialize data from untrusted sources, use PHP 7's [`allowed_classes`][unserialize] option to restrict which object types are allowed to be unserialized.
+Если вам абсолютно необходимо десериализовать данные из ненадежных источников, используйте параметр PHP 7
+[`allowed_classes`][unserialize], чтобы ограничить, какие типы объектов могут быть десериализованы.
 
-### Validation
+### Валидация (Validation)
 
-Validation ensures that foreign input is what you expect. For example, you may want to validate an email address, a
-phone number, or age when processing a registration submission.
+Валидация гарантирует, что иностранный ввод соответствует вашим ожиданиям. Например, вы можете захотеть подтвердить адрес
+электронной почты, номер телефона или возраст при обработке заявки на регистрацию.
 
-[See Validation Filters][3]
+[Смотреть Фильтры валидации данных][3]
 
-[1]: https://secure.php.net/book.filter
-[2]: https://secure.php.net/filter.filters.sanitize
-[3]: https://secure.php.net/filter.filters.validate
-[4]: https://secure.php.net/function.filter-var
-[5]: https://secure.php.net/function.filter-input
-[6]: https://secure.php.net/security.filesystem.nullbytes
+[1]: https://secure.php.net/ru/book.filter
+[2]: https://secure.php.net/ru/filter.filters.sanitize
+[3]: https://secure.php.net/ru/filter.filters.validate
+[4]: https://secure.php.net/ru/function.filter-var
+[5]: https://secure.php.net/ru/function.filter-input
+[6]: https://secure.php.net/ru/security.filesystem.nullbytes
 [html-purifier]: http://htmlpurifier.org/
-[unserialize]: https://secure.php.net/manual/function.unserialize.php
+[unserialize]: https://secure.php.net/manual/ru/function.unserialize.php

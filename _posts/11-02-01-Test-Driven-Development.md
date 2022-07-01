@@ -3,24 +3,37 @@ isChild: true
 anchor:  test_driven_development
 ---
 
-## Test Driven Development {#test_driven_development_title}
+## Разработка через тестирование {#test_driven_development_title}
 
-From [Wikipedia](https://wikipedia.org/wiki/Test-driven_development):
+Из [Wikipedia](https://wikipedia.org/wiki/Test-driven_development):
 
-> Test-driven development (TDD) is a software development process that relies on the repetition of a very short
-> development cycle: first the developer writes a failing automated test case that defines a desired improvement or new
-> function, then produces code to pass that test and finally refactors the new code to acceptable standards. Kent Beck,
-> who is credited with having developed or 'rediscovered' the technique, stated in 2003 that TDD encourages simple
-> designs and inspires confidence.
+> Разработка через тестирование (TDD) — это процесс разработки программного обеспечения, основанный на повторении очень
+> короткого цикла разработки: сначала разработчик пишет неудачный автоматизированный тестовый пример, который определяет
+> желаемое улучшение или новую функцию, а затем создает код для прохождения этого теста. и, наконец, реорганизует новый
+> код в соответствии с приемлемыми стандартами. Кент Бек, которому приписывают разработку или «повторное открытие» этой
+> техники, заявил в 2003 году, что TDD поощряет простые конструкции и внушает доверие.
 
-There are several different types of testing that you can do for your application:
+Существует несколько различных типов тестирования, которые вы можете выполнить для своего приложения::
 
-### Unit Testing
+### Unit Тестирование
 
-Unit Testing is a programming approach to ensure functions, classes and methods are working as expected, from the point
-you build them all the way through the development cycle. By checking values going in and out of various functions and
-methods, you can make sure the internal logic is working correctly. By using Dependency Injection and building "mock"
-classes and stubs you can verify that dependencies are correctly used for even better test coverage.
+Модульное тестирование — это подход к программированию, гарантирующий, что функции, классы и методы работают должным
+образом, с момента их создания на протяжении всего цикла разработки. Проверяя значения, входящие и исходящие из различных
+функций и методов, вы можете убедиться, что внутренняя логика работает правильно. Используя Dependency Injection и
+создавая "фиктивные" классы и заглушки, вы можете убедиться, что зависимости правильно используются для еще лучшего
+покрытия тестами.
+
+Когда вы создаете класс или функцию, вы должны создать модульный тест для каждого поведения, которое они должны иметь.
+На самом базовом уровне вы должны убедиться, что он ошибается, если вы отправляете ему неверные аргументы, и убедитесь,
+что он работает, если вы отправляете ему действительные аргументы. Это поможет гарантировать, что при внесении изменений
+в этот класс или функцию позже в цикле разработки старая функциональность продолжит работать должным образом. Единственной
+альтернативой этому может быть `var_dump()` в файле test.php, который нет возможности создать приложение - большое или
+маленькое.
+
+Еще одно применение модульных тестов — вклад в открытый исходный код. Если вы можете написать тест, который показывает
+неработающую функциональность (т. е. дает сбой), а затем исправить его и показать, что тест пройден, вероятность того,
+что патчи будут приняты, гораздо выше. Если вы запускаете проект, который принимает запросы на вытягивание, вы должны
+предложить это как требование.
 
 When you create a class or function you should create a unit test for each behavior it must have. At a very basic level
 you should make sure it errors if you send it bad arguments and make sure it works if you send it valid arguments. This
@@ -32,37 +45,40 @@ The other use for unit tests is contributing to open source. If you can write a 
 (i.e. fails), then fix it, and show the test passing, patches are much more likely to be accepted. If you run a project
 which accepts pull requests then you should suggest this as a requirement.
 
-[PHPUnit](https://phpunit.de/) is the de-facto testing framework for writing unit tests for PHP applications, but there
-are several alternatives
+[PHPUnit](https://phpunit.de/) — де-факто среда тестирования для написания модульных тестов для PHP-приложений, но есть
+несколько альтернатив.
 
 * [atoum](https://github.com/atoum/atoum)
 * [Kahlan](https://github.com/crysalead/kahlan)
 * [Peridot](https://peridot-php.github.io/)
 * [SimpleTest](http://simpletest.org)
 
-### Integration Testing
+### Интеграционное тестирование
 
-From [Wikipedia](https://wikipedia.org/wiki/Integration_testing):
+Из [Wikipedia](https://wikipedia.org/wiki/Integration_testing):
 
-> Integration testing (sometimes called Integration and Testing, abbreviated "I&T") is the phase in software testing in
-> which individual software modules are combined and tested as a group. It occurs after unit testing and before
-> validation testing. Integration testing takes as its input modules that have been unit tested, groups them in larger
-> aggregates, applies tests defined in an integration test plan to those aggregates, and delivers as its output the
-> integrated system ready for system testing.
+> Интеграционное тестирование (иногда называемое интеграцией и тестированием, сокращенно «I&T») — это этап тестирования
+> программного обеспечения, на котором отдельные программные модули объединяются и тестируются как группа. Это происходит
+> после модульного тестирования и перед проверочным тестированием. Интеграционное тестирование принимает в качестве
+> входных данных модули, прошедшие модульное тестирование, группирует их в более крупные агрегаты, применяет тесты,
+> определенные в плане интеграционного тестирования, к этим агрегатам и предоставляет на выходе интегрированную систему,
+> готовую к системному тестированию.
 
-Many of the same tools that can be used for unit testing can be used for integration testing as many of the same
-principles are used.
+Многие из тех же инструментов, которые можно использовать для модульного тестирования, можно использовать и для
+нтеграционного тестирования, поскольку используются многие из тех же принципов.
 
-### Functional Testing
+### Функциональное тестирование
 
-Sometimes also known as acceptance testing, functional testing consists of using tools to create automated tests that
-actually use your application instead of just verifying that individual units of code are behaving correctly and that
-individual units can speak to each other correctly. These tools typically work using real data and simulating actual
-users of the application.
+Иногда также известное как приемочное тестирование, функциональное тестирование состоит из использования инструментов
+для создания автоматических тестов, которые фактически используют ваше приложение, а не просто проверки того, что
+отдельные блоки кода ведут себя правильно и что отдельные блоки могут правильно общаться друг с другом. Эти инструменты
+обычно работают с реальными данными и имитируют реальных пользователей приложения.
 
-#### Functional Testing Tools
+#### Инструменты Функционального Тестирования
 
 * [Selenium](https://docs.seleniumhq.org/)
 * [Mink](http://mink.behat.org/)
-* [Codeception](https://codeception.com/) is a full-stack testing framework that includes acceptance testing tools
-* [Storyplayer](https://datasift.github.io/storyplayer/) is a full-stack testing framework that includes support for creating and destroying test environments on demand
+* [Codeception](https://codeception.com/) это полнофункциональная среда тестирования, включающая инструменты приемочного
+  тестирования.
+* [Storyplayer](https://datasift.github.io/storyplayer/) — это полнофункциональная среда тестирования, включающая
+  поддержку создания и уничтожения тестовых сред по запросу.
