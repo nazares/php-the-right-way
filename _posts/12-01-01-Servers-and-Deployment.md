@@ -1,8 +1,8 @@
 ---
-title:  Servers and Deployment
+title:  Серверы и развертывание
 anchor: servers_and_deployment
 ---
 
-# Servers and Deployment {#servers_and_deployment_title}
+# Серверы и развертывание {#servers_and_deployment_title}
 
-PHP applications can be deployed and run on production web servers in a number of ways.
+Приложения PHP можно развертывать и запускать на производственных веб-серверах несколькими способами.

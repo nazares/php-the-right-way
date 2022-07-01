@@ -3,12 +3,13 @@ isChild: true
 anchor:  shared_servers
 ---
 
-## Shared Servers {#shared_servers_title}
+## Общие серверы {#shared_servers_title}
 
-PHP has shared servers to thank for its popularity. It is hard to find a host without PHP installed, but be sure it's
-the latest version. Shared servers allow you and other developers to deploy websites to a single machine. The upside to
-this is that it has become a cheap commodity. The downside is that you never know what kind of a ruckus your
-neighboring tenants are going to create; loading down the server or opening up security holes are the main concerns. If
-your project's budget can afford to avoid shared servers, you should.
+Популярность PHP зависит от общих серверов. Трудно найти хост без установленного PHP, но убедитесь, что это последняя
+версия. Общие серверы позволяют вам и другим разработчикам развертывать веб-сайты на одном компьютере. Положительным
+моментом этого является то, что он стал дешевым товаром. Недостатком является то, что вы никогда не знаете, какой шум
+собираются создать ваши соседние арендаторы; загрузка сервера или открытие дыр в безопасности являются основными
+проблемами. Если бюджет вашего проекта позволяет избежать общих серверов, вы должны это сделать.
 
-To make sure your shared servers are offering the latest versions of PHP, check out [PHP Versions](http://phpversions.info/shared-hosting/).
+Чтобы убедиться, что ваши общие серверы предлагают последние версии PHP, проверьте
+[Версии PHP](http://phpversions.info/shared-hosting/).

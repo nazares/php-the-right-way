@@ -1,26 +1,29 @@
 ---
+title: Фреймворки
 isChild: true
 anchor:  frameworks
 ---
 
-## Frameworks {#frameworks_title}
+## Фреймворки {#frameworks_title}
 
-Rather than re-invent the wheel, many PHP developers use frameworks to build out web applications. Frameworks abstract
-away many of the low-level concerns and provide helpful, easy-to-use interfaces to complete common tasks.
+Вместо того, чтобы изобретать велосипед, многие PHP-разработчики используют фреймворки для создания веб-приложений.
+Фреймворки абстрагируются от многих низкоуровневых проблем и предоставляют полезные, простые в использовании интерфейсы
+для выполнения общих задач.
 
-You do not need to use a framework for every project. Sometimes plain PHP is the right way to go, but if you do need a
-framework then there are three main types available:
+Вам не нужно использовать фреймворк для каждого проекта. Иногда правильный путь — простой PHP, но если вам нужен
+фреймворк, то доступны три основных типа:
 
-* Micro Frameworks
-* Full-Stack Frameworks
-* Component Frameworks
+* Микрофреймворки
+* Фреймворки с полным стеком
+* Компонентные рамки
 
-Micro-frameworks are essentially a wrapper to route a HTTP request to a callback, controller, method, etc as quickly as
-possible, and sometimes come with a few extra libraries to assist development such as basic database wrappers and the
-like. They are prominently used to build remote HTTP services.
+Микрофреймворки, по сути, представляют собой оболочку для максимально быстрой маршрутизации HTTP-запроса к обратному
+вызову, контроллеру, методу и т. д., и иногда они поставляются с несколькими дополнительными библиотеками для помощи в
+разработке, такими как базовые оболочки базы данных и тому подобное. Они широко используются для создания удаленных
+HTTP-сервисов.
 
-Many frameworks add a considerable number of features on top of what is available in a micro-framework; these are
-called Full-Stack Frameworks. These often come bundled with ORMs, Authentication packages, etc.
+Многие фреймворки добавляют значительное количество функций поверх того, что доступно в микрофреймворке; они называются
+платформами полного стека. Они часто поставляются в комплекте с ORM, пакетами аутентификации и т. д.
 
-Component-based frameworks are collections of specialized and single-purpose libraries. Disparate component-based
-frameworks can be used together to make a micro- or full-stack framework.
+Компонентные фреймворки представляют собой наборы специализированных и одноцелевых библиотек. Разрозненные фреймворки на
+основе компонентов можно использовать вместе, чтобы создать микро- или фреймворк с полным стеком.
