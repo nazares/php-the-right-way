@@ -1,29 +1,29 @@
 ---
 isChild: true
+title: Дополнительные инструменты тестирования
 anchor:  complementary_testing_tools
 ---
 
-## Complementary Testing Tools {#complementary_testing_tools_title}
+## Дополнительные инструменты тестирования {#complementary_testing_tools_title}
 
-Besides individual testing and behavior driven frameworks, there are also a number of generic frameworks and helper
-libraries useful for any preferred approach taken.
+Помимо отдельных фреймворков для тестирования и поведения, существует также ряд универсальных фреймворков и
+вспомогательных библиотек, полезных для любого предпочтительного подхода.
 
-### Tool Links
+### Ссылки на инструменты
 
-* [Selenium] is a browser automation tool which can be [integrated with PHPUnit]
-* [Mockery] is a Mock Object Framework which can be integrated with [PHPUnit] or [PHPSpec]
-* [Prophecy] is a highly opinionated yet very powerful and flexible PHP object mocking framework. It's integrated with
-[PHPSpec] and can be used with [PHPUnit].
-* [php-mock]  is a library to help to mock PHP native functions.
-* [Infection] is a PHP implementation of [Mutation Testing] to help to measure the effectiveness of your tests.
-
+* [Selenium] это инструмент автоматизации браузера, который может быть [интегрирован с PHPUnit]
+* [Mockery] представляет собой Mock Object Framework, который можно интегрировать с [PHPUnit] или [PHPSpec].
+* [Prophecy] — это очень самоуверенная, но очень мощная и гибкая среда PHP для имитации объектов. Он интегрирован с
+  [PHPSpec] и может использоваться с [PHPUnit].
+* [php-mock]  — это библиотека, помогающая имитировать нативные функции PHP.
+* [Infection] — это PHP-реализация [Тестирования мутаций], помогающая измерять эффективность ваших тестов.
 
 [Selenium]: https://www.seleniumhq.org/
-[integrated with PHPUnit]: https://github.com/giorgiosironi/phpunit-selenium/
+[интегрирован с PHPUnit]: https://github.com/giorgiosironi/phpunit-selenium/
 [Mockery]: https://github.com/padraic/mockery
 [PHPUnit]: https://phpunit.de/
 [PHPSpec]: https://www.phpspec.net/
 [Prophecy]: https://github.com/phpspec/prophecy
 [php-mock]: https://github.com/php-mock/php-mock
 [Infection]: https://github.com/infection/infection
-[Mutation Testing]: https://en.wikipedia.org/wiki/Mutation_testing
+[Тестирования мутаций]: https://en.wikipedia.org/wiki/Mutation_testing

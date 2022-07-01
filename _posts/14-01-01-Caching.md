@@ -1,8 +1,10 @@
 ---
+title: Кеширование
 anchor: caching
 ---
 
-# Caching {#caching_title}
+# Кеширование {#caching_title}
 
-PHP is pretty quick by itself, but bottlenecks can arise when you make remote connections, load files, etc. 
-Thankfully, there are various tools available to speed up certain parts of your application, or reduce the number of times these various time-consuming tasks need to run.
+PHP сам по себе довольно быстр, но узкие места могут возникнуть, когда вы устанавливаете удаленные соединения, загружаете
+файлы и т. д. К счастью, существуют различные инструменты для ускорения определенных частей вашего приложения или
+уменьшения количества раз выполнения этих различных трудоемких задач. нужно бежать.

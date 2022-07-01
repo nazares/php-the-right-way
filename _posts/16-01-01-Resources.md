@@ -1,5 +1,6 @@
 ---
+title: Ресурсы
 anchor: resources
 ---
 
-# Resources {#resources_title}
+# Ресурсы {#resources_title}
