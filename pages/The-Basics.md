@@ -8,8 +8,8 @@ sitemap: true
 
 ## Операторы сравнения
 
-Comparison operators are an often overlooked aspect of PHP, which can lead to many unexpected outcomes. One such
-problem stems from strict comparisons (the comparison of booleans as integers).
+Операторы сравнения — часто упускаемый из виду аспект PHP, который может привести ко многим неожиданным результатам.
+Одна из таких проблем возникает из-за строгих сравнений (сравнение логических значений как целых чисел).
 
 {% highlight php %}
 <?php

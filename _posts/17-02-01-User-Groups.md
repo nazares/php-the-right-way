@@ -5,16 +5,9 @@ anchor:  user_groups
 
 ## PHP User Groups {#user_groups_title}
 
-If you live in a larger city, odds are there's a PHP user group nearby. You can easily find your local PUG at
-[PHP.ug][php-ug]. Alternate sources might be [Meetup.com][meetup] or a search for ```php user group near me```
-using your favorite search engine (i.e. [Google][google]). If you live in a smaller town, there may not be a
-local PUG; if that's the case, start one!
+Если вы живете в большом городе, скорее всего, поблизости есть группа пользователей PHP. Вы можете легко найти местный PUG на [PHP.ug][php-ug]. Альтернативными источниками могут быть [Meetup.com][meetup] или поиск ```группа пользователей php рядом со мной``` с помощью вашей любимой поисковой системы (например, [Google][google]). Если вы живете в маленьком городке, местного мопса может и не быть; если это так, начните один!
 
-Special mention should be made of two global user groups: [NomadPHP] and [PHPWomen]. [NomadPHP] offers twice monthly
-online user group meetings with presentations by some of the top speakers in the PHP community.
-[PHPWomen] is a non-exclusive user group originally targeted towards the women in the PHP world. Membership is open to
-everyone who supports a more diverse community. PHPWomen provide a network for support, mentorship and education, and
-generally promote the creating of a "female friendly" and professional atmosphere.
+Особо следует отметить две глобальные группы пользователей: [NomadPHP] и [PHPWomen]. [NomadPHP] два раза в месяц предлагает групповые онлайн-встречи пользователей с презентациями ведущих спикеров PHP-сообщества. [PHPWomen] — это неэксклюзивная группа пользователей, изначально ориентированная на женщин в мире PHP. Членство открыто для всех, кто поддерживает более разнообразное сообщество. PHPWomen предоставляет сеть для поддержки, наставничества и обучения и в целом способствует созданию «дружественной к женщинам» и профессиональной атмосферы.
 
 [Read about User Groups on the PHP Wiki][php-wiki]
 
