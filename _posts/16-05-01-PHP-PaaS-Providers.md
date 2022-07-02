@@ -23,4 +23,5 @@ anchor:  php_paas_providers
 * [Platform.sh](https://platform.sh/)
 * [Red Hat OpenShift](https://www.openshift.com/)
 
-To see which versions these PaaS hosts are running, head over to [PHP Versions](http://phpversions.info/paas-hosting/).
+Чтобы узнать, какие версии работают на этих хостах PaaS, перейдите на страницу
+[PHP Versions](http://phpversions.info/paas-hosting/).

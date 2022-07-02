@@ -1,44 +1,42 @@
 ---
 isChild: true
+title: Компоненты
 anchor:  components
 ---
 
-## Components {#components_title}
+## Компоненты {#components_title}
 
-As mentioned above "Components" are another approach to the common goal of creating, distributing and implementing
-shared code. Various component repositories exist, the main two of which are:
+Как упоминалось выше, «Компоненты» — это еще один подход к общей цели создания, распространения и реализации общего кода.
+Существуют различные репозитории компонентов, два основных из которых:
 
 * [Packagist]
 * [PEAR]
 
-Both of these repositories have command line tools associated with them to help the installation and upgrade processes,
-and have been explained in more detail in the [Dependency Management] section.
+С обоими этими репозиториями связаны инструменты командной строки, помогающие в процессах установки и обновления, и более подробно они описаны в разделе [Dependency Management].
 
-There are also component-based frameworks and component-vendors that offer no framework at all. These projects provide
-another source of packages which ideally have little to no dependencies on other packages, or specific frameworks.
+Существуют также фреймворки, основанные на компонентах, и поставщики компонентов, которые вообще не предлагают фреймворков. Эти проекты предоставляют еще один источник пакетов, которые в идеале практически не зависят от других пакетов или конкретных фреймворков.
 
-For example, you can use the [FuelPHP Validation package], without needing to use the FuelPHP framework itself.
+Например, вы можете использовать [FuelPHP Validation package], не используя саму структуру FuelPHP.
 
 * [Aura]
 * CakePHP Components
-    * [Collection]
-    * [Database]
-    * [Datasource]
-    * [Event]
-    * [I18n]
-    * [ORM]   
+  * [Collection]
+  * [Database]
+  * [Datasource]
+  * [Event]
+  * [I18n]
+  * [ORM]
 * [FuelPHP]
 * [Hoa Project]
 * [Symfony Components]
 * [The League of Extraordinary Packages]
 * Laravel's Illuminate Components
-    * [IoC Container]
-    * [Eloquent ORM]
-    * [Queue]
+  * [IoC Container]
+  * [Eloquent ORM]
+  * [Queue]
 
-_Laravel's [Illuminate components] will become better decoupled from the Laravel framework. For now, only the
-components best decoupled from the Laravel framework are listed above._
-
+_[Illuminate components] Laravel станут лучше отделены от фреймворка Laravel. На данный момент выше перечислены только те
+компоненты, которые лучше всего отделены от фреймворка Laravel._
 
 [Packagist]: /#composer_and_packagist
 [PEAR]: /#pear

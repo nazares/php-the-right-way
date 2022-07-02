@@ -1,17 +1,18 @@
 ---
+Title: Сообщество
 anchor: community
 ---
 
-# Community {#community_title}
+# Сообщество {#community_title}
 
-The PHP community is as diverse as it is large, and its members are ready and willing to support new PHP programmers.
-Consider joining your local PHP user group (PUG) or attending larger PHP conferences to learn more about the best
-practices shown here. You can hang out on IRC in the #phpc channel on [irc.freenode.com][php-irc] and follow the
-[@phpc][phpc-twitter] twitter account. Get out there, meet new developers, learn new topics, and above all, make new
-friends! Other community resources include [StackOverflow][php-so].
+Сообщество PHP столь же разнообразно, сколь и велико, и его члены готовы и желают поддерживать новых PHP-программистов.
+Подумайте о том, чтобы присоединиться к вашей локальной группе пользователей PHP (PUG) или посетить более крупные
+конференции PHP, чтобы узнать больше о передовых методах, показанных здесь. Вы можете общаться в IRC на канале #phpc на
+[irc.freenode.com][php-irc] и следить за учетной записью [@phpc][phpc-twitter] в Twitter. Отправляйтесь туда, знакомьтесь
+с новыми разработчиками, изучайте новые темы и, прежде всего, заводите новых друзей! Другие ресурсы сообщества включают
+[StackOverflow][php-so].
 
 [Read the Official PHP Events Calendar][php-calendar]
-
 
 [php-irc]: https://webchat.freenode.net/?channels=phpc
 [phpc-twitter]: https://twitter.com/phpc
