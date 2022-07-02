@@ -1,5 +1,6 @@
 ---
 isChild: true
+title: Общие серверы
 anchor:  shared_servers
 ---
 
