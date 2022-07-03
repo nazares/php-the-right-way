@@ -1,40 +1,42 @@
 # Contributing to PHP The Right Way
 
-Enjoy [PHP The Right Way](http://phptherightway.com) and want to get
-involved? Great! There are plenty of ways you can help out.
+Нравится [PHP The Right Way](http://phptherightway.com) и хотите принять участие?
+Замечательно! Есть много способов помочь.
+
+Пожалуйста, найдите время, чтобы просмотреть этот документ, чтобы сделать процесс
+внесения вклада простым и эффективным для всех участников.
+
+Следование этим рекомендациям помогает показать, что вы уважаете время разработчиков,
+управляющих и разрабатывающих этот проект с открытым исходным кодом. В свою очередь,
+они должны ответить взаимностью на решение вашей проблемы или оценку исправлений
+и функций.
 
 Please take a moment to review this document in order to make the contribution
 process easy and effective for everyone involved.
 
-Following these guidelines helps to communicate that you respect the time of
-the developers managing and developing this open source project. In return,
-they should reciprocate that respect in addressing your issue or assessing
-patches and features.
+## Использование issue tracker
 
-## Using the issue tracker
+[issue tracker](https://github.com/codeguy/php-the-right-way/issues) является
+предпочтительным каналом для внесения изменений: орфографические ошибки, изменения
+формулировок, новый контент и вообще [отправка запросов на включение](#pull-requests),
+но, пожалуйста, соблюдайте следующие ограничения:
 
-The [issue tracker](https://github.com/codeguy/php-the-right-way/issues) is
-the preferred channel for changes: spelling mistakes, wording changes, new
-content and generally [submitting pull requests](#pull-requests), but please
-respect the following restrictions:
+* Пожалуйста, **не** используйте средство отслеживания проблем для личных запросов
+в службу поддержки (используйте [Stack Overflow](http://stackoverflow.com/questions/tagged/php) или IRC).
 
-* Please **do not** use the issue tracker for personal support requests (use
-  [Stack Overflow](http://stackoverflow.com/questions/tagged/php) or IRC).
-
-* Please **do not** derail or troll issues. Keep the discussion on topic and
-  respect the opinions of others.
+* Пожалуйста, **не** срывайте и не троллите проблемы. Держите дискуссию по теме
+и уважайте мнение других.
 
 ## Pull Requests
 
-Pull requests are a great way to add new content to PHP The Right Way, as well
-as updating any browser issues or other style changes. Pretty much any sort of
-change is accepted if seen as constructive.
+Запросы Pull requests — отличный способ добавить новый контент в PHP «Правильно»,
+а также обновить любые проблемы с браузером или другие изменения стиля.
+Практически любые изменения принимаются, если они рассматриваются как конструктивные.
 
-Adhering to the following process is the best way to get your work
-included in the project:
+Соблюдение следующего процесса — лучший способ включить вашу работу в проект:
 
-1. [Fork](http://help.github.com/fork-a-repo/) the project, clone your fork,
-   and configure the remotes:
+1. [Fork](http://help.github.com/fork-a-repo/) проект, клонируйте свой форк и
+настройте пульты:
 
    ```bash
    # Clone your fork of the repo into the current directory
@@ -52,14 +54,14 @@ included in the project:
    git pull upstream gh-pages
    ```
 
-3. Create a new topic branch (off the main project development branch) to
-   contain your change or fix:
+3. Создайте новую ветку темы (вне основной ветки разработки проекта), чтобы
+содержать ваши изменения или исправления:
 
    ```bash
    git checkout -b <topic-branch-name>
    ```
 
-4. Install the [Jekyll](https://github.com/jekyll/jekyll/) gem and dependencies to preview locally:
+4. Установить [Jekyll](https://github.com/jekyll/jekyll/) gem и зависимости для локального предварительного просмотра:
 
     ```bash
     # Install the needed gems through Bundler
@@ -68,48 +70,47 @@ included in the project:
     bundle exec jekyll serve
     ```
 
-5. Commit your changes in logical chunks. Please adhere to these [git commit
+5. Зафиксируйте изменения логическими фрагментами. Пожалуйста, придерживайтесь этих [git commit
    message guidelines](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
-   or your content is unlikely be merged into the main project. Use Git's
+   или ваш контент вряд ли будет объединен с основным проектом. Используйте Git
    [interactive rebase](https://help.github.com/articles/about-git-rebase/)
-   feature to tidy up your commits before making them public.
+   функции, чтобы привести в порядок ваши коммиты, прежде чем публиковать их.
 
-6. Locally merge (or rebase) the upstream development branch into your topic branch:
+6. Локально объедините (или перебазируйте) вышестоящую ветку разработки в вашу тематическую ветку:
 
    ```bash
    git pull [--rebase] upstream gh-pages
    ```
 
-7. Push your topic branch up to your fork:
+7. Push свою ветку темы к вашей вилке:
 
    ```bash
    git push origin <topic-branch-name>
    ```
 
 8. [Open a Pull Request](https://help.github.com/articles/using-pull-requests/)
-    with a clear title and description.
+    с понятным названием и описанием.
 
-## Contribution Agreement and Usage
+## Соглашение о вкладе и использование
 
-By submitting a pull request to this repository, you agree to allow the project
-owners to license your work under the the terms of the [Creative Commons Attribution-NonCommercial-ShareAlike
+Отправляя pull request в этот репозиторий, вы соглашаетесь разрешить владельцам проекта лицензировать вашу работу в
+соответствии с условиями [Creative Commons Attribution-NonCommercial-ShareAlike
 3.0 Unported License](http://creativecommons.org/licenses/by-nc-sa/3.0/).
 
-The same content and license will be used for all PHP The Right Way publications,
-including - but not limited to:
+Один и тот же контент и лицензия будут использоваться для всех публикаций PHP The Right Way, включая, помимо прочего:
 
 * [phptherightway.com](http://phptherightway.com)
-* Translations of phptherightway.com
+* Переводы phptherightway.com
 * [LeanPub: PHP The Right Way](https://leanpub.com/phptherightway/)
-* Translations of "LeanPub: PHP The Right Way"
+* Переводы "LeanPub: PHP The Right Way"
 
-All content is completely free now, and always will be.
+Весь контент теперь полностью бесплатен и всегда будет таким.
 
-## Contributor Style Guide
+## Руководство по стилю для авторов
 
-1. Use American English spelling (*primary English repo only*)
-2. Use four (4) spaces to indent text; do not use tabs
-3. Wrap all text to 120 characters
-4. Code samples should adhere to PSR-1 or higher
-5. Use [GitHub Flavored Markdown](https://github.github.com/gfm/) for all content
-6. Use language agnostic urls when referring to external websites such as the [php.net](http://php.net/urlhowto.php) manual
+1. Используйте американскую английскую орфографию (*только основной английский репозиторий*)
+2. Используйте четыре (4) пробела для отступа текста; не используйте вкладки
+3. Оберните весь текст до 120 символов.
+4. Примеры кода должны соответствовать PSR-1 или выше.
+5. Используйте [GitHub Flavored Markdown](https://github.github.com/gfm/) для всего контента.
+6. Используйте URL-адреса, не зависящие от языка, при обращении к внешним веб-сайтам, таким как руководство [php.net](http://php.net/urlhowto.php).
