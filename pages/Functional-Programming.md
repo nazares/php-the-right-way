@@ -1,10 +1,10 @@
 ---
 layout: page
-title:  Functional Programming in PHP
+title:  Функциональное программирование в PHP
 sitemap: true
 ---
 
-# Functional Programming in PHP
+# Функциональное программирование в PHP
 
 PHP supports first-class functions, meaning that a function can be assigned to a variable. Both user-defined and
 built-in functions can be referenced by a variable and invoked dynamically. Functions can be passed as arguments to
@@ -79,10 +79,9 @@ Early binding is used by default for importing `$min` variable into the created 
 binding one should use a reference when importing. Imagine a templating or input validation library, where a closure is
 defined to capture variables in scope and access them later when the anonymous function is evaluated.
 
-* [Read about Anonymous functions][anonymous-functions]
+*[Read about Anonymous functions][anonymous-functions]
 * [More details in the Closures RFC][closures-rfc]
 * [Read about dynamically invoking functions with `call_user_func_array()`][call-user-func-array]
-
 
 [anonymous-functions]: http://php.net/functions.anonymous
 [closures-rfc]: https://wiki.php.net/rfc/closures
