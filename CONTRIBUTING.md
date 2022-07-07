@@ -11,9 +11,6 @@
 они должны ответить взаимностью на решение вашей проблемы или оценку исправлений
 и функций.
 
-Please take a moment to review this document in order to make the contribution
-process easy and effective for everyone involved.
-
 ## Использование issue tracker
 
 [issue tracker](https://github.com/codeguy/php-the-right-way/issues) является
