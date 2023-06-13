@@ -444,7 +444,7 @@ sources", и здесь вы настроите различные параме�
 [yii]: https://www.yiiframework.com/doc/guide/2.0/en/tutorial-i18n
 [intl]: https://secure.php.net/manual/intro.intl.php
 [ICU project]: https://icu.unicode.org
-[symfony-keys]: https://symfony.com/doc/current/components/translation/usage.html#creating-translations
+[symfony-keys]: https://symfony.com/doc/current/translation.html#using-real-or-keyword-messages
 
 [sprintf]: https://secure.php.net/manual/function.sprintf.php
 [func]: https://secure.php.net/manual/function.gettext.php
