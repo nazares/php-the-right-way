@@ -17,4 +17,5 @@ anchor:  design_patterns
 
 Вы можете узнать больше о шаблонах проектирования PHP и увидеть рабочие примеры по адресу:
 
+<https://refactoring.guru/design-patterns/php>
 [https://designpatternsphp.readthedocs.io/](https://web.archive.org/web/20221007015016/https://designpatternsphp.readthedocs.io/en/latest/README.html) (archived, [PDF download](https://www.computer-pdf.com/web-programming/php/924-tutorial-designpatternsphp-documentation.html))
