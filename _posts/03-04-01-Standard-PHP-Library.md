@@ -13,5 +13,5 @@ anchor: standard_php_library
 * [Читать о SPL][spl]
 * [SPL видео курс на Lynda.com(Платно)][spllynda]
 
-[spl]: https://secure.php.net/book.spl
+[spl]: https://www.php.net/book.spl
 [spllynda]: https://www.lynda.com/PHP-tutorials/Up-Running-Standard-PHP-Library/175038-2.html
