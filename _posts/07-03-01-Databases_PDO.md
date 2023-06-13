@@ -74,6 +74,6 @@ NULL. Если вы не сделаете это явно, PHP автомати�
 * [Узнать о PDO соединениях]
 
 [pdo]: https://secure.php.net/pdo
-[SQL Инъекции]: http://wiki.hashphp.org/Validation
+[SQL Инъекции]: https://web.archive.org/web/20210413233627/http://wiki.hashphp.org/Validation
 [Узнать о PDO]: https://secure.php.net/book.pdo
 [Узнать о PDO соединениях]: https://secure.php.net/pdo.connections
