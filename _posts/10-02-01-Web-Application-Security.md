@@ -39,4 +39,4 @@ Padraic Brady — еще одно хорошее руководство по б�
 [5]: http://searchsecurity.techtarget.com/definition/address-space-layout-randomization-ASLR
 [6]: https://paragonie.com/blog/2016/01/on-design-and-implementation-stealth-backdoor-for-web-applications
 [7]: https://paragonie.com/blog/2015/05/using-encryption-and-authentication-correctly
-[8]: http://blog.ircmaxell.com/2014/11/its-all-about-time.html
+[8]: https://blog.ircmaxell.com/2014/11/its-all-about-time.html
