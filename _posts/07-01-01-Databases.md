@@ -14,6 +14,6 @@ anchor: databases
 MySQL и немного MSSQL, или вам необходимо подключиться к базе данных Oracle, то тогда вы не сможете использовать одни и
 те же драйверы. Вам потребуется изучить новые фирменные API для каждой базы данных &mdash; и это может быть глупо.
 
-[mysqli]: https://secure.php.net/mysqli
-[pgsql]: https://secure.php.net/pgsql
-[mssql]: https://secure.php.net/mssql
+[mysqli]: https://www.php.net/mysqli
+[pgsql]: https://www.php.net/pgsql
+[mssql]: https://www.php.net/mssql
