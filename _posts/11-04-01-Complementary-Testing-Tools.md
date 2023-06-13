@@ -17,6 +17,7 @@ anchor:  complementary_testing_tools
   [PHPSpec] и может использоваться с [PHPUnit].
 * [php-mock]  — это библиотека, помогающая имитировать нативные функции PHP.
 * [Infection] — это PHP-реализация [Тестирования мутаций], помогающая измерять эффективность ваших тестов.
+[PHPUnit Polyfills] — это библиотека, которая позволяет создавать тесты, совместимые с разными версиями PHPUnit, когда набор тестов необходимо запускать для разных версий PHPUnit.
 
 [Selenium]: https://www.seleniumhq.org/
 [интегрирован с PHPUnit]: https://github.com/giorgiosironi/phpunit-selenium/
@@ -27,3 +28,4 @@ anchor:  complementary_testing_tools
 [php-mock]: https://github.com/php-mock/php-mock
 [Infection]: https://github.com/infection/infection
 [Тестирования мутаций]: https://en.wikipedia.org/wiki/Mutation_testing
+[PHPUnit Polyfills]: https://github.com/Yoast/PHPUnit-Polyfills
