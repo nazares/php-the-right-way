@@ -55,7 +55,7 @@ Apache есть несколько возможных конфигураций �
 [event MPM]: https://httpd.apache.org/docs/2.4/mod/event.html
 [apache]: https://httpd.apache.org/
 [apache-MPM]: https://httpd.apache.org/docs/2.4/mod/mpm_common.html
-[mod_fastcgi]: https://blogs.oracle.com/opal/entry/php_fpm_fastcgi_process_manager
+[mod_fastcgi]: https://blogs.oracle.com/opal/post/php-fpm-fastcgi-process-manager-with-apache-2
 [mod_fcgid]: hhttps://httpd.apache.org/mod_fcgid/
 [mod_proxy_fcgi]: https://httpd.apache.org/docs/current/mod/mod_proxy_fcgi.html
 [tutorial-mod_proxy_fcgi]: https://serversforhackers.com/video/apache-and-php-fpm
