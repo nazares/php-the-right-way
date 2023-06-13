@@ -59,8 +59,7 @@ anchor:  data_filtering
 создавать экземпляры объектов (с определяемыми пользователем свойствами), чьи деструкторы будут выполняться, **даже если
 сами объекты не используются**. Поэтому вам следует избегать десериализации ненадежных данных.
 
-Если вам абсолютно необходимо десериализовать данные из ненадежных источников, используйте параметр PHP 7
-[`allowed_classes`][unserialize], чтобы ограничить, какие типы объектов могут быть десериализованы.
+Bспользуйте безопасный стандартный формат обмена данными, такой как JSON (через [`json_decode`][json_decode] и [`json_encode`][json_encode]), если вам нужно передать пользователю сериализованные данные.
 
 ### Валидация (Validation)
 
@@ -76,4 +75,5 @@ anchor:  data_filtering
 [5]: https://www.php.net/ru/function.filter-input
 [6]: https://www.php.net/ru/security.filesystem.nullbytes
 [html-purifier]: http://htmlpurifier.org/
-[unserialize]: https://www.php.net/manual/ru/function.unserialize.php
+[json_decode]: https://www.php.net/manual/function.json-decode.php
+ [json_encode]: https://www.php.net/manual/en/function.json-encode.php
