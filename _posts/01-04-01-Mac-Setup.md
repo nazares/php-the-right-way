@@ -1,5 +1,5 @@
 ---
-# title: Mac Установка
+title: macOS Установка
 isChild: true
 anchor:  mac_setup
 ---
