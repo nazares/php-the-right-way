@@ -24,7 +24,7 @@ anchor:  behavior_driven_development
 * [PHPSpec], инфраструктура SpecBDD для PHP, вдохновленная проектом Ruby [RSpec];
 * [Codeception] — это полнофункциональная среда тестирования, использующая принципы BDD.
 
-[Behat]: http://behat.org/
+[Behat]: https://behat.org/
 [Cucumber]: https://cucumber.io/
 [PHPSpec]: https://www.phpspec.net/
 [RSpec]: https://rspec.info/
