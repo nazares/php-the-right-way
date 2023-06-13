@@ -19,7 +19,7 @@ anchor:  complementary_testing_tools
 * [Infection] — это PHP-реализация [Тестирования мутаций], помогающая измерять эффективность ваших тестов.
 [PHPUnit Polyfills] — это библиотека, которая позволяет создавать тесты, совместимые с разными версиями PHPUnit, когда набор тестов необходимо запускать для разных версий PHPUnit.
 
-[Selenium]: https://www.seleniumhq.org/
+[Selenium]: https://www.selenium.dev/
 [интегрирован с PHPUnit]: https://github.com/giorgiosironi/phpunit-selenium/
 [Mockery]: https://github.com/padraic/mockery
 [PHPUnit]: https://phpunit.de/
