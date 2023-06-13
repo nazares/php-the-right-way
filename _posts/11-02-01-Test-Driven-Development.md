@@ -40,8 +40,9 @@ anchor:  test_driven_development
 несколько альтернатив:
 
 * [atoum](https://github.com/atoum/atoum)
-* [Kahlan](https://github.com/crysalead/kahlan)
+* [Kahlan](https://github.com/kahlan/kahlan)
 * [Peridot](https://peridot-php.github.io/)
+* [Pest](https://pestphp.com/)
 * [SimpleTest](https://github.com/simpletest/simpletest)
 
 ### Интеграционное тестирование
