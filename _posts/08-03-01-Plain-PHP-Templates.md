@@ -61,5 +61,5 @@ PHP сам по себе является языком шаблонов. Это 
 <p>Hello, <?=$this->escape($name)?></p>
 {% endhighlight %}
 
-[plates]: http://platesphp.com/
+[plates]: https://platesphp.com/
 [aura]: https://github.com/auraphp/Aura.View
