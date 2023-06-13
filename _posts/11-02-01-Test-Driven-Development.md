@@ -42,7 +42,7 @@ anchor:  test_driven_development
 * [atoum](https://github.com/atoum/atoum)
 * [Kahlan](https://github.com/crysalead/kahlan)
 * [Peridot](https://peridot-php.github.io/)
-* [SimpleTest](http://simpletest.org)
+* [SimpleTest](https://github.com/simpletest/simpletest)
 
 ### Интеграционное тестирование
 
