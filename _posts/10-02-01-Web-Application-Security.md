@@ -36,7 +36,7 @@ Padraic Brady — еще одно хорошее руководство по б�
 [2]: https://www.owasp.org/index.php/Guide_Table_of_Contents
 [3]: https://phpsecurity.readthedocs.io/en/latest/index.html
 [4]: https://paragonie.com/blog/2015/08/gentle-introduction-application-security
-[5]: http://searchsecurity.techtarget.com/definition/address-space-layout-randomization-ASLR
+[5]: https://www.techtarget.com/searchsecurity/definition/address-space-layout-randomization-ASLRaddress-space-layout-randomization-ASLR
 [6]: https://paragonie.com/blog/2016/01/on-design-and-implementation-stealth-backdoor-for-web-applications
 [7]: https://paragonie.com/blog/2015/05/using-encryption-and-authentication-correctly
 [8]: https://blog.ircmaxell.com/2014/11/its-all-about-time.html
