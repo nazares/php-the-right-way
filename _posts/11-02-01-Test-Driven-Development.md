@@ -36,18 +36,8 @@ anchor:  test_driven_development
 что патчи будут приняты, гораздо выше. Если вы запускаете проект, который принимает запросы на вытягивание, вы должны
 предложить это как требование.
 
-When you create a class or function you should create a unit test for each behavior it must have. At a very basic level
-you should make sure it errors if you send it bad arguments and make sure it works if you send it valid arguments. This
-will help ensure that when you make changes to this class or function later on in the development cycle that the old
-functionality continues to work as expected. The only alternative to this would be `var_dump()` in a test.php, which is
-no way to build an application - large or small.
-
-The other use for unit tests is contributing to open source. If you can write a test that shows broken functionality
-(i.e. fails), then fix it, and show the test passing, patches are much more likely to be accepted. If you run a project
-which accepts pull requests then you should suggest this as a requirement.
-
 [PHPUnit](https://phpunit.de/) — де-факто среда тестирования для написания модульных тестов для PHP-приложений, но есть
-несколько альтернатив.
+несколько альтернатив:
 
 * [atoum](https://github.com/atoum/atoum)
 * [Kahlan](https://github.com/crysalead/kahlan)
