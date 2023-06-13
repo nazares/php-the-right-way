@@ -11,7 +11,7 @@ PHP сообщество многочисленно и разнообразно,
 проектов.
 
 [Framework Interop Group][fig] предложил и одобрил серию рекомендаций по оформлению. Не все из них связаны со стилем
-кода, но те, что есть [PSR-1][psr1], [PSR-12][psr12] и [PSR-4][psr4]. Эти рекомендации представляют собой, просто набор
+кода, но те, что есть [PSR-1][psr1], [PSR-12][psr12], [PSR-4][psr4] и [PER Coding Style][per-cs]. Эти рекомендации представляют собой, просто набор
 правил, принятых во многих проектах, таких как Drupal, Zend, Symfony, Laravel, CakePHP, phpBB, AWS SDK, FuelPHP, Lithium,
 и т.д. Вы можете использовать их для своих собственных проектов, или продолжать использовать свой стиль.
 
@@ -23,6 +23,7 @@ PHP сообщество многочисленно и разнообразно,
 * [Читать о PSR-1][psr1]
 * [Читать о PSR-12][psr12]
 * [Читать о PSR-4][psr4]
+* [Читать о PER Coding Style][per-cs]
 * [Читать о PEAR Coding Standards][pear-cs]
 * [Читать о Symfony Coding Standards][symfony-cs]
 
@@ -63,6 +64,7 @@ PHP сообщество многочисленно и разнообразно,
 [psr1]: https://www.php-fig.org/psr/psr-1/
 [psr12]: https://www.php-fig.org/psr/psr-12/
 [psr4]: https://www.php-fig.org/psr/psr-4/
+[per-cs]: https://www.php-fig.org/per/coding-style/
 [pear-cs]: https://pear.php.net/manual/en/standards.php
 [symfony-cs]: https://symfony.com/doc/current/contributing/code/standards.html
 [phpcs]: https://pear.php.net/package/PHP_CodeSniffer/
