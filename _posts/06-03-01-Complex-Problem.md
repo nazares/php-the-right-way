@@ -85,11 +85,9 @@ namespace Database;
 
 class Database
 {
-    protected $adapter;
-
-    public function __construct(AdapterInterface $adapter)
+    public function __construct(protected AdapterInterface $adapter)
     {
-        $this->adapter = $adapter;
+
     }
 }
 
