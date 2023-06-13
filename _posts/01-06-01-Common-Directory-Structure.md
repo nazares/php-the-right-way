@@ -23,6 +23,6 @@ anchor:  common_directory_structure
 сторонние библиотеки, установленные с помощью [composer], принадлежат к `vendor/` директории. Для остальных файлов и
 каталогов, соблюдение [Standard PHP Package Skeleton] будет иметь больший смысл для участников проекта.
 
-[Paul M. Jones]: http://paul-m-jones.com/
+[Paul M. Jones]: https://paul-m-jones.com/
 [Standard PHP Package Skeleton]: https://github.com/php-pds/skeleton
 [Composer]: /#composer_and_packagist
