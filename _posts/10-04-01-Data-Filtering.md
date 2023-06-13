@@ -69,11 +69,11 @@ anchor:  data_filtering
 
 [Смотреть Фильтры валидации данных][3]
 
-[1]: https://secure.php.net/ru/book.filter
-[2]: https://secure.php.net/ru/filter.filters.sanitize
-[3]: https://secure.php.net/ru/filter.filters.validate
-[4]: https://secure.php.net/ru/function.filter-var
-[5]: https://secure.php.net/ru/function.filter-input
-[6]: https://secure.php.net/ru/security.filesystem.nullbytes
+[1]: https://www.php.net/ru/book.filter
+[2]: https://www.php.net/ru/filter.filters.sanitize
+[3]: https://www.php.net/ru/filter.filters.validate
+[4]: https://www.php.net/ru/function.filter-var
+[5]: https://www.php.net/ru/function.filter-input
+[6]: https://www.php.net/ru/security.filesystem.nullbytes
 [html-purifier]: http://htmlpurifier.org/
-[unserialize]: https://secure.php.net/manual/ru/function.unserialize.php
+[unserialize]: https://www.php.net/manual/ru/function.unserialize.php
