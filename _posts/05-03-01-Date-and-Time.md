@@ -70,5 +70,5 @@ foreach ($periodIterator as $date) {
 *[Читать о DateTime][datetime]
 *[Читать о форматировании даты][dateformat] (принятые параметры строки формата даты)
 
-[datetime]: https://secure.php.net/book.datetime
-[dateformat]: https://secure.php.net/function.date
+[datetime]: https://www.php.net/book.datetime
+[dateformat]: https://www.php.net/function.date
