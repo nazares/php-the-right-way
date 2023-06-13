@@ -45,11 +45,6 @@ anchor: building_and_deploying_your_application
 [Ansistrano] — это пара ролей Ansible для простого управления процессом развертывания (развертывание и откат) для таких
 приложений, как PHP, Python и Ruby. Это порт Ansible для [Capistrano]. Он уже используется довольно многими PHP-компаниями.
 
-[Rocketeer] черпает вдохновение и философию из фреймворка Laravel. Его цель — быть быстрым, элегантным и простым в
-использовании с умными настройками по умолчанию. Он имеет несколько серверов, несколько этапов, атомарное развертывание,
-и развертывание может выполняться параллельно. Все в инструменте может быть заменено или расширено в горячем режиме, и
-все написано на PHP.
-
 [Deployer] — это инструмент развертывания, написанный на PHP. Это просто и функционально. Функции включают в себя
 параллельный запуск задач, атомарное развертывание и поддержание согласованности между серверами. Доступны рецепты общих
 задач для Symfony, Laravel, Zend Framework и Yii. Статья Юнеса Рафи [Простое развертывание приложений PHP с помощью Deployer][phpdeploy_deployer] — отличное руководство по развертыванию вашего приложения с помощью этого инструмента.
@@ -131,7 +126,6 @@ OpsWorks.
 [PHP Censor]: https://github.com/php-censor/php-censor
 [Teamcity]: https://www.jetbrains.com/teamcity/
 [Deployer]: https://deployer.org/
-[Rocketeer]: http://rocketeer.autopergamene.eu/
 [Magallanes]: https://www.magephp.com/
 [deploying_php_applications]: https://deployingphpapplications.com/
 [Ansible]: https://www.ansible.com/
