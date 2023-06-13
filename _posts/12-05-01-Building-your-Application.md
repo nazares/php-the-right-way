@@ -98,9 +98,9 @@ OpsWorks.
 *-- Martin Fowler*
 
 Существуют разные способы реализации непрерывной интеграции для PHP. [Travis CI] проделал огромную работу, сделав
-непрерывную интеграцию реальностью даже для небольших проектов. Travis CI — это размещенная служба непрерывной интеграции
-для сообщества открытого исходного кода. Он интегрирован с GitHub и предлагает первоклассную поддержку многих языков,
-включая PHP.
+непрерывную интеграцию реальностью даже для небольших проектов. Travis CI — это размещенная служба непрерывной интеграции.
+Может быть интегрировано с GitHub и предлагает первоклассную поддержку многих языков, включая PHP.
+GitHub имеет непрерывную интеграцию рабочих процессов с [GitHub Actions][github_actions].
 
 #### Дальнейшее чтение
 
@@ -133,3 +133,4 @@ OpsWorks.
 [ansible_for_devops]: https://leanpub.com/ansible-for-devops
 [ansible_for_aws]: https://leanpub.com/ansible-for-aws
 [an_ansible_tutorial]: https://serversforhackers.com/an-ansible-tutorial
+[github_actions]: https://docs.github.com/en/actions
