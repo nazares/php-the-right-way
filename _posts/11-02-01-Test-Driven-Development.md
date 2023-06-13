@@ -68,7 +68,7 @@ anchor:  test_driven_development
 #### Инструменты Функционального Тестирования
 
 * [Selenium](https://docs.seleniumhq.org/)
-* [Mink](http://mink.behat.org/)
+* [Mink](https://mink.behat.org/)
 * [Codeception](https://codeception.com/) это полнофункциональная среда тестирования, включающая инструменты приемочного
   тестирования.
 * [Storyplayer](https://datasift.github.io/storyplayer/) — это полнофункциональная среда тестирования, включающая
