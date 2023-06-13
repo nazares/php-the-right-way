@@ -438,7 +438,7 @@ sources", и здесь вы настроите различные параме�
 [func_format]: https://www.gnu.org/software/gettext/manual/gettext.html#Language-specific-options
 [aura-intl]: https://github.com/auraphp/Aura.Intl
 [oscarotero]: https://github.com/oscarotero/Gettext
-[symfony]: https://symfony.com/doc/current/components/translation.html
+[symfony]: https://symfony.com/components/Translation
 [laminas]: https://docs.laminas.dev/laminas-i18n/
 [laravel]: https://laravel.com/docs/master/localization
 [yii]: https://www.yiiframework.com/doc/guide/2.0/en/tutorial-i18n
