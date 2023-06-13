@@ -52,8 +52,7 @@ anchor: building_and_deploying_your_application
 
 [Deployer] — это инструмент развертывания, написанный на PHP. Это просто и функционально. Функции включают в себя
 параллельный запуск задач, атомарное развертывание и поддержание согласованности между серверами. Доступны рецепты общих
-задач для Symfony, Laravel, Zend Framework и Yii. Статья Юнеса Рафи [Простое развертывание приложений PHP с помощью
-Deployer][phpdeploy_deployer] — отличное руководство по развертыванию вашего приложения с помощью этого инструмента.
+задач для Symfony, Laravel, Zend Framework и Yii. Статья Юнеса Рафи [Простое развертывание приложений PHP с помощью Deployer][phpdeploy_deployer] — отличное руководство по развертыванию вашего приложения с помощью этого инструмента.
 
 [Magallanes] — еще один инструмент, написанный на PHP с простой настройкой в ​​файлах YAML. Он поддерживает несколько
 cерверов и сред, атомарное развертывание и имеет несколько встроенных задач, которые вы можете использовать для общих
@@ -124,7 +123,7 @@ OpsWorks.
 [Chef]: https://www.chef.io/
 [chef_vagrant_and_ec2]: https://web.archive.org/web/20190307220000/http://www.jasongrimes.org/2012/06/managing-lamp-environments-with-chef-vagrant-and-ec2-1-of-3/
 [Chef_cookbook]: https://github.com/chef-cookbooks/php
-[Chef_tutorial]: https://www.youtube.com/playlist?list=PL11cZfNdwNyPnZA9D1MbVqldGuOWqbumZ
+[Chef_tutorial]: https://www.youtube.com/playlist?list=PL11cZfNdwNyNYcpntVe6js-prb80LBZuc
 [apache_ant_tutorial]: https://code.tutsplus.com/tutorials/automate-your-projects-with-apache-ant--net-18595
 [Travis CI]: https://www.travis-ci.com/
 [Jenkins]: https://jenkins.io/
