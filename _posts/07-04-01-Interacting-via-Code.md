@@ -67,11 +67,9 @@ include 'views/foo-list.php';
 <?php
 class FooModel
 {
-    protected $db;
-
-    public function __construct(PDO $db)
+    public function __construct(protected PDO $db)
     {
-        $this->db = $db;
+
     }
 
     public function getAllFoos() {
@@ -91,5 +89,3 @@ class FooModel
 По сути, это то же самое, что и большинство современных фреймворков, хотя и немного более ручное. Возможно, вам не
 нужно делать все это каждый раз, но смешивание слишком большого количества логики представления и взаимодействия с базой
 данных может стать реальной проблемой, если вы когда-нибудь захотите [unit-тестирование](/#unit-testing) своего приложения.
-
-[MVC]: https://code.tutsplus.com/tutorials/mvc-for-noobs--net-10488
