@@ -30,6 +30,7 @@ class MysqlAdapter {}
 {% endhighlight %}
 
 Этот код может быть переработан с использованием Внедрения Зависимости и следовательно ослабит зависимости.
+Здесь мы внедряем зависимость в конструктор и используем [продвижение свойства конструктора][php-constructor-promotion], для того, чтобы оно было доступно во всем классе:
 
 {% highlight php %}
 <?php
@@ -37,18 +38,15 @@ namespace Database;
 
 class Database
 {
-    protected $adapter;
-
-    public function __construct(MySqlAdapter $adapter)
+    public function __construct(protected MySqlAdapter $adapter)
     {
-        $this->adapter = $adapter;
+
     }
 }
 
 class MysqlAdapter {}
 {% endhighlight %}
 
-Теперь мы отдаем классу `Database` его зависимость а не создаем его самого. Мы даже могли бы
-создать метод
-который принимал бы аргумент зависимости и устанавливал его этим способом, или если свойство `$adapter` было `public`, мы
-могли бы установить его напрямую.
+Теперь мы отдаем классу `Database` его зависимость а не создаем его самого. Мы даже могли бы создать метод который принимал бы аргумент зависимости и устанавливал его этим способом, или если свойство `$adapter` было `public`, мы могли бы установить его напрямую.
+
+[php-constructor-promotion]: https://www.php.net/manual/en/language.oop5.decon.php#language.oop5.decon.constructor.promotion
