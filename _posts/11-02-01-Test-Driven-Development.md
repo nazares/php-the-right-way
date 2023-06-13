@@ -67,7 +67,7 @@ anchor:  test_driven_development
 
 #### Инструменты Функционального Тестирования
 
-* [Selenium](https://docs.seleniumhq.org/)
+* [Selenium](https://www.selenium.dev/)
 * [Mink](https://mink.behat.org/)
 * [Codeception](https://codeception.com/) это полнофункциональная среда тестирования, включающая инструменты приемочного
   тестирования.
