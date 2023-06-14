@@ -17,4 +17,4 @@ anchor: community
 [php-irc]: https://webchat.freenode.net/?channels=phpc
 [phpc-twitter]: https://twitter.com/phpc
 [php-so]: https://stackoverflow.com/questions/tagged/php
-[php-calendar]: https://secure.php.net/cal.php
+[php-calendar]: https://www.php.net/cal.php
