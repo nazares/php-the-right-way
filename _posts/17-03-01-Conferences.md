@@ -12,4 +12,4 @@ anchor:  conferences
 
 [Найти PHP конференцию][php-conf]
 
-[php-conf]: https://secure.php.net/conferences/index.php
+[php-conf]: https://www.php.net/conferences/index.php
