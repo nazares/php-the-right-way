@@ -13,7 +13,7 @@ anchor:  object_caching
  баз данных.
 
 Многие из популярных решений для кэширования байт-кода также позволяют кэшировать пользовательские данные, так что есть
-еще больше причин воспользоваться ими. APCu, XCache и WinCache предоставляют API для сохранения данных из вашего PHP-кода
+еще больше причин воспользоваться ими. APCu и WinCache предоставляют API для сохранения данных из вашего PHP-кода
 в их кэш-память.
 
 Наиболее часто используемыми системами кэширования объектов памяти являются APCu и memcached. APCu — отличный выбор для
@@ -55,5 +55,4 @@ print_r($data);
 * [APC Functions](https://secure.php.net/ref.apc)
 *[Memcached](https://memcached.org/)
 * [Redis](https://redis.io/)
-*[XCache APIs](https://xcache.lighttpd.net/wiki/XcacheApi)
 * [WinCache Functions](https://secure.php.net/ref.wincache)
