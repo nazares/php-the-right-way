@@ -55,4 +55,4 @@ print_r($data);
 * [APCu Documentation](https://www.php.net/apcu)
 *[Memcached](https://memcached.org/)
 * [Redis](https://redis.io/)
-* [WinCache Functions](https://secure.php.net/ref.wincache)
+* [WinCache Functions](https://www.php.net/ref.wincache)
