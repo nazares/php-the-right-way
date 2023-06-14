@@ -14,7 +14,7 @@ anchor:  opcode_cache
 
 Вполне вероятно, что кеш opcode операции значительно улучшит скорость вашего приложения. Начиная с PHP 5.5 есть
 встроенный — [Zend OPcache][opcache-book]. В зависимости от вашего пакета/дистрибутива PHP он обычно включен по умолчанию
-— проверьте [opcache.enable](https://secure.php.net/manual/opcache.configuration.php#ini.opcache.enable) и вывод
+— проверьте [opcache.enable](https://www.php.net/manual/opcache.configuration.php#ini.opcache.enable) и вывод
 `phpinfo()`, чтобы убедиться. Для более ранних версий есть расширение PECL.
 
 Подробнее о кэшах opcodes:
