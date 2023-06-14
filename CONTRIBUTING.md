@@ -1,6 +1,6 @@
 # Contributing to PHP The Right Way
 
-Нравится [PHP The Right Way](http://phptherightway.com) и хотите принять участие?
+Нравится [PHP The Right Way](https://phptherightway.com) и хотите принять участие?
 Замечательно! Есть много способов помочь.
 
 Пожалуйста, найдите время, чтобы просмотреть этот документ, чтобы сделать процесс
@@ -19,7 +19,7 @@
 но, пожалуйста, соблюдайте следующие ограничения:
 
 * Пожалуйста, **не** используйте средство отслеживания проблем для личных запросов
-в службу поддержки (используйте [Stack Overflow](http://stackoverflow.com/questions/tagged/php) или IRC).
+в службу поддержки (используйте [Stack Overflow](https://stackoverflow.com/questions/tagged/php) или IRC).
 
 * Пожалуйста, **не** срывайте и не троллите проблемы. Держите дискуссию по теме
 и уважайте мнение других.
@@ -32,7 +32,7 @@
 
 Соблюдение следующего процесса — лучший способ включить вашу работу в проект:
 
-1. [Fork](http://help.github.com/fork-a-repo/) проект, клонируйте свой форк и
+1. [Fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo/) проект, клонируйте свой форк и
 настройте пульты:
 
    ```bash
@@ -70,7 +70,7 @@
 5. Зафиксируйте изменения логическими фрагментами. Пожалуйста, придерживайтесь этих [git commit
    message guidelines](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
    или ваш контент вряд ли будет объединен с основным проектом. Используйте Git
-   [interactive rebase](https://help.github.com/articles/about-git-rebase/)
+   [interactive rebase](https://docs.github.com/en/get-started/using-git/about-git-rebase/)
    функции, чтобы привести в порядок ваши коммиты, прежде чем публиковать их.
 
 6. Локально объедините (или перебазируйте) вышестоящую ветку разработки в вашу тематическую ветку:
@@ -85,14 +85,14 @@
    git push origin <topic-branch-name>
    ```
 
-8. [Open a Pull Request](https://help.github.com/articles/using-pull-requests/)
+8. [Open a Pull Request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)
     с понятным названием и описанием.
 
 ## Соглашение о вкладе и использование
 
 Отправляя pull request в этот репозиторий, вы соглашаетесь разрешить владельцам проекта лицензировать вашу работу в
 соответствии с условиями [Creative Commons Attribution-NonCommercial-ShareAlike
-3.0 Unported License](http://creativecommons.org/licenses/by-nc-sa/3.0/).
+3.0 Unported License](https://creativecommons.org/licenses/by-nc-sa/3.0/).
 
 Один и тот же контент и лицензия будут использоваться для всех публикаций PHP The Right Way, включая, помимо прочего:
 
