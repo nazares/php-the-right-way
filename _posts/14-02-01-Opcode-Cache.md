@@ -6,7 +6,7 @@ anchor:  opcode_cache
 ## Opcode Cache {#opcode_cache_title}
 
 Когда файл PHP выполняется, он должен быть сначала скомпилирован в
-[opcodes](https://secure.php.net/manual/internals2.opcodes.php) (инструкции машинного языка для ЦП). Если исходный
+[opcodes](https://php-legacy-docs.zend.com/manual/php4/en/internals2.opcodes) (инструкции машинного языка для ЦП). Если исходный
 код не изменился, коды операций будут такими же, поэтому этот шаг компиляции становится пустой тратой ресурсов процессора.
 
 Кэш opcode операций предотвращает избыточную компиляцию, сохраняя opcodes в памяти и повторно используя их при
