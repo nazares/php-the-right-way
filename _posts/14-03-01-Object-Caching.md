@@ -37,22 +37,22 @@ anchor:  object_caching
 {% highlight php %}
 <?php
 // check if there is data saved as 'expensive_data' in cache
-$data = apc_fetch('expensive_data');
+$data = apcu_fetch('expensive_data');
 if ($data === false) {
     // data is not in cache; save result of expensive call for later use
-    apc_add('expensive_data', $data = get_expensive_data());
+    apcu_add('expensive_data', $data = get_expensive_data());
 }
 
 print_r($data);
 {% endhighlight %}
 
-Обратите внимание, что до версии PHP 5.5 APC предоставлял как кеш объектов, так и кеш байт-кода. APCu — это проект по
+Обратите внимание, что до версии PHP 5.5 было расширение APC которое предоставляло как кеш объектов, так и кеш байт-кода. APCu — это проект по
 переносу кеша объектов APC на PHP 5.5+, поскольку PHP теперь имеет встроенный кеш байт-кода (OPcache).
 
 ### Узнайте больше о популярных системах кэширования объектов:
 
 *[APCu](https://github.com/krakjoe/apcu)
-* [APC Functions](https://secure.php.net/ref.apc)
+* [APCu Documentation](https://www.php.net/apcu)
 *[Memcached](https://memcached.org/)
 * [Redis](https://redis.io/)
 * [WinCache Functions](https://secure.php.net/ref.wincache)
