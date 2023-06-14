@@ -31,4 +31,4 @@ Vagrant создает папки для совместного использо
 [Puppet]: https://puppet.com/
 [Chef]: https://www.chef.io/
 [Puphpet]: https://github.com/puphpet/puphpet
-[Phansible]: http://phansible.com/
+[Phansible]: https://phansible.com/
