@@ -50,7 +50,7 @@ log_errors = On
 При использовании этих настроек ошибки по-прежнему будут регистрироваться в журналах ошибок веб-сервера, но не будут
 отображаться пользователю. Дополнительные сведения об этих настройках см. в руководстве по PHP:
 
-* [error_reporting](https://secure.php.net/ru/errorfunc.configuration#ini.error-reporting)
-* [display_errors](https://secure.php.net/ru/errorfunc.configuration#ini.display-errors)
-* [display_startup_errors](https://secure.php.net/ru/errorfunc.configuration#ini.display-startup-errors)
-* [log_errors](https://secure.php.net/ru/errorfunc.configuration#ini.log-errors)
+* [error_reporting](https://www.php.net/ru/errorfunc.configuration#ini.error-reporting)
+* [display_errors](https://www.php.net/ru/errorfunc.configuration#ini.display-errors)
+* [display_startup_errors](https://www.php.net/ru/errorfunc.configuration#ini.display-startup-errors)
+* [log_errors](https://www.php.net/ru/errorfunc.configuration#ini.log-errors)
