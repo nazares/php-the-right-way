@@ -1,4 +1,5 @@
 ---
+title: Linux Установка
 isChild: true
 anchor:  linux_setup
 ---
