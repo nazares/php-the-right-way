@@ -12,10 +12,10 @@ macOS поставляется с предустановленным PHP но э
 ### Установка PHP через Homebrew
 
 [Homebrew] - это пакетный менеджер для macOS который помогает вам легко установить PHP и различные расширения. Главный
-репозиторий Homebrew предоставляет "formulae" формулы для PHP 7.4, 8.0, 8.1 и PHP 8.2. Установите
+репозиторий Homebrew предоставляет "formulae" формулы для PHP 7.4, 8.0, 8.1, PHP 8.2 и PHP 8.3. Установите
 последнюю версию командой:
 
-    brew install php@8.2
+    brew install php@8.3
 
 Вы можете переключаться между Homebrew PHP версиями изменяя переменную `PATH`. Как альтернативу, вы можете использовать
 [brew-php-switcher][brew-php-switcher] для переключения PHP версий автоматически.
@@ -24,12 +24,12 @@ macOS поставляется с предустановленным PHP но э
 
 ```
     brew unlink php
-    brew link --overwrite php@8.1
+    brew link --overwrite php@8.2
 ```
 
 ```
     brew unlink php
-    brew link --overwrite php@8.2
+    brew link --overwrite php@8.3
 ```
 
 ### Установка PHP через MacPorts
@@ -41,15 +41,15 @@ macOS поставляется с предустановленным PHP но э
 MacPorts поддерживает предварительно скомпилированные бинарники, поэтому вам не нужно пересобирать каждую
 зависимость из исходных tarball файлов, это спасет вас если в вашей системе не установлен какой-либо пакет..
 
-Здесь вы можете установить `php54`, `php55`, `php56`, `php70`, `php71`, `php72`, `php73`, `php74`, `php80`, `php81` или `php82`
-используя команду `port install`, например:
+Здесь вы можете установить `php54`, `php55`, `php56`, `php70`, `php71`, `php72`, `php73`, `php74`, `php80`, `php81`, `php82`
+ или `php83` используя команду `port install`, например:
 
     sudo port install php74
-    sudo port install php82
+    sudo port install php83
 
 И вы можете запустить команду `select` чтобы переключиться на активную версию PHP:
 
-    sudo port select --set php php82
+    sudo port select --set php php83
 
 ### Установка PHP через phpbrew
 
