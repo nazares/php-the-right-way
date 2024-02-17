@@ -1,6 +1,6 @@
 # PHP: The Right Way
 
-Русский перевод <https://nazares.github.io/php-the-right-way/> руководства <http://phptherightway.com>
+Русский перевод руководства <http://phptherightway.com>
 
 ## Обзор
 
