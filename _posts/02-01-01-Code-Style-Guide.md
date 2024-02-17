@@ -41,8 +41,8 @@ PHP сообщество многочисленно и разнообразно,
     phpcs -sw --standard=PSR1 file.php
 
 Оно покажет ошибки и расскажет, как их исправить.
-Также может быть полезно включить эту команду в git hook.
-Таким образом, ветки, содержащие нарушения выбранного стандарта, не смогут войти в репозиторий, пока эти нарушения не
+Также может быть полезно включить команду `phpcs` в git pre-commit hook с параметром коммандной строки `--filter=GitStaged`.
+Таким образом, код содержащий нарушения выбранного стандарта, не смогут войти в репозиторий, пока эти нарушения не
 будут исправлены.
 
 Если у вас есть PHP_CodeSniffer, вы можете автоматически исправить проблемы с макетом кода, о которых он сообщает, с
@@ -67,8 +67,8 @@ PHP сообщество многочисленно и разнообразно,
 [per-cs]: https://www.php-fig.org/per/coding-style/
 [pear-cs]: https://pear.php.net/manual/en/standards.php
 [symfony-cs]: https://symfony.com/doc/current/contributing/code/standards.html
-[phpcs]: https://pear.php.net/package/PHP_CodeSniffer/
-[phpcbf]: https://github.com/squizlabs/PHP_CodeSniffer/wiki/Fixing-Errors-Automatically
+[phpcs]: https://github.com/PHPCSStandards/PHP_CodeSniffer
+[phpcbf]: https://github.com/PHPCSStandards/PHP_CodeSniffer/wiki/Fixing-Errors-Automatically
 [st-cs]: https://github.com/benmatselby/sublime-phpcs
 [phpcsfixer]: https://cs.symfony.com/
 [cleancode]: https://github.com/jupeter/clean-code-php
