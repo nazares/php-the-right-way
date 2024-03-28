@@ -72,5 +72,5 @@ anchor:  test_driven_development
 * [Mink](https://mink.behat.org/)
 * [Codeception](https://codeception.com/) это полнофункциональная среда тестирования, включающая инструменты приемочного
   тестирования.
-* [Storyplayer](https://datasift.github.io/storyplayer/) — это полнофункциональная среда тестирования, включающая
+* [Storyplayer](https://github.com/MeltwaterArchive/storyplayer) — это полнофункциональная среда тестирования, включающая
   поддержку создания и уничтожения тестовых сред по запросу.
