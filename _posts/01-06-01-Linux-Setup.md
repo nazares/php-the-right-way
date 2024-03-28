@@ -1,7 +1,7 @@
 ---
 title: Linux Установка
 isChild: true
-anchor:  linux_setup
+anchor: linux_setup
 ---
 
 ## Linux Установка {#linux_setup_title}
