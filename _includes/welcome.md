@@ -21,7 +21,7 @@ _PHP: The Right Way_ переведено на множество различн
 * [Español](https://phpdevenezuela.github.io/php-the-right-way)
 * [Français](https://eilgin.github.io/php-the-right-way/)
 * [Indonesia](https://id.phptherightway.com)
-* [Italiano](https://it.phptherightway.com)
+* [Italiano](https://gscioni-innoteam.github.io/php-the-right-way/)
 * [Polski](https://pl.phptherightway.com)
 * [Português do Brasil](https://br.phptherightway.com)
 * [Română](https://bgui.github.io/php-the-right-way/)
