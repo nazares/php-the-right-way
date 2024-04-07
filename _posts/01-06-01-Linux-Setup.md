@@ -29,6 +29,17 @@ anchor: linux_setup
 
 Это гарантирует, что ваша система сможет получить доступ и установить последние пакеты PHP, доступные в PPA.
 
+Вы можете переключаться между версиями PHP изменяя вашу переменную `PATH`. Как альтернативу
+вы можете использовать [deb-sphp][deb-sphp] для автоматического переключения версии PHP.
+
+Так же вы можете вручную переключаться между версиями PHP с помощью `updating-alternatives` на нужную версию:
+
+```
+sudo update-alternatives --set php /usr/bin/php8.2
+sudo update-alternatives --set phar /usr/bin/phar8.2
+sudo update-alternatives --set phar.phar /usr/bin/phar.phar8.2
+```
+
 #### Дистрибутивы на базе Debian
 
 Для дистрибутивов основанных на Debian, Ondřej Surý также [bikeshed][bikeshed] (Debian эквивалент PPA). Добавьте bikeshed в вашу ситему и обновите, следуя этим шагам:
@@ -70,3 +81,4 @@ anchor: linux_setup
 [Ondrej Sury Blog]: https://deb.sury.org/
 [Ondrej Sury PPA]: https://launchpad.net/~ondrej/+archive/ubuntu/php
 [bikeshed]: https://packages.sury.org/php/
+[deb-sphp]: https://github.com/nazares/deb-sphp
