@@ -207,6 +207,6 @@ MVC is the most common architectural pattern used in the popular [PHP frameworks
 
 Learn more about MVC and its relatives:
 
-*[MVC](https://en.wikipedia.org/wiki/Model%E2%80%93View%E2%80%93Controller)
+* [MVC](https://en.wikipedia.org/wiki/Model%E2%80%93View%E2%80%93Controller)
 * [HMVC](https://en.wikipedia.org/wiki/Hierarchical_model%E2%80%93view%E2%80%93controller)
 * [MVVM](https://en.wikipedia.org/wiki/Model_View_ViewModel)
