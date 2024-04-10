@@ -79,7 +79,7 @@ Early binding is used by default for importing `$min` variable into the created 
 binding one should use a reference when importing. Imagine a templating or input validation library, where a closure is
 defined to capture variables in scope and access them later when the anonymous function is evaluated.
 
-*[Read about Anonymous functions][anonymous-functions]
+* [Read about Anonymous functions][anonymous-functions]
 * [More details in the Closures RFC][closures-rfc]
 * [Read about dynamically invoking functions with `call_user_func_array()`][call-user-func-array]
 
