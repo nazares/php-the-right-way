@@ -65,7 +65,7 @@ class ValidationException extends Exception {}
 генерировать стандартное исключение, которое является расплывчатым, или создавать специальное исключение только для этого,
 вы можете просто `throw new BadMethodCallException;`.
 
-*[Читать о Exceptions][exceptions]
+* [Читать о Exceptions][exceptions]
 * [Читать о SPL Exceptions][splexe]
 * [Nesting Exceptions In PHP][nesting-exceptions-in-php]
 

@@ -21,4 +21,4 @@ anchor:  php_paas_providers
 * [Pivotal Web Services](https://network.pivotal.io/)
 * [Platform.sh](https://platform.sh/)
 * [Red Hat OpenShift](https://www.openshift.com/)
-[Virtuozzo](https://www.virtuozzo.com/application-platform-partners/)
+* [Virtuozzo](https://www.virtuozzo.com/application-platform-partners/)

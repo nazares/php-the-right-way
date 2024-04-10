@@ -1,19 +1,21 @@
 ---
 layout: page
-title:  Design Patterns
+title:  Шаблоны проектирования
 sitemap: true
 ---
 
-# Design Patterns
+# Шаблоны проектирования
 
+Существует множество способов структурировать код и проект вашего веб-приложения, и вы можете уделять архитектуре столько внимания, сколько захотите. Но обычно полезно следовать общим шаблонам, потому что это поможет
+сделайте ваш код более простым в управлении и понятным для других.
 There are numerous ways to structure the code and project for your web application, and you can put as much or as little thought as you like into architecting. But it is usually a good idea to follow common patterns because it will
 make your code easier to manage and easier for others to understand.
 
-* [Architectural pattern on Wikipedia](https://en.wikipedia.org/wiki/Architectural_pattern)
-* [Software design pattern on Wikipedia](https://en.wikipedia.org/wiki/Software_design_pattern)
-* [Collection of implementation examples](https://designpatternsphp.readthedocs.io/en/latest/)
+* [Архитектурные паттерны на Wikipedia](https://en.wikipedia.org/wiki/Architectural_pattern)
+* [Шаблон проектирования ПО на Wikipedia](https://en.wikipedia.org/wiki/Software_design_pattern)
+* [Сборник примеров реализации](https://designpatternsphp.readthedocs.io/en/latest/)
 
-## Factory
+## Фабрика (Factory)
 
 One of the most commonly used design patterns is the factory pattern. In this pattern, a class simply creates the
 object you want to use. Consider the following example of the factory pattern:
@@ -61,9 +63,9 @@ Using the factory pattern isn't always necessary (or wise). The example code use
 would simply be adding unneeded complexity. However if you are making a fairly large or complex project you may save
 yourself a lot of trouble down the road by using factories.
 
-* [Factory pattern on Wikipedia](https://en.wikipedia.org/wiki/Factory_pattern)
+* [Паттерн Фабрика на Wikipedia](https://en.wikipedia.org/wiki/Factory_pattern)
 
-## Singleton
+## Одиночка (Singleton)
 
 When designing web applications, it often makes sense conceptually and architecturally to allow access to one and only
 one instance of a particular class. The singleton pattern enables us to do this.
@@ -93,9 +95,9 @@ application, reducing testability. In most cases, dependency injection can (and 
 class. Using dependency injection means that we do not introduce unnecessary coupling into the design of our
 application, as the object using the shared or global resource requires no knowledge of a concretely defined class.
 
-* [Singleton pattern on Wikipedia](https://en.wikipedia.org/wiki/Singleton_pattern)
+* [Паттерн Одиночка на Wikipedia](https://en.wikipedia.org/wiki/Singleton_pattern)
 
-## Strategy
+## Стратегия (Strategy)
 
 With the strategy pattern you encapsulate specific families of algorithms allowing the client class responsible for
 instantiating a particular algorithm to have no knowledge of the actual implementation. There are several variations on
@@ -184,7 +186,7 @@ $data = $client->loadOutput();
 
 {% endhighlight %}
 
-* [Strategy pattern on Wikipedia](https://www.en.wikipedia.org/wiki/Strategy_pattern)
+* [Паттерн Стратегия на Wikipedia](https://www.en.wikipedia.org/wiki/Strategy_pattern)
 
 ## Front Controller
 

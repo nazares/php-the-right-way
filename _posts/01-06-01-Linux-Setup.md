@@ -34,7 +34,7 @@ anchor: linux_setup
 
 Так же вы можете вручную переключаться между версиями PHP с помощью `update-alternatives` на нужную версию:
 
-```
+```bash
 sudo update-alternatives --set php /usr/bin/php8.2
 sudo update-alternatives --set phar /usr/bin/phar8.2
 sudo update-alternatives --set phar.phar /usr/bin/phar.phar8.2

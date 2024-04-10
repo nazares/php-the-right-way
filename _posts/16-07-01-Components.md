@@ -38,9 +38,9 @@ anchor:  components
 _[Illuminate components] Laravel станут лучше отделены от фреймворка Laravel. На данный момент выше перечислены только те
 компоненты, которые лучше всего отделены от фреймворка Laravel._
 
-[Packagist]: /#composer_and_packagist
-[PEAR]: /#pear
-[Dependency Management]: /#dependency_management
+[Packagist]: {{site.baseurl}}/#composer_and_packagist
+[PEAR]: {{site.baseurl}}/#pear
+[Dependency Management]: {{site.baseurl}}/#dependency_management
 [FuelPHP Validation package]: https://github.com/fuelphp/validation
 [Aura]: https://auraphp.com/framework/
 [FuelPHP]: https://github.com/fuelphp
