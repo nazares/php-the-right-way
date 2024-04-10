@@ -31,7 +31,7 @@ if (strpos('testing', 'test') !== false) {    // true, as strict comparison was 
 }
 {% endhighlight %}
 
-*[Comparison operators](https://www.php.net/language.operators.comparison)
+* [Comparison operators](https://www.php.net/language.operators.comparison)
 * [Comparison table](https://www.php.net/types.comparisons)
 * [Comparison cheatsheet](https://phpcheatsheets.com/index.php?page=compare)
 
@@ -106,7 +106,7 @@ function test($a)
 }
 {% endhighlight %}
 
-*[Switch statements](https://www.php.net/control-structures.switch)
+* [Switch statements](https://www.php.net/control-structures.switch)
 * [PHP switch](http://phpswitch.com/)
 
 ## Global namespace
@@ -131,7 +131,7 @@ function array()
 }
 {% endhighlight %}
 
-*[Global space](https://www.php.net/language.namespaces.global)
+* [Global space](https://www.php.net/language.namespaces.global)
 * [Global rules](https://www.php.net/userlandnaming.rules)
 
 ## Строки
