@@ -15,5 +15,5 @@ anchor: dependency_management
 пакетов. Знать историю PEAR — хорошая идея, так как вы все равно можете найти упоминания о нем, даже если никогда им не
 пользовались.
 
-[Composer]: /#composer_and_packagist
-[PEAR]: /#pear
+[Composer]: {{site.baseurl}}/#composer_and_packagist
+[PEAR]: {{site.baseurl}}/#pear
