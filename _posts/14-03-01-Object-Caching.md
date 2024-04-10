@@ -51,8 +51,8 @@ print_r($data);
 
 ### Узнайте больше о популярных системах кэширования объектов
 
-*[APCu](https://github.com/krakjoe/apcu)
+* [APCu](https://github.com/krakjoe/apcu)
 * [APCu Documentation](https://www.php.net/apcu)
-*[Memcached](https://memcached.org/)
+* [Memcached](https://memcached.org/)
 * [Redis](https://redis.io/)
 * [WinCache Functions](https://www.php.net/ref.wincache)
