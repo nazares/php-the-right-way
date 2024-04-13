@@ -34,7 +34,7 @@ anchor:  object_caching
 
 Пример логики с использованием APCu:
 
-{% highlight php %}
+```php
 <?php
 // check if there is data saved as 'expensive_data' in cache
 $data = apcu_fetch('expensive_data');
@@ -44,7 +44,7 @@ if ($data === false) {
 }
 
 print_r($data);
-{% endhighlight %}
+```
 
 Обратите внимание, что до версии PHP 5.5 было расширение APC которое предоставляло как кеш объектов, так и кеш байт-кода. APCu — это проект по
 переносу кеша объектов APC на PHP 5.5+, поскольку PHP теперь имеет встроенный кеш байт-кода (OPcache).

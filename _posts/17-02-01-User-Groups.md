@@ -16,7 +16,7 @@ php рядом со мной``` с помощью вашей любимой по
 поддерживает более разнообразное сообщество. PHPWomen предоставляет сеть для поддержки, наставничества и обучения и в
 целом способствует созданию «дружественной к женщинам» и профессиональной атмосферы.
 
-[Read about User Groups on the PHP Wiki][php-wiki]
+[Читать о User Groups на PHP Wiki][php-wiki]
 
 [google]: https://www.google.com/search?q=php+user+group+near+me
 [meetup]: https://www.meetup.com/find/
