@@ -11,7 +11,7 @@ sitemap: true
 Операторы сравнения — часто упускаемый из виду аспект PHP, который может привести ко многим неожиданным результатам.
 Одна из таких проблем возникает из-за строгих сравнений (сравнение логических значений как целых чисел).
 
-{% highlight php %}
+```php
 <?php
 $a = 5;   // 5 as an integer
 
@@ -29,21 +29,21 @@ if (strpos('testing', 'test')) {    // 'test' is found at position 0, which is i
 if (strpos('testing', 'test') !== false) {    // true, as strict comparison was made (0 !== false)
     // code...
 }
-{% endhighlight %}
+```
 
-* [Comparison operators](https://www.php.net/language.operators.comparison)
-* [Comparison table](https://www.php.net/types.comparisons)
-* [Comparison cheatsheet](https://phpcheatsheets.com/index.php?page=compare)
+* [Операторы сравнения](https://www.php.net/language.operators.comparison)
+* [Таблица сравнения](https://www.php.net/types.comparisons)
+* [Шпаргалка по сравнению](https://phpcheatsheets.com/index.php?page=compare)
 
-## Conditional statements
+## Условные операторы
 
-### If statements
+### Оператор If
 
-While using 'if/else' statements within a function or class method, there is a common misconception that 'else' must be used
-in conjunction to declare potential outcomes. However if the outcome is to define the return value, 'else' is not
-necessary as 'return' will end the function, causing 'else' to become moot.
+При использовании операторов 'if/else' внутри функции или метода класса существует распространенное заблуждение, что необходимо использовать оператор 'else'.
+в сочетании с объявлением потенциальных результатов. Однако, если результат должен определить возвращаемое значение, 'else' не является
+необходимым, поскольку 'return' завершит функцию, в результате чего 'else' станет спорным.
 
-{% highlight php %}
+```php
 <?php
 function test($a)
 {
@@ -70,21 +70,21 @@ function test($a)
 {
     return (bool) $a;
 }
+```
 
-{% endhighlight %}
+* [Оператор If](https://www.php.net/control-structures.if)
 
-* [If statements](https://www.php.net/control-structures.if)
+### Оператор Switch
 
-### Switch statements
+Операторы Switch — отличный способ избежать набора бесконечных if и elseif, но есть несколько вещей, о которых следует знать:
 
-Switch statements are a great way to avoid typing endless if's and elseif's, but there are a few things to be aware of:
+* Операторы switch сравнивают только значения, а не тип (эквивалент '==')
+* Они перебирают каждый случай, пока не будет найдено совпадение. Если совпадение не найдено, используется значение по умолчанию (если оно определено).
+* Без 'break' они будут продолжать реализовывать каждый случай до достижения break/return.
+* Within a function, using 'return' alleviates the need for 'break' as it ends the function
+* Bспользование 'return' внутри функции устраняет необходимость в 'break', поскольку оно завершает функцию.
 
-- Switch statements only compare values, and not the type (equivalent to '==')
-- They Iterate case by case until a match is found. If no match is found, then the default is used (if defined)
-- Without a 'break', they will continue to implement each case until reaching a break/return
-- Within a function, using 'return' alleviates the need for 'break' as it ends the function
-
-{% highlight php %}
+```php
 <?php
 $answer = test(2);    // the code from both 'case 2' and 'case 3' will be implemented
 
@@ -104,17 +104,17 @@ function test($a)
             return $error;
     }
 }
-{% endhighlight %}
+```
 
-* [Switch statements](https://www.php.net/control-structures.switch)
+* [Оператор Switch](https://www.php.net/control-structures.switch)
 * [PHP switch](http://phpswitch.com/)
 
-## Global namespace
+## Глобальное пространство имен
 
-When using namespaces, you may find that internal functions are hidden by functions you wrote. To fix this, refer to
-the global function by using a backslash before the function name.
+При использовании пространства имен вы можете обнаружить, что внутренние функции скрыты от функций написанных вами. Чтобы исправить это, обратитесь к
+глобальной функции, используя обратную косую черту перед именем функции.
 
-{% highlight php %}
+```php
 <?php
 namespace phptherightway;
 
@@ -129,20 +129,20 @@ function array()
     $iterator = new \ArrayIterator();    // ArrayIterator is an internal class. Using its name without a backslash
                                          // will attempt to resolve it within your namespace.
 }
-{% endhighlight %}
+```
 
-* [Global space](https://www.php.net/language.namespaces.global)
-* [Global rules](https://www.php.net/userlandnaming.rules)
+* [Глобальное пространство](https://www.php.net/language.namespaces.global)
+* [Глобальные правила](https://www.php.net/userlandnaming.rules)
 
 ## Строки
 
 ### Конкатенация
 
-- If your line extends beyond the recommended line length (120 characters), consider concatenating your line
-- For readability it is best to use concatenation operators over concatenating assignment operators
-- While within the original scope of the variable, indent when concatenation uses a new line
+* Если длина вашей строки превышает рекомендуемую (120 символов), рассмотрите возможность объединения строк.
+* Для удобства чтения лучше использовать операторы конкатенации, а не операторы присваивания.
+* Находясь в исходной области действия переменной, отступ при конкатенации использует новую строку.
 
-{% highlight php %}
+```php
 <?php
 $a  = 'Multi-line example';    // concatenating assignment operator (.=)
 $a .= "\n";
@@ -153,25 +153,25 @@ $a .= 'of what not to do';
 $a = 'Multi-line example'      // concatenation operator (.)
     . "\n"                     // indenting new lines
     . 'of what to do';
-{% endhighlight %}
+```
 
-* [String Operators](https://www.php.net/language.operators.string)
+* [Строковые операторы](https://www.php.net/language.operators.string)
 
-### String types
+### Типы строк
 
-Strings are a series of characters, which should sound fairly simple. That said, there are a few different types of
-strings and they offer slightly different syntax, with slightly different behaviors.
+Строки — это последовательность символов, которая должна звучать довольно просто. Тем не менее, существует несколько различных типов
+строки, и они предлагают немного другой синтаксис и немного другое поведение.
 
-#### Single quotes
+#### Одинарные кавычки
 
-Single quotes are used to denote a "literal string". Literal strings do not attempt to parse special characters or
-variables.
+Одинарные кавычки используются для обозначения 'литеральной строки'. Литеральные строки не пытаются анализировать специальные символы или
+переменные.
 
-If using single quotes, you could enter a variable name into a string like so: `'some $thing'`, and you would see the
-exact output of `some $thing`. If using double quotes, that would try to evaluate the `$thing` variable name and show
-errors if no variable was found.
+Если вы используете одинарные кавычки, вы можете ввести имя переменной в строку, например: `'some $thing'`, и вы увидите
+точный вывод `some $thing`. При использовании двойных кавычек будет предпринята попытка оценить имя переменной `$thing` и показать
+ошибки, если переменная не найдена.
 
-{% highlight php %}
+```php
 <?php
 echo 'This is my string, look at how pretty it is.';    // no need to parse a simple string
 
@@ -180,16 +180,16 @@ echo 'This is my string, look at how pretty it is.';    // no need to parse a si
  *
  * This is my string, look at how pretty it is.
  */
-{% endhighlight %}
+```
 
-* [Single quote](https://www.php.net/language.types.string#language.types.string.syntax.single)
+* [Одинрные кавычки](https://www.php.net/language.types.string#language.types.string.syntax.single)
 
-#### Double quotes
+#### Двойные кавычки
 
-Double quotes are the Swiss Army Knife of strings. They will not only parse variables as mentioned above, but all sorts
-of special characters, like `\n` for newline, `\t` for a tab, etc.
+Двойные кавычки — это швейцарский армейский нож для строк. Они будут анализировать не только переменные, как упоминалось выше, но и все виды
+специальных символов, например `\n` для новой строки, `\t` для табуляции и т. д.
 
-{% highlight php %}
+```php
 <?php
 echo 'phptherightway is ' . $adjective . '.'     // a single quotes example that uses multiple concatenating for
     . "\n"                                       // variables and escaped string
@@ -199,22 +199,22 @@ echo 'phptherightway is ' . $adjective . '.'     // a single quotes example that
 
 echo "phptherightway is $adjective.\n I love learning $code!"  // Instead of multiple concatenating, double quotes
                                                                // enables us to use a parsable string
-{% endhighlight %}
+```
 
-Double quotes can contain variables; this is called "interpolation".
+Двойные кавычки могут содержать переменные; это называется «интерполяция».
 
-{% highlight php %}
+```php
 <?php
 $juice = 'plum';
 echo "I like $juice juice";    // Output: I like plum juice
-{% endhighlight %}
+```
 
-When using interpolation, it is often the case that the variable will be touching another character. This will result
-in some confusion as to what is the name of the variable, and what is a literal character.
+При использовании интерполяции часто бывает, что переменная касается другого символа. Это приведет
+к некоторой путанице относительно того, как называется переменная и что такое буквальный символ.
 
-To fix this problem, wrap the variable within a pair of curly brackets.
+Чтобы решить эту проблему, заключите переменную в пару фигурных скобок.
 
-{% highlight php %}
+```php
 <?php
 $juice = 'plum';
 echo "I drank some juice made of $juices";    // $juice cannot be parsed
@@ -230,16 +230,16 @@ echo "I drank some juice made of {$juice}s";    // $juice will be parsed
 
 $juice = array('apple', 'orange', 'plum');
 echo "I drank some juice made of {$juice[1]}s";   // $juice[1] will be parsed
-{% endhighlight %}
+```
 
-* [Double quotes](https://www.php.net/language.types.string#language.types.string.syntax.double)
+* [Двойные кавычки](https://www.php.net/language.types.string#language.types.string.syntax.double)
 
-#### Nowdoc syntax
+#### Nowdoc синтаксис
 
-Nowdoc syntax was introduced in 5.3 and internally behaves the same way as single quotes except it is suited toward the
-use of multi-line strings without the need for concatenating.
+Синтаксис Nowdoc был представлен в версии 5.3 и внутренне ведет себя так же, как одинарные кавычки, за исключением того, что он подходит для
+использование многострочных строк без необходимости объединения.
 
-{% highlight php %}
+```php
 <?php
 $str = <<<'EOD'             // initialized by <<<
 Example of string
@@ -256,16 +256,16 @@ EOD;                        // closing 'EOD' must be on it's own line, and to th
  * using nowdoc syntax.
  * $a does not parse.
  */
-{% endhighlight %}
+```
 
-* [Nowdoc syntax](https://www.php.net/language.types.string#language.types.string.syntax.nowdoc)
+* [Nowdoc синтаксис](https://www.php.net/language.types.string#language.types.string.syntax.nowdoc)
 
-#### Heredoc syntax
+#### Heredoc синтаксис
 
-Heredoc syntax internally behaves the same way as double quotes except it is suited toward the use of multi-line
-strings without the need for concatenating.
+Синтаксис Heredoc внутренне ведет себя так же, как и двойные кавычки, за исключением того, что он подходит для использования многострочных символов.
+строки без необходимости объединения.
 
-{% highlight php %}
+```php
 <?php
 $a = 'Variables';
 
@@ -284,13 +284,13 @@ EOD;                        // closing 'EOD' must be on it's own line, and to th
  * using heredoc syntax.
  * Variables are parsed.
  */
-{% endhighlight %}
+```
 
-* [Heredoc syntax](https://www.php.net/language.types.string#language.types.string.syntax.heredoc)
+* [Heredoc синтаксис](https://www.php.net/language.types.string#language.types.string.syntax.heredoc)
 
-> It should be noted that multiline strings can also be formed by continuing them across multilines in a statement. _e.g._
+> Следует отметить, что многострочные строки также могут быть сформированы путем продолжения их по нескольким строкам в операторе. _например._
 
-{% highlight php %}
+```php
 $str = "
 Example of string
 spanning multiple lines
@@ -306,47 +306,45 @@ $a are parsed.
  * using statement syntax.
  * Variables are parsed.
  */
-{% endhighlight %}
+```
 
-### Which is quicker?
+### Что быстрее?
 
-There is a myth floating around that single quote strings are fractionally quicker than double quote strings. This is
-fundamentally not true.
+Существует миф о том, что строки с одинарными кавычками работают немного быстрее, чем строки с двойными кавычками. Это в корне не верно.
 
-If you are defining a single string and not trying to concatenate values or anything complicated, then either a single
-or double quoted string will be entirely identical. Neither are quicker.
+Если вы определяете одну строку и не пытаетесь объединить значения или что-то сложное, то либо одна
+или строка в двойных кавычках будет полностью идентична. Ни один из них не быстрее.
 
-If you are concatenating multiple strings of any type, or interpolate values into a double quoted string, then the
-results can vary. If you are working with a small number of values, concatenation is minutely faster. With a lot of
-values, interpolating is minutely faster.
+Если вы объединяете несколько строк любого типа или интерполируете значения в строку с двойными кавычками, то
+результаты могут различаться. Если вы работаете с небольшим количеством значений, конкатенация происходит на мгновение быстрее. С большим количеством
+значения, интерполяция происходит на мгновение быстрее.
 
-Regardless of what you are doing with strings, none of the types will ever have any noticeable impact on your
-application. Trying to rewrite code to use one or the other is always an exercise in futility, so avoid this micro-
-optimization unless you really understand the meaning and impact of the differences.
+Независимо от того, что вы делаете со строками, ни один из типов никогда не окажет заметного влияния на работу вашего приложения.
+Попытка переписать код для использования того или иного варианта всегда бесполезна, поэтому избегайте подобных микро-оптимизаций, если вы действительно не понимаете значение и влияние различий.
 
-* [Disproving the Single Quotes Performance Myth](https://www.npopov.com/2012/01/09/Disproving-the-Single-Quotes-Performance-Myth.html)
+* [Опровержение мифа об эффективности одинарных кавычек](https://www.npopov.com/2012/01/09/Disproving-the-Single-Quotes-Performance-Myth.html)
 
-## Ternary operators
+## Тернарные операторы
 
-Ternary operators are a great way to condense code, but are often used in excess. While ternary operators can be
-stacked/nested, it is advised to use one per line for readability.
+Тернарные операторы — отличный способ сократить код, но их часто используют чрезмерно. Хотя тернарные операторы могут быть
+сложенные/вложенные, для удобства чтения рекомендуется использовать по одному на строку.
 
-{% highlight php %}
+```php
 <?php
 $a = 5;
 echo ($a == 5) ? 'yay' : 'nay';
-{% endhighlight %}
+```
 
-In comparison, here is an example that sacrifices all forms of readability for the sake of reducing the line count.
+Для сравнения, вот пример, в котором читабельность приносится в жертву ради уменьшения количества строк.
 
-{% highlight php %}
+```php
 <?php
 echo ($a) ? ($a == 5) ? 'yay' : 'nay' : ($b == 10) ? 'excessive' : ':(';    // excess nesting, sacrificing readability
-{% endhighlight %}
+```
 
-To 'return' a value with ternary operators use the correct syntax.
+Чтобы 'вернуть' значение с помощью тернарных операторов, используйте правильный синтаксис.
 
-{% highlight php %}
+```php
 <?php
 $a = 5;
 echo ($a == 5) ? return true : return false;    // this example will output an error
@@ -356,12 +354,12 @@ echo ($a == 5) ? return true : return false;    // this example will output an e
 $a = 5;
 return ($a == 5) ? 'yay' : 'nope';    // this example will return 'yay'
 
-{% endhighlight %}
+```
 
-It should be noted that you do not need to use a ternary operator for returning a boolean value. An example of this
-would be.
+Следует отметить, что вам не нужно использовать тернарный оператор для возврата логического значения. Примером этого
+могло бы быть.
 
-{% highlight php %}
+```php
 <?php
 $a = 3;
 return ($a == 3) ? true : false; // Will return true if $a == 3 or false
@@ -371,16 +369,16 @@ return ($a == 3) ? true : false; // Will return true if $a == 3 or false
 $a = 3;
 return $a == 3; // Will return true if $a == 3 or false
 
-{% endhighlight %}
+```
 
-This can also be said for all operations(===, !==, !=, == etc).
+Это также можно сказать для всех операций (===, !==, !=, == и т. д.).
 
-#### Utilising brackets with ternary operators for form and function
+#### Использование скобок с тернарными операторами для обозначения формы и функции
 
-When utilising a ternary operator, brackets can play their part to improve code readability and also to include unions
-within blocks of statements. An example of when there is no requirement to use bracketing is:
+При использовании тернарного оператора скобки могут сыграть свою роль в улучшении читаемости кода, а также для включения объединений
+внутри блоков утверждений. Пример того, когда нет необходимости использовать скобки:
 
-{% highlight php %}
+```php
 <?php
 $a = 3;
 return ($a == 3) ? "yay" : "nope"; // return yay if $a == 3 or nope
@@ -389,25 +387,25 @@ return ($a == 3) ? "yay" : "nope"; // return yay if $a == 3 or nope
 
 $a = 3;
 return $a == 3 ? "yay" : "nope"; // return yay if $a == 3 or nope
-{% endhighlight %}
+```
 
-Bracketing also affords us the capability of creating unions within a statement block where the block will be checked
-as a whole. Such as this example below which will return true if both ($a == 3 and $b == 4) are true and $c == 5 is
-also true.
+Обьединение в скобки также дает нам возможность создавать объединения внутри блока операторов, где блок будет проверяться
+в целом. Например, этот пример ниже, который вернет true, если оба ($a == 3 и $b == 4) верны, а $c == 5 —
+тоже верно.
 
-{% highlight php %}
+```php
 <?php
 return ($a == 3 && $b == 4) && $c == 5;
-{% endhighlight %}
+```
 
-Another example is the snippet below which will return true if ($a != 3 AND $b != 4) OR $c == 5.
+Другой пример — приведенный ниже фрагмент, который вернет true, если ($a != 3 И $b != 4) ИЛИ $c == 5.
 
-{% highlight php %}
+```php
 <?php
 return ($a != 3 && $b != 4) || $c == 5;
-{% endhighlight %}
+```
 
-Since PHP 5.3, it is possible to leave out the middle part of the ternary operator.
-Expression "expr1 ?: expr3" returns expr1 if expr1 evaluates to TRUE, and expr3 otherwise.
+Начиная с PHP 5.3, можно исключить среднюю часть тернарного оператора.
+Выражение "expr1 ?: expr3" возвращает expr1, если expr1 имеет значение TRUE, и expr3 в противном случае.
 
-* [Ternary operators](https://www.php.net/language.operators.comparison)
+* [Тернарные операторы](https://www.php.net/language.operators.comparison)
