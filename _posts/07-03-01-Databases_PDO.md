@@ -10,7 +10,7 @@ anchor:  pdo_extension
 обеспечивает общий интерфейс для общения со многими различными базами данных. Например, вы можете использовать практически
 идентичный код для взаимодействия с MySQL или SQLite:
 
-{% highlight php %}
+```php
 <?php
 // PDO + MySQL
 $pdo = new PDO('mysql:host=example.com;dbname=database', 'user', 'password');
@@ -23,7 +23,7 @@ $pdo = new PDO('sqlite:/path/db/foo.sqlite');
 $statement = $pdo->query("SELECT some_field FROM some_table");
 $row = $statement->fetch(PDO::FETCH_ASSOC);
 echo htmlentities($row['some_field']);
-{% endhighlight %}
+```
 
 PDO не будет переводить ваши SQL-запросы или эмулировать отсутствующие функции; это исключительно для подключения к
 нескольким типам баз данных с одним и тем же API.
@@ -34,11 +34,11 @@ PDO не будет переводить ваши SQL-запросы или эм
 Предположим, PHP-скрипт получает числовой идентификатор в качестве параметра запроса. Этот идентификатор следует
 использовать для извлечения записи пользователя из базы данных. Это `wrong` способ сделать это:
 
-{% highlight php %}
+```php
 <?php
 $pdo = new PDO('sqlite:/path/db/users.db');
 $pdo->query("SELECT name FROM users WHERE id = " . $_GET['id']); // <-- NO!
-{% endhighlight %}
+```
 
 Это ужасный код. Вы вставляете необработанный параметр запроса в запрос SQL. Это позволит вам взломать систему в мгновение
 ока, используя практику под названием [SQL Инъекции]. Только представьте, что хакер передает оригинальный параметр "id",
@@ -46,7 +46,7 @@ $pdo->query("SELECT name FROM users WHERE id = " . $_GET['id']); // <-- NO!
 `1;DELETE FROM users`, что удалит всех ваших пользователей! Вместо этого вы должны дезинфицировать ввод идентификатора,
 используя параметры, привязанные к PDO.
 
-{% highlight php %}
+```php
 <?php
 $pdo = new PDO('sqlite:/path/db/users.db');
 $stmt = $pdo->prepare('SELECT name FROM users WHERE id = :id');
@@ -54,12 +54,12 @@ $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT); // <-- filter y
 (see [Data Filtering]({{site.baseurl}}#data_filtering)), especially important for INSERT, UPDATE, etc.
 $stmt->bindParam(':id', $id, PDO::PARAM_INT); // <-- Automatically sanitized for SQL by PDO
 $stmt->execute();
-{% endhighlight %}
+```
 
 Это правильный код. Он использует связанный параметр в операторе PDO. Это ускользает от внешнего входного ID до того,
 как он будет введен в базу данных, предотвращая потенциальные атаки SQL-инъекций.
 
-Для записей, таких как INSERT или UPDATE, особенно важно сначала по-прежнему [фильтровать ваши данные](#data_filtering)
+Для записей, таких как INSERT или UPDATE, особенно важно сначала по-прежнему [фильтровать ваши данные]({{site.baseurl}}#data_filtering)
 и очищать их для других вещей (удаление HTML-тегов, JavaScript и т. д.). PDO будет очищать его только для SQL, а не для
 вашего приложения.
 

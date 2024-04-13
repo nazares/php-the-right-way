@@ -79,7 +79,7 @@ anchor:  complex_problem
 классами, а не конкретными реализациями. Мы можем легко реорганизовать приведенный выше пример, чтобы следовать этому
 принципу.
 
-{% highlight php %}
+```php
 <?php
 namespace Database;
 
@@ -94,7 +94,7 @@ class Database
 interface AdapterInterface {}
 
 class MysqlAdapter implements AdapterInterface {}
-{% endhighlight %}
+```
 
 Теперь у класса `Database` есть несколько преимуществ, зависящих от интерфейса, а не от конкретизации.
 
