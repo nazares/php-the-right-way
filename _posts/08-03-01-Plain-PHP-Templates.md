@@ -20,7 +20,7 @@ PHP сам по себе является языком шаблонов. Это 
 
 Использование библиотеки [Plates][plates].
 
-{% highlight php %}
+```php
 <?php // user_profile.php ?>
 
 <?php $this->insert('header', ['title' => 'User Profile']) ?>
@@ -29,13 +29,13 @@ PHP сам по себе является языком шаблонов. Это 
 <p>Hello, <?=$this->escape($name)?></p>
 
 <?php $this->insert('footer') ?>
-{% endhighlight %}
+```
 
 ### Пример простых шаблонов PHP с использованием наследования
 
 Использование библиотеки [Plates][plates].
 
-{% highlight php %}
+```php
 <?php // template.php ?>
 
 <html>
@@ -50,16 +50,16 @@ PHP сам по себе является языком шаблонов. Это 
 
 </body>
 </html>
-{% endhighlight %}
+```
 
-{% highlight php %}
+```php
 <?php // user_profile.php ?>
 
 <?php $this->layout('template', ['title' => 'User Profile']) ?>
 
 <h1>User Profile</h1>
 <p>Hello, <?=$this->escape($name)?></p>
-{% endhighlight %}
+```
 
 [plates]: https://platesphp.com/
 [aura]: https://github.com/auraphp/Aura.View

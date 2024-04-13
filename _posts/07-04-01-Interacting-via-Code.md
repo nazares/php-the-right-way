@@ -9,7 +9,7 @@ anchor:  databases_interacting
 Когда разработчики впервые начинают изучать PHP, они часто заканчивают тем, что смешивают взаимодействие с базой данных
 с логикой представления, используя код, который может выглядеть следующим образом:
 
-{% highlight php %}
+```php
 <ul>
 <?php
 foreach ($db->query('SELECT * FROM table') as $row) {
@@ -17,7 +17,7 @@ foreach ($db->query('SELECT * FROM table') as $row) {
 }
 ?>
 </ul>
-{% endhighlight %}
+```
 
 Это плохая практика по разным причинам, в основном из-за того, что ее трудно отлаживать, трудно тестировать, трудно читать,
 и она будет выводить много полей, если вы не установите там ограничение.
@@ -25,7 +25,7 @@ foreach ($db->query('SELECT * FROM table') as $row) {
 Хотя есть много других решений для этого — в зависимости от того, предпочитаете ли вы [ООП]({{site.baseurl}}/#object-oriented-programming)
 или [функциональное программирование]({{site.baseurl}}/#functional-programming) — должен быть какой-то элемент разделения.
 
-{% highlight php %}
+```php
 <?php
 function getAllFoos($db) {
     return $db->query('SELECT * FROM table');
@@ -35,7 +35,7 @@ $results = getAllFoos($db);
 foreach ($results as $row) {
     echo "<li>".$row['field1']." - ".$row['field1']."</li>"; // BAD!!
 }
-{% endhighlight %}
+```
 
 Это хорошее начало. Поместите эти два элемента в два разных файла, и вы получите четкое разделение.
 
@@ -45,7 +45,7 @@ foreach ($results as $row) {
 
 **foo.php**
 
-{% highlight php %}
+```php
 <?php
 $db = new PDO('mysql:host=localhost;dbname=testdb;charset=utf8mb4', 'username', 'password');
 
@@ -59,11 +59,11 @@ $fooList = $fooModel->getAllFoos();
 
 // Show the view
 include 'views/foo-list.php';
-{% endhighlight %}
+```
 
 **models/FooModel.php**
 
-{% highlight php %}
+```php
 <?php
 class FooModel
 {
@@ -76,15 +76,15 @@ class FooModel
         return $this->db->query('SELECT * FROM table');
     }
 }
-{% endhighlight %}
+```
 
 **views/foo-list.php**
 
-{% highlight php %}
+```php
 <?php foreach ($fooList as $row): ?>
     <li><?= $row['field1'] ?> - <?= $row['field1'] ?></li>
 <?php endforeach ?>
-{% endhighlight %}
+```
 
 По сути, это то же самое, что и большинство современных фреймворков, хотя и немного более ручное. Возможно, вам не
 нужно делать все это каждый раз, но смешивание слишком большого количества логики представления и взаимодействия с базой
