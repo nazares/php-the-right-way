@@ -47,7 +47,7 @@ anchor:  password_hashing
 Ниже мы хешируем строку, а затем проверяем хеш на новую строку. Поскольку наши две исходные строки различаются
 ("secret-password" и "bad-password"), этот вход не удастся.
 
-{% highlight php %}
+```php
 <?php
 require 'password.php';
 
@@ -58,7 +58,7 @@ if (password_verify('bad-password', $passwordHash)) {
 } else {
     // Wrong password
 }
-{% endhighlight %}
+```
 
 `password_hash()` позаботится о добавлении соли для вас. Соль хранится вместе с алгоритмом и "расценивается" как часть
 хэша. `password_verify()` извлекает это, чтобы определить, как проверить пароль, поэтому вам не нужно отдельное поле
