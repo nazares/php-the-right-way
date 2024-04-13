@@ -8,8 +8,6 @@ sitemap: true
 
 Существует множество способов структурировать код и проект вашего веб-приложения, и вы можете уделять архитектуре столько внимания, сколько захотите. Но обычно полезно следовать общим шаблонам, потому что это поможет
 сделайте ваш код более простым в управлении и понятным для других.
-There are numerous ways to structure the code and project for your web application, and you can put as much or as little thought as you like into architecting. But it is usually a good idea to follow common patterns because it will
-make your code easier to manage and easier for others to understand.
 
 * [Архитектурные паттерны на Wikipedia](https://en.wikipedia.org/wiki/Architectural_pattern)
 * [Шаблон проектирования ПО на Wikipedia](https://en.wikipedia.org/wiki/Software_design_pattern)
@@ -17,10 +15,10 @@ make your code easier to manage and easier for others to understand.
 
 ## Фабрика (Factory)
 
-One of the most commonly used design patterns is the factory pattern. In this pattern, a class simply creates the
-object you want to use. Consider the following example of the factory pattern:
+Одним из наиболее часто используемых шаблонов проектирования является шаблон "Фабрика". В этом шаблоне класс просто создает
+объект, который вы хотите использовать. Рассмотрим следующий пример шаблона фабрики:
 
-{% highlight php %}
+```php
 <?php
 class Automobile
 {
@@ -51,62 +49,62 @@ class AutomobileFactory
 $veyron = AutomobileFactory::create('Bugatti', 'Veyron');
 
 print_r($veyron->getMakeAndModel()); // outputs "Bugatti Veyron"
-{% endhighlight %}
+```
 
-This code uses a factory to create the Automobile object. There are two possible benefits to building your code this
-way; the first is that if you need to change, rename, or replace the Automobile class later on you can do so and you
-will only have to modify the code in the factory, instead of every place in your project that uses the Automobile class.
-The second possible benefit is that, if creating the object is a complicated job, you can do all of the work in the
-factory instead of repeating it every time you want to create a new instance.
+Этот код использует фабрику для создания объекта Automobile. Есть два возможных преимущества для создания вашего кода этим
+способом; во-первых, если вам позже понадобится изменить, переименовать или заменить класс Automobile, вы сможете это сделать, и вам
+нужно будет изменить код только в фабрике, а не в каждом месте вашего проекта, где используется класс Automobile.
+Второе возможное преимущество заключается в том, что если создание объекта является сложной задачей, вы можете выполнить всю работу в
+Фабрике вместо того, чтобы повторять это каждый раз, когда вы хотите создать новый экземпляр.
 
-Using the factory pattern isn't always necessary (or wise). The example code used here is so simple that a factory
-would simply be adding unneeded complexity. However if you are making a fairly large or complex project you may save
-yourself a lot of trouble down the road by using factories.
+Использование фабричного шаблона не всегда необходимо (или разумно). Используемый здесь пример кода настолько прост, что фабрика
+просто добавила бы ненужную сложность. Однако, если вы делаете довольно большой или сложный проект, вы можете избежать
+много неприятностей в будущем, используя фабрики.
 
 * [Паттерн Фабрика на Wikipedia](https://en.wikipedia.org/wiki/Factory_pattern)
 
 ## Одиночка (Singleton)
 
-When designing web applications, it often makes sense conceptually and architecturally to allow access to one and only
-one instance of a particular class. The singleton pattern enables us to do this.
+При разработке веб-приложений часто имеет смысл концептуально и архитектурно разрешить доступ к одному и только
+одиному экземпляру определенного класса. Шаблон Одиночка (Singleton) позволяет нам сделать это.
 
 **TODO: NEED NEW SINGLETON CODE EXAMPLE**
 
-The code above implements the singleton pattern using a [*static* variable](https://www.php.net/language.variables.scope#language.variables.scope.static) and the static creation method `getInstance()`.
-Note the following:
+Приведенный выше код реализует шаблон Singleton с использованием [*static* variable](https://www.php.net/language.variables.scope#language.variables.scope.static) и статический метод создания `getInstance()`.
+Обратите внимание на следующее:
 
-*The constructor [`__construct()`](https://www.php.net/language.oop5.decon#object.construct) is declared as protected to
-prevent creating a new instance outside of the class via the `new` operator.
-* The magic method [`__clone()`](https://www.php.net/language.oop5.cloning#object.clone) is declared as private to prevent
-cloning of an instance of the class via the [`clone`](https://www.php.net/language.oop5.cloning) operator.
-*The magic method [`__wakeup()`](https://www.php.net/language.oop5.magic#object.wakeup) is declared as private to prevent
-unserializing of an instance of the class via the global function [`unserialize()`](https://www.php.net/function.unserialize)
-.
-* A new instance is created via [late static binding](https://www.php.net/language.oop5.late-static-bindings) in the static
-creation method `getInstance()` with the keyword `static`. This allows the subclassing of the class `Singleton` in the
-example.
+* Конструктор [`__construct()`](https://www.php.net/language.oop5.decon#object.construct) объявлен как protected для
+для предотвращения создания нового экземпляра вне класса с помощью оператора `new`.
 
-The singleton pattern is useful when we need to make sure we only have a single instance of a class for the entire
-request lifecycle in a web application. This typically occurs when we have global objects (such as a Configuration
-class) or a shared resource (such as an event queue).
+* Магический метод [`__clone()`](https://www.php.net/language.oop5.cloning#object.clone) объявлен как private для предотвращения
+клонирования экземпляра класса через метод [`clone`](https://www.php.net/language.oop5.cloning).
+* Магический метод [`__wakeup()`](https://www.php.net/language.oop5.magic#object.wakeup) объявлен как private для предотвращения
+десериализации экземпляра класса через глобальную функцию [`unserialize()`](https://www.php.net/function.unserialize).
+* Новый экземпляр создается через [позднее статическое связывание](https://www.php.net/language.oop5.late-static-bindings) в статическом
+методе создания `getInstance()` с ключевым словом `static`. Это позволяет создать подкласс класса `Singleton` в
+примере.
 
-You should be wary when using the singleton pattern, as by its very nature it introduces global state into your
-application, reducing testability. In most cases, dependency injection can (and should) be used in place of a singleton
-class. Using dependency injection means that we do not introduce unnecessary coupling into the design of our
-application, as the object using the shared or global resource requires no knowledge of a concretely defined class.
+Шаблон singleton полезен, когда нам нужно убедиться, что у нас есть только один экземпляр класса для всего
+жизненного цикла запроса в веб-приложении. Обычно это происходит, когда у нас есть глобальные объекты (например, класс конфигурации)
+или общий ресурс (например, очередь событий).
+
+Вам следует быть осторожными при использовании шаблона Singleton, поскольку по своей природе он вводит глобальное состояние в ваше
+приложение, что снижает тестируемость. В большинстве случаев внедрение зависимостей (dependency injection) может (и должно) использоваться вместо Singleton.
+Использование внедрения зависимостей означает, что мы не вносим ненужную связанность в дизайн нашего
+приложения, поскольку объект, использующий общий или глобальный ресурс, не требует знания конкретно определенного класса.
 
 * [Паттерн Одиночка на Wikipedia](https://en.wikipedia.org/wiki/Singleton_pattern)
 
 ## Стратегия (Strategy)
 
-With the strategy pattern you encapsulate specific families of algorithms allowing the client class responsible for
-instantiating a particular algorithm to have no knowledge of the actual implementation. There are several variations on
-the strategy pattern, the simplest of which is outlined below:
+С помощью шаблона стратегия вы инкапсулируете определенные семейства алгоритмов, позволяя клиентскому классу, отвечать за
+создание экземпляра конкретного алгоритма без знания фактической реализации. Существует несколько вариаций
+шаблона стратегии, самый простой из которых описан ниже:
 
-This first code snippet outlines a family of algorithms; you may want a serialized array, some JSON or maybe just an
-array of data:
+В этом первом фрагменте кода описывается семейство алгоритмов; вам может понадобиться сериализованный массив, немного JSON или, может быть, просто
+массив данных:
 
-{% highlight php %}
+```php
 <?php
 
 interface OutputInterface
@@ -137,20 +135,18 @@ class ArrayOutput implements OutputInterface
         return $arrayOfData;
     }
 }
-{% endhighlight %}
+```
 
-By encapsulating the above algorithms you are making it nice and clear in your code that other developers can easily
-add new output types without affecting the client code.
+Инкапсулируя приведенные выше алгоритмы, вы делаете их красивыми и понятными в своем коде, чтобы другие разработчики могли легко
+добавлять новые типы вывода, не затрагивая клиентский код.
 
-You will see how each concrete 'output' class implements an OutputInterface - this serves two purposes, primarily it
-provides a simple contract which must be obeyed by any new concrete implementations. Secondly by implementing a common
-interface you will see in the next section that you can now utilise [Type Hinting](https://www.php.net/language.oop5.typehinting) to ensure that the client which is utilising these behaviours is of the correct type in
-this case 'OutputInterface'.
+Вы увидите, как каждый конкретный "выходной" класс реализует OutputInterface — это служит двум целям: в первую очередь он обеспечивает простой контракт, которому должны подчиняться любые новые конкретные реализации. Во-вторых, реализовав общий интерфейс, который вы увидите в следующем разделе, который теперь можно использовать [Type Hinting](https://www.php.net/language.oop5.typehinting) чтобы гарантировать, что клиент, который использует это поведение, имеет правильный тип в
+данном случае 'OutputInterface'.
 
-The next snippet of code outlines how a calling client class might use one of these algorithms and even better set the
-behaviour required at runtime:
+Следующий фрагмент кода показывает, как вызывающий клиентский класс может использовать один из этих алгоритмов и, что еще лучше, установить
+поведение, необходимое во время выполнения:
 
-{% highlight php %}
+```php
 <?php
 class SomeClient
 {
@@ -166,13 +162,17 @@ class SomeClient
         return $this->output->load();
     }
 }
-{% endhighlight %}
+```
 
-The calling client class above has a private property which must be set at runtime and be of type 'OutputInterface'
-once this property is set a call to loadOutput() will call the load() method in the concrete class of the output type
-that has been set.
+Вышеупомянутый класс вызывающий клиента, имеет приватное свойство, которое должно быть установлено во время выполнения и иметь тип «OutputInterface».
+Как только это свойство установлено, вызов loadOutput() вызовет метод load() в конкретном классе типа вывода.
+это было установлено.
 
-{% highlight php %}
+Вызывающий клиентский класс выше, имеет приватное свойство, которое должно быть установлено во время
+выполнения и иметь тип 'OutputInterface' как только это свойство установлено для вызова
+loadOutput() который будет вызывать метод load() в конкретном классе типа вывода который был установлен.
+
+```php
 <?php
 $client = new SomeClient();
 
@@ -184,30 +184,30 @@ $data = $client->loadOutput();
 $client->setOutput(new JsonStringOutput());
 $data = $client->loadOutput();
 
-{% endhighlight %}
+```
 
 * [Паттерн Стратегия на Wikipedia](https://www.en.wikipedia.org/wiki/Strategy_pattern)
 
 ## Front Controller
 
-The front controller pattern is where you have a single entrance point for your web application (e.g. index.php) that
-handles all of the requests. This code is responsible for loading all of the dependencies, processing the request and
-sending the response to the browser. The front controller pattern can be beneficial because it encourages modular code
-and gives you a central place to hook in code that should be run for every request (such as input sanitization).
+Шаблон front controller — это единая точка входа для вашего веб-приложения (например, index.php), которая
+обрабатывает все запросы. Этот код отвечает за загрузку всех зависимостей, обработку запроса и
+отправку ответа в браузер. Шаблон front controller может быть полезен, поскольку он поощряет модульный код
+и дает вам центральное место для подключения кода, который должен выполняться для каждого запроса (например, для очистки ввода).
 
-* [Front Controller pattern on Wikipedia](https://en.wikipedia.org/wiki/Front_Controller_pattern)
+* [Шаблон Front Controller на Wikipedia](https://en.wikipedia.org/wiki/Front_Controller_pattern)
 
 ## Model-View-Controller
 
-The model-view-controller (MVC) pattern and its relatives HMVC and MVVM lets you break up code into logical objects
-that serve very specific purposes. Models serve as a data access layer where data is fetched and returned in formats
-usable throughout your application. Controllers handle the request, process the data returned from models and load
-views to send in the response. And views are display templates (markup, xml, etc) that are sent in the response to the
-web browser.
+Шаблон модель-представление-контроллер (MVC) и его родственники HMVC и MVVM позволяют разбивать код на логические объекты,
+которые служат очень конкретным целям. Модели служат уровнем доступа к данным, где данные извлекаются и возвращаются в форматах, которые
+можно использовать во всем вашем приложении. Контроллеры обрабатывают запрос, обрабатывают данные, возвращаемые моделями, и загружают
+просмотры для отправки ответа. А представления — это шаблоны отображения (разметка, xml и т. д.), которые отправляются в ответ на запрос
+веб-браузеру.
 
-MVC is the most common architectural pattern used in the popular [PHP frameworks](https://github.com/codeguy/php-the-right-way/wiki/Frameworks).
+MVC — наиболее распространенный архитектурный шаблон, используемый в популярных [PHP frameworks](https://github.com/codeguy/php-the-right-way/wiki/Frameworks).
 
-Learn more about MVC and its relatives:
+Узнайте больше о MVC и его родственниках:
 
 * [MVC](https://en.wikipedia.org/wiki/Model%E2%80%93View%E2%80%93Controller)
 * [HMVC](https://en.wikipedia.org/wiki/Hierarchical_model%E2%80%93view%E2%80%93controller)
