@@ -67,15 +67,15 @@ _Этот раздел был первоначально написан [Alex Ca
 Затем браузер должен будет сообщить ответом HTTP, что эту страницу следует рассматривать как UTF-8. Сегодня принято
 устанавливать набор символов в заголовке ответа HTTP следующим образом:
 
-{% highlight php %}
+```php
 <?php
 header('Content-Type: text/html; charset=UTF-8')
-{% endhighlight %}
+```
 
 Исторический подход к этому заключался в том, чтобы включить
 [тег charset `<meta>`](http://htmlpurifier.org/docs/enduser-utf8.html) в тег `<head>` вашей страницы.
 
-{% highlight php %}
+```php
 <?php
 // Tell PHP that we're using UTF-8 strings until the end of the script
 mb_internal_encoding('UTF-8');
@@ -145,7 +145,7 @@ header('Content-Type: text/html; charset=UTF-8'); // Unnecessary if your default
         ?>
     </body>
 </html>
-{% endhighlight %}
+```
 
 ### Дальнейшее чтение {#further-reading-utf8}
 
