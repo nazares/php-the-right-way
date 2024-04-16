@@ -1,5 +1,5 @@
 ---
-Title: Сообщество
+title: Сообщество
 anchor: community
 ---
 
@@ -10,7 +10,7 @@ anchor: community
 конференции PHP, чтобы узнать больше о передовых методах, показанных здесь. Вы можете общаться в IRC на канале #phpc на
 [irc.freenode.com][php-irc] и следить за учетной записью @phpc в [Twitter][phpc-twitter] или [Mastodon][php-mastodon]. Отправляйтесь туда, знакомьтесь с новыми разработчиками, изучайте новые темы и, прежде всего, заводите новых друзей! Другие ресурсы сообщества включают [StackOverflow][php-so].
 
-[Read the Official PHP Events Calendar][php-calendar]
+[Читать официальный календарь событий PHP][php-calendar]
 
 [php-irc]: https://webchat.freenode.net/?channels=phpc
 [phpc-twitter]: https://twitter.com/phpc
