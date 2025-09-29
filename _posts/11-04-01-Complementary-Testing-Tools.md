@@ -23,7 +23,7 @@ anchor:  complementary_testing_tools
 [интегрирован с PHPUnit]: https://github.com/giorgiosironi/phpunit-selenium/
 [Mockery]: https://github.com/padraic/mockery
 [PHPUnit]: https://phpunit.de/
-[PHPSpec]: https://www.phpspec.net/
+[PHPSpec]: https://phpspec.net/
 [Prophecy]: https://github.com/phpspec/prophecy
 [php-mock]: https://github.com/php-mock/php-mock
 [Infection]: https://github.com/infection/infection
