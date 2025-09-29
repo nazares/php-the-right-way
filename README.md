@@ -82,7 +82,7 @@
 
 ## Кто
 
-Меня зовут [Josh Lockhart](https://twitter.com/codeguy). Я автор [Slim Framework](https://www.slimframework.com/), и я работаю на [New Media Campaigns](https://www.newmediacampaigns.com/).
+Меня зовут [Josh Lockhart](https://x.com/codeguy). Я автор [Slim Framework](https://www.slimframework.com/), и я работаю на [New Media Campaigns](https://www.newmediacampaigns.com/).
 
 ### Соавторы
 

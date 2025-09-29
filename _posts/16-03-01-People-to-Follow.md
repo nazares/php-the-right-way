@@ -10,4 +10,4 @@ anchor:  people_to_follow
 Вы можете найти сокращенный список членов сообщества PHP, с которого можно начать:
 
 * <https://www.ogprogrammer.com/2017/06/28/how-to-get-connected-with-the-php-community/>
-* <https://twitter.com/CalEvans/lists/phpeople>
+* <https://x.com/CalEvans/lists/phpeople>
