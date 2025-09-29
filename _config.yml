@@ -47,6 +47,6 @@ exclude:
 future: true
 
 title: "PHP: The Right Way"
-tagline: Reference for PHP best practices
-description: An easy to read, quick reference for PHP best practices, accepted coding standards, and links to authoritative PHP tutorials around the Web
+tagline: Справочник по лучшим практикам PHP
+description: Легко читаемый и краткий справочник по лучшим практикам PHP, принятым стандартам кодирования и ссылкам на авторитетные учебные пособия по PHP в Интернете.
 logo: /images/og-image.png
