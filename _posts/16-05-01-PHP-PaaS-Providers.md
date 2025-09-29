@@ -8,6 +8,7 @@ anchor:  php_paas_providers
 
 * [Amezmo](https://www.amezmo.com)
 * [AWS Elastic Beanstalk](https://aws.amazon.com/elasticbeanstalk/)
+* [Bref Cloud](https://bref.sh/cloud)
 * [Cloudways](https://www.cloudways.com/)
 * [DigitalOcean App Platform](https://www.digitalocean.com/products/app-platform)
 * [Divio](https://www.divio.com/)
