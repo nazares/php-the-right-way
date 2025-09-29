@@ -68,9 +68,10 @@ anchor:  test_driven_development
 
 #### Инструменты Функционального Тестирования
 
-* [Selenium](https://www.selenium.dev/)
-* [Mink](https://mink.behat.org/)
 * [Codeception](https://codeception.com/) это полнофункциональная среда тестирования, включающая инструменты приемочного
+* [Cypress](https://www.cypress.io/)
+* [Mink](https://mink.behat.org/)
+* [Selenium](https://www.selenium.dev/)
   тестирования.
 * [Storyplayer](https://github.com/MeltwaterArchive/storyplayer) — это полнофункциональная среда тестирования, включающая
   поддержку создания и уничтожения тестовых сред по запросу.
