@@ -26,6 +26,6 @@ anchor:  behavior_driven_development
 
 [Behat]: https://behat.org/
 [Cucumber]: https://cucumber.io/
-[PHPSpec]: https://www.phpspec.net/
+[PHPSpec]: https://phpspec.net/
 [RSpec]: https://rspec.info/
 [Codeception]: https://codeception.com/
